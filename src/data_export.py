@@ -61,6 +61,11 @@ blocks.to_file('./data/results/blocks.shp')
 ###
 # sql = "SELECT dest_type, st_x(geom) as lon, st_y(geom) as lat FROM destinations"
 # dist = pd.read_sql(sql, db['con'])
+gdf = geopandas.GeoDataFrame(dist, geometry=gpd.points_from_xy(df.lon, df.lat))
+zones = gpd.read_file('./data/raw/statsnzterritorial-authority-2021-generalised-SHP/territorial-authority-2021-generalised.shp')
+zones = zones[['TA2021_V_1','geometry']]
+zones = zones.to_crs(df.crs)
+gdf = gpd.clip(zones, gdf)
 # dist.to_csv('./data/results/destinations.csv')
 
 ###
@@ -70,6 +75,7 @@ blocks.to_file('./data/results/blocks.shp')
 # import data
 sql = "SELECT geoid, dest_type, distance, population, geometry  FROM nearest_block WHERE population > 0 AND distance IS NOT NULL"
 df = gpd.read_postgis(sql, con=db['con'], geom_col='geometry')
+df['distance'] = df['distance']/60
 df['centroids'] = df.centroid
 zones = gpd.read_file('./data/raw/statsnzterritorial-authority-2021-generalised-SHP/territorial-authority-2021-generalised.shp')
 zones = zones[['TA2021_V_1','geometry']]
@@ -87,7 +93,7 @@ df_census = df_census[['Area_code','nz_euro','maori','pasifika','asian']]
 df_census['Area_code'] = df_census['Area_code'].map(str)
 df = df.merge(df_census, how='inner', left_on='geoid',right_on='Area_code')
 # set bins
-bins = 100#list(range(0,21))
+bins = list(range(1,60)) + [1000]
 # create hist and cdf
 groups = ['population','nz_euro','maori','pasifika','asian']#,'difficulty_walking']
 hists = []
@@ -100,7 +106,7 @@ for group in groups:
         # create the hist
         # import code
         # code.interact(local=locals())
-        density, division = np.histogram(df_sub['distance']/60, bins = bins, weights=df_sub[group], density=True)
+        density, division = np.histogram(df_sub['distance'], bins = bins, weights=df_sub[group], density=True)
         unity_density = density / density.sum()
         unity_density = np.append(0, unity_density)
         division = np.append(0, division)
@@ -114,7 +120,7 @@ for group in groups:
         for region in regions:
             df_sub = df[(df['dest_type']==service)&(df['TA2021_V_1']==region)]
             # create the hist
-            density, division = np.histogram(df_sub['distance']/60, bins = bins, weights=df_sub[group], density=True)
+            density, division = np.histogram(df_sub['distance'], bins = bins, weights=df_sub[group], density=True)
             unity_density = density / density.sum()
             unity_density = np.append(0, unity_density)
             division = np.append(0, division)

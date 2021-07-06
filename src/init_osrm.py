@@ -7,7 +7,7 @@ def main(config, logger, transport_mode):
     - downloads the osrm files
     - establishes the osrm routing docker
     '''
-    logger.info('Initialize the OSRM server for {} to {} in {}'.format(transport_mode, config['services'],config['location']['city']))
+    logger.error('Initialize the OSRM server for {} to {} in {}'.format(transport_mode, config['services'],config['location']['city']))
     # transport mode options
     mode_dict = {'driving':'car','walking':'foot','cycling':'bicycle'}
 
@@ -28,14 +28,14 @@ def main(config, logger, transport_mode):
         subprocess.run(com.split())
 
     # download the data
-    download_data = 'wget -N https://download.geofabrik.de/{}/{}-latest.osm.pbf -P {}'.format(osm_region, osm_subregion, directory)
-    p = subprocess.run(download_data.split(), stderr=subprocess.PIPE, bufsize=0)
-    compile_osrm = '304 Not Modified' not in str(p.stderr)
+    # download_data = 'wget -N https://download.geofabrik.de/{}/{}-latest.osm.pbf -P {}'.format(osm_region, osm_subregion, directory)
+    # p = subprocess.run(download_data.split(), stderr=subprocess.PIPE, bufsize=0)
+    compile_osrm = True #'304 Not Modified' not in str(p.stderr)
     # compile_osrm = False  # True  #
 
     # if the data does not redownload, it does not need to re-compile.
     if compile_osrm:
-        logger.info('Compiling the data files')
+        logger.error('Compiling the data files')
         shell_commands = [
                         # init docker data
                         'docker run -t -v {}:/data osrm/osrm-backend osrm-extract -p /opt/{}.lua /data/{}-latest.osm.pbf'.format(directory, transport_mode, osm_subregion),
@@ -45,10 +45,10 @@ def main(config, logger, transport_mode):
         for com in shell_commands:
             subprocess.run(com.split(), stdout=open(os.devnull, 'wb'))
     else:
-        logger.info('Data not re-downloaded and compiled because no changes to online version')
+        logger.error('Data not re-downloaded and compiled because no changes to online version')
 
     run_docker = 'docker run -d --name osrm-{} -t -i -p {}:5000 -v {}:/data osrm/osrm-backend osrm-routed --algorithm mld --max-table-size 100000 /data/{}-latest.osrm'.format(state, port, directory, osm_subregion)
     subprocess.run(run_docker.split())
 
-    logger.info('OSRM server initialized')
+    logger.error('OSRM server initialized')
     
