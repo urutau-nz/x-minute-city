@@ -37,19 +37,19 @@ def main(config_filename=None):
     # import config file
     with open('./config/{}.yaml'.format(config_filename)) as file:
         config = yaml.load(file)
+    for transport_mode in config['transport_mode']:
+        # initialize the OSRM server
+        init_osrm.main(config, logger, transport_mode)
 
-    # initialize the OSRM server
-    init_osrm.main(config, logger)
+        # initialize and connect to the server
+        db = init_db(config)
 
-    # initialize and connect to the server
-    db = init_db(config)
-
-    # add origins and destinations
-    init_destinations(db, config)
-    init_origins(db, config)
-    
-    # query
-    query.main(config)
+        # add origins and destinations
+        # init_destinations(db, config)
+        # init_origins(db, config)
+        
+        # query
+        query.main(config, transport_mode)
 
     # calculate nearest
     determine_nearest.main(db)
@@ -92,6 +92,8 @@ def init_origins(db, config):
     # import and project
     origin = gpd.read_file(r'{}'.format(config['set_up']['origin_file_directory']))
     origin = origin.to_crs("EPSG:{}".format(projection))
+    # remove none geometries
+    origin = origin[origin.geometry!=None]
     # remove MultiPolygons by taking the largest
     is_mp = [type(origin.loc[i].geometry)==MultiPolygon for i in origin.index]
     # origin = origin[[not i for i in is_mp]]

@@ -9,6 +9,11 @@ set_up:
     - /homedirs/projects/x-minute-city/data/raw/Community_oralhealthcare_services.shp
     - /homedirs/projects/x-minute-city/data/raw/All_GP_including_VLCA.shp
     - /homedirs/projects/x-minute-city/data/raw/Alcohol_outlets_GHL.shp
+    - /homedirs/projects/x-minute-city/data/raw/Dairy_and_conv.shp
+    - /homedirs/projects/x-minute-city/data/raw/Fast_food.shp
+    - /homedirs/projects/x-minute-city/data/raw/Fruit_and_veg.shp
+    - /homedirs/projects/x-minute-city/data/raw/Supermarkets.shp
+    - /homedirs/projects/x-minute-city/data/raw/Takeaways.shp
   # name of column in shapefile to keep for matching with destination data
   dest_id_colname:
     - OBJECTID
@@ -16,6 +21,11 @@ set_up:
     - Street_Add
     - OBJECTID
     - OBJECTID
+    - FID_
+    - FID_
+    - FID_
+    - FID_
+    - FID_
   origin_file_directory: /homedirs/projects/x-minute-city/data/raw/statsnz2018-census-individual-part-1-total-new-zealand-by-statistic-SHP/2018-census-individual-part-1-total-new-zealand-by-statistic.shp
 orig_id: SA12018_V1
 
@@ -26,14 +36,22 @@ services:
   - oral_health
   - doctor
   - alcohol_outlet
+  - convenience_store
+  - fast_food
+  - fruit_store
+  - supermarket
+  - takeaway
 
 # What mode of transport are you evaluating? ['driving', 'walking', 'cycling'] TYPE: str
-transport_mode: 'walking'
+transport_mode: ['driving', 'walking', 'cycling']
 
 # What metric would you like to evaluate? comment one out, leaving in list TYPE: str
 metric:
-  - distance
+  # - distance
   - duration
+
+# This filters origin destination pairs based on their Euclidean proximity and then calculates the network distance between those subset pairs
+query_euclidean: True
 
 # What percent of CPU cores would you like to utilise? [0.0 - 1.0] TYPE: float
 par_frac: 0.1
@@ -41,8 +59,8 @@ par_frac: 0.1
 # What name would save the distance matrix as? TYPE: str
 SQL:
   create_db: True
-  database_name: wremo # this is the name of the database
-  table_name: distance # this is the name for the table of distances
+  database_name: x-minute-city # this is the name of the database
+  table_name: duration # this is the name for the table of distances
   port: '5002'
   host: 132.181.102.2
 

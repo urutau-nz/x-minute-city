@@ -35,9 +35,9 @@ def main(db):
         # """,
         'CREATE TABLE IF NOT EXISTS nearest_block(geoid TEXT, dest_type TEXT, distance INT, population INT, geometry geometry)'
     ]
-    queries_2 = [''' INSERT INTO nearest_block (geoid, dest_type, distance, population, geometry)
-            SELECT dist.id_orig as geoid, destinations.dest_type, MIN(dist.distance) as distance, blocks."C18_CURPop" as population, blocks.geometry
-            FROM distance as dist
+    queries_2 = [''' INSERT INTO nearest_block (geoid, dest_type, distance, population, geometry, mode)
+            SELECT dist.id_orig as geoid, destinations.dest_type, MIN(dist.duration) as duration, blocks."C18_CURPop" as population, blocks.geometry, dist.mode
+            FROM duration as dist
             INNER JOIN destinations ON dist.id_dest = destinations.id_dest
             INNER JOIN blocks ON  dist.id_orig = blocks."SA12018_V1"
             WHERE destinations.dest_type='{}'

@@ -1,13 +1,13 @@
 import subprocess
 import os
 
-def main(config, logger):
+def main(config, logger, transport_mode):
     ''' run the shell script that
     - removes the existing docker
     - downloads the osrm files
     - establishes the osrm routing docker
     '''
-    logger.info('Initialize the OSRM server for {} to {} in {}'.format(config['transport_mode'], config['services'],config['location']['city']))
+    logger.info('Initialize the OSRM server for {} to {} in {}'.format(transport_mode, config['services'],config['location']['city']))
     # transport mode options
     mode_dict = {'driving':'car','walking':'foot','cycling':'bicycle'}
 
@@ -15,7 +15,7 @@ def main(config, logger):
     osm_subregion = config['OSM']['osm_subregion']
     osm_region = config['OSM']['osm_region']
     port = config['OSRM']['port']
-    transport_mode = mode_dict[config['transport_mode']]
+    # transport_mode = mode_dict[config['transport_mode']]
     directory = config['OSM']['data_directory']
     state = config['location']['state']
 
@@ -28,10 +28,10 @@ def main(config, logger):
         subprocess.run(com.split())
 
     # download the data
-    # download_data = 'wget -N https://download.geofabrik.de/{}/{}-latest.osm.pbf -P {}'.format(osm_region, osm_subregion, directory)
-    # p = subprocess.run(download_data.split(), stderr=subprocess.PIPE, bufsize=0)
-    # compile_osrm = '304 Not Modified' not in str(p.stderr)
-    compile_osrm = False  # True  #
+    download_data = 'wget -N https://download.geofabrik.de/{}/{}-latest.osm.pbf -P {}'.format(osm_region, osm_subregion, directory)
+    p = subprocess.run(download_data.split(), stderr=subprocess.PIPE, bufsize=0)
+    compile_osrm = '304 Not Modified' not in str(p.stderr)
+    # compile_osrm = False  # True  #
 
     # if the data does not redownload, it does not need to re-compile.
     if compile_osrm:
