@@ -1,5 +1,6 @@
 /data/raw
 /data/osm
+/data/results/blocks*
 /.git
 .bash_history
 /venv

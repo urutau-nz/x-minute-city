@@ -17,8 +17,8 @@ with open('./config/{}.yaml'.format(config_filename)) as file:
 # connect to the psql database
 db = main.init_db(config)
 
-# import code
-# code.interact(local=locals())
+import code
+code.interact(local=locals())
 
 ###
 # distance as csv - only nonzero pop
@@ -28,7 +28,28 @@ db = main.init_db(config)
 # dist.to_csv('./data/results/distances.csv')
 
 ###
-# topojson
+# blocks - shpfile
+###
+sql = 'SELECT geoid as id, geometry FROM nearest_block WHERE population > 0 AND distance IS NOT NULL'
+blocks = gpd.read_postgis(sql, con=db['con'], geom_col='geometry')
+blocks.drop_duplicates(inplace=True)
+blocks['centroids'] = blocks.centroid
+zones = gpd.read_file('./data/raw/statsnzterritorial-authority-2021-generalised-SHP/territorial-authority-2021-generalised.shp')
+zones = zones[['TA2021_V_1', 'TA2021_V1_','geometry']]
+zones = zones.to_crs(blocks.crs)
+blocks.set_geometry('centroids',inplace=True)
+blocks = blocks.to_crs(zones.crs)
+blocks = gpd.sjoin(blocks, zones, how='inner', op='within')
+blocks.set_geometry('geometry',inplace=True)
+blocks = blocks.to_crs(zones.crs)
+blocks = blocks.loc[blocks['TA2021_V1_'] != 999]
+blocks = blocks.loc[~blocks['id'].isin(['7022480', '7001121', '7001125', '7001123', '7023238', '7029871'])]
+blocks.drop('centroids', axis=1, inplace=True)
+blocks.to_file('./data/results/blocks.shp')
+
+
+###
+# topojson - or use https://mapshaper.org/
 ###
 # sql = 'SELECT geoid as id, geometry FROM nearest_block WHERE population > 0'
 # blocks = gpd.read_postgis(sql, con=db['con'], geom_col='geometry')
@@ -47,18 +68,19 @@ db = main.init_db(config)
 ###
 
 # import data
-sql = "SELECT geoid, dest_type, distance, population, geometry  FROM nearest_block WHERE population > 0"
+sql = "SELECT geoid, dest_type, distance, population, geometry  FROM nearest_block WHERE population > 0 AND distance IS NOT NULL"
 df = gpd.read_postgis(sql, con=db['con'], geom_col='geometry')
+df['centroids'] = df.centroid
 zones = gpd.read_file('./data/raw/statsnzterritorial-authority-2021-generalised-SHP/territorial-authority-2021-generalised.shp')
 zones = zones[['TA2021_V_1','geometry']]
 zones = zones.to_crs(df.crs)
-import code
-code.interact(local=locals())
+df.set_geometry('centroids',inplace=True)
+df = df.to_crs(zones.crs)
 df = gpd.sjoin(df, zones, how='inner', op='within')
 # # join with census data
 df_census = pd.read_csv('./data/raw/Individual_part1_totalNZ-wide_format_updated_16-7-20.csv')
 df_census['nz_euro'] = pd.to_numeric(df_census['Census_2018_Ethnicity_grouped_total_responses_level_1_1_European_CURP'].replace('C',0))
-df_census['maori'] = pd.to_numeric(df_census['Census_2018_Ethnicity_grouped_total_responses_level_1_2_MÄori_CURP'].replace('C',0))
+df_census['maori'] = pd.to_numeric(df_census['Census_2018_Ethnicity_grouped_total_responses_level_1_2_Māori_CURP'].replace('C',0))
 df_census['pasifika'] = pd.to_numeric(df_census['Census_2018_Ethnicity_grouped_total_responses_level_1_3_Pacific_Peoples_CURP'].replace('C',0))
 df_census['asian'] = pd.to_numeric(df_census['Census_2018_Ethnicity_grouped_total_responses_level_1_4_Asian_CURP'].replace('C',0))
 df_census = df_census[['Area_code','nz_euro','maori','pasifika','asian']]
@@ -70,13 +92,15 @@ bins = 100#list(range(0,21))
 groups = ['population','nz_euro','maori','pasifika','asian']#,'difficulty_walking']
 hists = []
 for group in groups:
-    regions = df['Location'].unique()
+    regions = df['TA2021_V_1'].unique()
     for service in df['dest_type'].unique():
         df_sub = df[df['dest_type']==service]
+        # print(group)
+        # print(service)
         # create the hist
         # import code
         # code.interact(local=locals())
-        density, division = np.histogram(df_sub['distance']/1000, bins = bins, weights=df_sub[group], density=True)
+        density, division = np.histogram(df_sub['distance']/60, bins = bins, weights=df_sub[group], density=True)
         unity_density = density / density.sum()
         unity_density = np.append(0, unity_density)
         division = np.append(0, division)
@@ -88,9 +112,9 @@ for group in groups:
         df_new['group'] = group
         hists.append(df_new)
         for region in regions:
-            df_sub = df[(df['dest_type']==service)&(df['Location']==region)]
+            df_sub = df[(df['dest_type']==service)&(df['TA2021_V_1']==region)]
             # create the hist
-            density, division = np.histogram(df_sub['distance']/1000, bins = bins, weights=df_sub[group], density=True)
+            density, division = np.histogram(df_sub['distance']/60, bins = bins, weights=df_sub[group], density=True)
             unity_density = density / density.sum()
             unity_density = np.append(0, unity_density)
             division = np.append(0, division)
@@ -104,6 +128,7 @@ for group in groups:
 
 # concat
 df_hists = pd.concat(hists)
+df_hists = df_hists[df_hists['distance'] <= 100]
 # export
 df_hists.to_csv('./data/results/access_histogram.csv')
 
