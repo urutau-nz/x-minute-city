@@ -1,0 +1,1009 @@
+,region,service,mode,percent
+0,Auckland,doctor,driving,100.0
+1,Auckland,doctor,walking,75.0
+2,Auckland,doctor,cycling,99.0
+3,Auckland,ece,driving,100.0
+4,Auckland,ece,walking,97.0
+5,Auckland,ece,cycling,100.0
+6,Auckland,greenspace,driving,100.0
+7,Auckland,greenspace,walking,100.0
+8,Auckland,greenspace,cycling,100.0
+9,Auckland,oral_health,driving,100.0
+10,Auckland,oral_health,walking,88.0
+11,Auckland,oral_health,cycling,100.0
+12,Auckland,pharmacy,driving,100.0
+13,Auckland,pharmacy,walking,74.0
+14,Auckland,pharmacy,cycling,99.0
+15,Auckland,primary_school,driving,100.0
+16,Auckland,primary_school,walking,87.0
+17,Auckland,primary_school,cycling,100.0
+18,Auckland,supermarket,driving,100.0
+19,Auckland,supermarket,walking,40.0
+20,Auckland,supermarket,cycling,94.0
+21,Auckland,all,driving,100.0
+22,Auckland,all,walking,32.0
+23,Auckland,all,cycling,93.0
+24,Invercargill,doctor,driving,100.0
+25,Invercargill,doctor,walking,64.0
+26,Invercargill,doctor,cycling,94.0
+27,Invercargill,ece,driving,100.0
+28,Invercargill,ece,walking,94.0
+29,Invercargill,ece,cycling,100.0
+30,Invercargill,greenspace,driving,100.0
+31,Invercargill,greenspace,walking,94.0
+32,Invercargill,greenspace,cycling,96.0
+33,Invercargill,oral_health,driving,100.0
+34,Invercargill,oral_health,walking,51.0
+35,Invercargill,oral_health,cycling,94.0
+36,Invercargill,pharmacy,driving,100.0
+37,Invercargill,pharmacy,walking,69.0
+38,Invercargill,pharmacy,cycling,94.0
+39,Invercargill,primary_school,driving,100.0
+40,Invercargill,primary_school,walking,83.0
+41,Invercargill,primary_school,cycling,100.0
+42,Invercargill,supermarket,driving,100.0
+43,Invercargill,supermarket,walking,55.0
+44,Invercargill,supermarket,cycling,100.0
+45,Invercargill,all,driving,100.0
+46,Invercargill,all,walking,23.0
+47,Invercargill,all,cycling,94.0
+48,Hamilton,doctor,driving,100.0
+49,Hamilton,doctor,walking,70.0
+50,Hamilton,doctor,cycling,99.0
+51,Hamilton,ece,driving,100.0
+52,Hamilton,ece,walking,96.0
+53,Hamilton,ece,cycling,100.0
+54,Hamilton,greenspace,driving,100.0
+55,Hamilton,greenspace,walking,99.0
+56,Hamilton,greenspace,cycling,100.0
+57,Hamilton,oral_health,driving,100.0
+58,Hamilton,oral_health,walking,78.0
+59,Hamilton,oral_health,cycling,100.0
+60,Hamilton,pharmacy,driving,100.0
+61,Hamilton,pharmacy,walking,67.0
+62,Hamilton,pharmacy,cycling,99.0
+63,Hamilton,primary_school,driving,100.0
+64,Hamilton,primary_school,walking,77.0
+65,Hamilton,primary_school,cycling,100.0
+66,Hamilton,supermarket,driving,100.0
+67,Hamilton,supermarket,walking,40.0
+68,Hamilton,supermarket,cycling,91.0
+69,Hamilton,all,driving,100.0
+70,Hamilton,all,walking,34.0
+71,Hamilton,all,cycling,91.0
+72,Palmerston North,doctor,driving,100.0
+73,Palmerston North,doctor,walking,71.0
+74,Palmerston North,doctor,cycling,97.0
+75,Palmerston North,ece,driving,100.0
+76,Palmerston North,ece,walking,93.0
+77,Palmerston North,ece,cycling,98.0
+78,Palmerston North,greenspace,driving,100.0
+79,Palmerston North,greenspace,walking,99.0
+80,Palmerston North,greenspace,cycling,100.0
+81,Palmerston North,oral_health,driving,100.0
+82,Palmerston North,oral_health,walking,83.0
+83,Palmerston North,oral_health,cycling,98.0
+84,Palmerston North,pharmacy,driving,100.0
+85,Palmerston North,pharmacy,walking,70.0
+86,Palmerston North,pharmacy,cycling,97.0
+87,Palmerston North,primary_school,driving,100.0
+88,Palmerston North,primary_school,walking,80.0
+89,Palmerston North,primary_school,cycling,97.0
+90,Palmerston North,supermarket,driving,100.0
+91,Palmerston North,supermarket,walking,75.0
+92,Palmerston North,supermarket,cycling,98.0
+93,Palmerston North,all,driving,100.0
+94,Palmerston North,all,walking,53.0
+95,Palmerston North,all,cycling,96.0
+96,Levin,doctor,driving,100.0
+97,Levin,doctor,walking,71.0
+98,Levin,doctor,cycling,98.0
+99,Levin,ece,driving,100.0
+100,Levin,ece,walking,94.0
+101,Levin,ece,cycling,97.0
+102,Levin,greenspace,driving,100.0
+103,Levin,greenspace,walking,95.0
+104,Levin,greenspace,cycling,100.0
+105,Levin,oral_health,driving,100.0
+106,Levin,oral_health,walking,93.0
+107,Levin,oral_health,cycling,97.0
+108,Levin,pharmacy,driving,100.0
+109,Levin,pharmacy,walking,55.0
+110,Levin,pharmacy,cycling,97.0
+111,Levin,primary_school,driving,100.0
+112,Levin,primary_school,walking,91.0
+113,Levin,primary_school,cycling,97.0
+114,Levin,supermarket,driving,100.0
+115,Levin,supermarket,walking,38.0
+116,Levin,supermarket,cycling,97.0
+117,Levin,all,driving,100.0
+118,Levin,all,walking,30.0
+119,Levin,all,cycling,97.0
+120,Lower Hutt,doctor,driving,100.0
+121,Lower Hutt,doctor,walking,59.0
+122,Lower Hutt,doctor,cycling,96.0
+123,Lower Hutt,ece,driving,100.0
+124,Lower Hutt,ece,walking,93.0
+125,Lower Hutt,ece,cycling,100.0
+126,Lower Hutt,greenspace,driving,100.0
+127,Lower Hutt,greenspace,walking,97.0
+128,Lower Hutt,greenspace,cycling,100.0
+129,Lower Hutt,oral_health,driving,100.0
+130,Lower Hutt,oral_health,walking,85.0
+131,Lower Hutt,oral_health,cycling,99.0
+132,Lower Hutt,pharmacy,driving,100.0
+133,Lower Hutt,pharmacy,walking,63.0
+134,Lower Hutt,pharmacy,cycling,96.0
+135,Lower Hutt,primary_school,driving,100.0
+136,Lower Hutt,primary_school,walking,83.0
+137,Lower Hutt,primary_school,cycling,99.0
+138,Lower Hutt,supermarket,driving,100.0
+139,Lower Hutt,supermarket,walking,51.0
+140,Lower Hutt,supermarket,cycling,81.0
+141,Lower Hutt,all,driving,100.0
+142,Lower Hutt,all,walking,43.0
+143,Lower Hutt,all,cycling,79.0
+144,Christchurch,doctor,driving,100.0
+145,Christchurch,doctor,walking,73.0
+146,Christchurch,doctor,cycling,98.0
+147,Christchurch,ece,driving,100.0
+148,Christchurch,ece,walking,93.0
+149,Christchurch,ece,cycling,99.0
+150,Christchurch,greenspace,driving,100.0
+151,Christchurch,greenspace,walking,99.0
+152,Christchurch,greenspace,cycling,100.0
+153,Christchurch,oral_health,driving,100.0
+154,Christchurch,oral_health,walking,83.0
+155,Christchurch,oral_health,cycling,100.0
+156,Christchurch,pharmacy,driving,100.0
+157,Christchurch,pharmacy,walking,73.0
+158,Christchurch,pharmacy,cycling,98.0
+159,Christchurch,primary_school,driving,100.0
+160,Christchurch,primary_school,walking,78.0
+161,Christchurch,primary_school,cycling,100.0
+162,Christchurch,supermarket,driving,100.0
+163,Christchurch,supermarket,walking,41.0
+164,Christchurch,supermarket,cycling,95.0
+165,Christchurch,all,driving,100.0
+166,Christchurch,all,walking,32.0
+167,Christchurch,all,cycling,94.0
+168,Mosgiel,doctor,driving,100.0
+169,Mosgiel,doctor,walking,46.0
+170,Mosgiel,doctor,cycling,98.0
+171,Mosgiel,ece,driving,100.0
+172,Mosgiel,ece,walking,80.0
+173,Mosgiel,ece,cycling,100.0
+174,Mosgiel,greenspace,driving,100.0
+175,Mosgiel,greenspace,walking,92.0
+176,Mosgiel,greenspace,cycling,100.0
+177,Mosgiel,oral_health,driving,100.0
+178,Mosgiel,oral_health,walking,43.0
+179,Mosgiel,oral_health,cycling,97.0
+180,Mosgiel,pharmacy,driving,100.0
+181,Mosgiel,pharmacy,walking,50.0
+182,Mosgiel,pharmacy,cycling,99.0
+183,Mosgiel,primary_school,driving,100.0
+184,Mosgiel,primary_school,walking,55.0
+185,Mosgiel,primary_school,cycling,99.0
+186,Mosgiel,supermarket,driving,100.0
+187,Mosgiel,supermarket,walking,63.0
+188,Mosgiel,supermarket,cycling,100.0
+189,Mosgiel,all,driving,100.0
+190,Mosgiel,all,walking,33.0
+191,Mosgiel,all,cycling,97.0
+192,Dunedin,doctor,driving,100.0
+193,Dunedin,doctor,walking,65.0
+194,Dunedin,doctor,cycling,95.0
+195,Dunedin,ece,driving,100.0
+196,Dunedin,ece,walking,89.0
+197,Dunedin,ece,cycling,100.0
+198,Dunedin,greenspace,driving,100.0
+199,Dunedin,greenspace,walking,98.0
+200,Dunedin,greenspace,cycling,100.0
+201,Dunedin,oral_health,driving,100.0
+202,Dunedin,oral_health,walking,22.0
+203,Dunedin,oral_health,cycling,59.0
+204,Dunedin,pharmacy,driving,100.0
+205,Dunedin,pharmacy,walking,67.0
+206,Dunedin,pharmacy,cycling,96.0
+207,Dunedin,primary_school,driving,100.0
+208,Dunedin,primary_school,walking,84.0
+209,Dunedin,primary_school,cycling,100.0
+210,Dunedin,supermarket,driving,99.0
+211,Dunedin,supermarket,walking,58.0
+212,Dunedin,supermarket,cycling,94.0
+213,Dunedin,all,driving,99.0
+214,Dunedin,all,walking,11.0
+215,Dunedin,all,cycling,57.0
+216,Napier,doctor,driving,100.0
+217,Napier,doctor,walking,69.0
+218,Napier,doctor,cycling,97.0
+219,Napier,ece,driving,100.0
+220,Napier,ece,walking,85.0
+221,Napier,ece,cycling,97.0
+222,Napier,greenspace,driving,100.0
+223,Napier,greenspace,walking,95.0
+224,Napier,greenspace,cycling,97.0
+225,Napier,oral_health,driving,100.0
+226,Napier,oral_health,walking,75.0
+227,Napier,oral_health,cycling,96.0
+228,Napier,pharmacy,driving,100.0
+229,Napier,pharmacy,walking,74.0
+230,Napier,pharmacy,cycling,96.0
+231,Napier,primary_school,driving,100.0
+232,Napier,primary_school,walking,83.0
+233,Napier,primary_school,cycling,97.0
+234,Napier,supermarket,driving,100.0
+235,Napier,supermarket,walking,68.0
+236,Napier,supermarket,cycling,96.0
+237,Napier,all,driving,100.0
+238,Napier,all,walking,49.0
+239,Napier,all,cycling,96.0
+240,New Plymouth,doctor,driving,100.0
+241,New Plymouth,doctor,walking,49.0
+242,New Plymouth,doctor,cycling,97.0
+243,New Plymouth,ece,driving,100.0
+244,New Plymouth,ece,walking,85.0
+245,New Plymouth,ece,cycling,97.0
+246,New Plymouth,greenspace,driving,100.0
+247,New Plymouth,greenspace,walking,94.0
+248,New Plymouth,greenspace,cycling,99.0
+249,New Plymouth,oral_health,driving,100.0
+250,New Plymouth,oral_health,walking,49.0
+251,New Plymouth,oral_health,cycling,97.0
+252,New Plymouth,pharmacy,driving,100.0
+253,New Plymouth,pharmacy,walking,59.0
+254,New Plymouth,pharmacy,cycling,99.0
+255,New Plymouth,primary_school,driving,100.0
+256,New Plymouth,primary_school,walking,77.0
+257,New Plymouth,primary_school,cycling,100.0
+258,New Plymouth,supermarket,driving,100.0
+259,New Plymouth,supermarket,walking,45.0
+260,New Plymouth,supermarket,cycling,99.0
+261,New Plymouth,all,driving,100.0
+262,New Plymouth,all,walking,13.0
+263,New Plymouth,all,cycling,96.0
+264,Tauranga,doctor,driving,100.0
+265,Tauranga,doctor,walking,52.0
+266,Tauranga,doctor,cycling,95.0
+267,Tauranga,ece,driving,99.0
+268,Tauranga,ece,walking,88.0
+269,Tauranga,ece,cycling,100.0
+270,Tauranga,greenspace,driving,98.0
+271,Tauranga,greenspace,walking,94.0
+272,Tauranga,greenspace,cycling,99.0
+273,Tauranga,oral_health,driving,100.0
+274,Tauranga,oral_health,walking,60.0
+275,Tauranga,oral_health,cycling,96.0
+276,Tauranga,pharmacy,driving,99.0
+277,Tauranga,pharmacy,walking,55.0
+278,Tauranga,pharmacy,cycling,93.0
+279,Tauranga,primary_school,driving,100.0
+280,Tauranga,primary_school,walking,60.0
+281,Tauranga,primary_school,cycling,95.0
+282,Tauranga,supermarket,driving,99.0
+283,Tauranga,supermarket,walking,46.0
+284,Tauranga,supermarket,cycling,85.0
+285,Tauranga,all,driving,99.0
+286,Tauranga,all,walking,22.0
+287,Tauranga,all,cycling,76.0
+288,Rotorua,doctor,driving,100.0
+289,Rotorua,doctor,walking,37.0
+290,Rotorua,doctor,cycling,93.0
+291,Rotorua,ece,driving,100.0
+292,Rotorua,ece,walking,93.0
+293,Rotorua,ece,cycling,100.0
+294,Rotorua,greenspace,driving,100.0
+295,Rotorua,greenspace,walking,100.0
+296,Rotorua,greenspace,cycling,100.0
+297,Rotorua,oral_health,driving,100.0
+298,Rotorua,oral_health,walking,78.0
+299,Rotorua,oral_health,cycling,96.0
+300,Rotorua,pharmacy,driving,100.0
+301,Rotorua,pharmacy,walking,34.0
+302,Rotorua,pharmacy,cycling,92.0
+303,Rotorua,primary_school,driving,100.0
+304,Rotorua,primary_school,walking,74.0
+305,Rotorua,primary_school,cycling,96.0
+306,Rotorua,supermarket,driving,100.0
+307,Rotorua,supermarket,walking,40.0
+308,Rotorua,supermarket,cycling,83.0
+309,Rotorua,all,driving,100.0
+310,Rotorua,all,walking,22.0
+311,Rotorua,all,cycling,79.0
+312,Whakatāne,doctor,driving,100.0
+313,Whakatāne,doctor,walking,47.0
+314,Whakatāne,doctor,cycling,90.0
+315,Whakatāne,ece,driving,100.0
+316,Whakatāne,ece,walking,85.0
+317,Whakatāne,ece,cycling,98.0
+318,Whakatāne,greenspace,driving,100.0
+319,Whakatāne,greenspace,walking,94.0
+320,Whakatāne,greenspace,cycling,97.0
+321,Whakatāne,oral_health,driving,100.0
+322,Whakatāne,oral_health,walking,70.0
+323,Whakatāne,oral_health,cycling,93.0
+324,Whakatāne,pharmacy,driving,100.0
+325,Whakatāne,pharmacy,walking,52.0
+326,Whakatāne,pharmacy,cycling,90.0
+327,Whakatāne,primary_school,driving,100.0
+328,Whakatāne,primary_school,walking,73.0
+329,Whakatāne,primary_school,cycling,100.0
+330,Whakatāne,supermarket,driving,100.0
+331,Whakatāne,supermarket,walking,23.0
+332,Whakatāne,supermarket,cycling,84.0
+333,Whakatāne,all,driving,100.0
+334,Whakatāne,all,walking,17.0
+335,Whakatāne,all,cycling,84.0
+336,Wellington,doctor,driving,100.0
+337,Wellington,doctor,walking,74.0
+338,Wellington,doctor,cycling,100.0
+339,Wellington,ece,driving,100.0
+340,Wellington,ece,walking,93.0
+341,Wellington,ece,cycling,100.0
+342,Wellington,greenspace,driving,100.0
+343,Wellington,greenspace,walking,97.0
+344,Wellington,greenspace,cycling,100.0
+345,Wellington,oral_health,driving,100.0
+346,Wellington,oral_health,walking,81.0
+347,Wellington,oral_health,cycling,100.0
+348,Wellington,pharmacy,driving,100.0
+349,Wellington,pharmacy,walking,71.0
+350,Wellington,pharmacy,cycling,99.0
+351,Wellington,primary_school,driving,100.0
+352,Wellington,primary_school,walking,90.0
+353,Wellington,primary_school,cycling,100.0
+354,Wellington,supermarket,driving,100.0
+355,Wellington,supermarket,walking,68.0
+356,Wellington,supermarket,cycling,100.0
+357,Wellington,all,driving,100.0
+358,Wellington,all,walking,58.0
+359,Wellington,all,cycling,99.0
+360,Whangārei,doctor,driving,100.0
+361,Whangārei,doctor,walking,67.0
+362,Whangārei,doctor,cycling,96.0
+363,Whangārei,ece,driving,100.0
+364,Whangārei,ece,walking,90.0
+365,Whangārei,ece,cycling,99.0
+366,Whangārei,greenspace,driving,100.0
+367,Whangārei,greenspace,walking,86.0
+368,Whangārei,greenspace,cycling,99.0
+369,Whangārei,oral_health,driving,100.0
+370,Whangārei,oral_health,walking,65.0
+371,Whangārei,oral_health,cycling,98.0
+372,Whangārei,pharmacy,driving,100.0
+373,Whangārei,pharmacy,walking,63.0
+374,Whangārei,pharmacy,cycling,97.0
+375,Whangārei,primary_school,driving,100.0
+376,Whangārei,primary_school,walking,68.0
+377,Whangārei,primary_school,cycling,98.0
+378,Whangārei,supermarket,driving,100.0
+379,Whangārei,supermarket,walking,53.0
+380,Whangārei,supermarket,cycling,96.0
+381,Whangārei,all,driving,100.0
+382,Whangārei,all,walking,40.0
+383,Whangārei,all,cycling,95.0
+384,Hibiscus Coast,doctor,driving,100.0
+385,Hibiscus Coast,doctor,walking,55.0
+386,Hibiscus Coast,doctor,cycling,87.0
+387,Hibiscus Coast,ece,driving,100.0
+388,Hibiscus Coast,ece,walking,83.0
+389,Hibiscus Coast,ece,cycling,100.0
+390,Hibiscus Coast,greenspace,driving,100.0
+391,Hibiscus Coast,greenspace,walking,99.0
+392,Hibiscus Coast,greenspace,cycling,100.0
+393,Hibiscus Coast,oral_health,driving,100.0
+394,Hibiscus Coast,oral_health,walking,57.0
+395,Hibiscus Coast,oral_health,cycling,94.0
+396,Hibiscus Coast,pharmacy,driving,100.0
+397,Hibiscus Coast,pharmacy,walking,58.0
+398,Hibiscus Coast,pharmacy,cycling,87.0
+399,Hibiscus Coast,primary_school,driving,100.0
+400,Hibiscus Coast,primary_school,walking,61.0
+401,Hibiscus Coast,primary_school,cycling,98.0
+402,Hibiscus Coast,supermarket,driving,100.0
+403,Hibiscus Coast,supermarket,walking,43.0
+404,Hibiscus Coast,supermarket,cycling,99.0
+405,Hibiscus Coast,all,driving,100.0
+406,Hibiscus Coast,all,walking,21.0
+407,Hibiscus Coast,all,cycling,80.0
+408,Blenheim,doctor,driving,100.0
+409,Blenheim,doctor,walking,55.0
+410,Blenheim,doctor,cycling,98.0
+411,Blenheim,ece,driving,100.0
+412,Blenheim,ece,walking,89.0
+413,Blenheim,ece,cycling,100.0
+414,Blenheim,greenspace,driving,100.0
+415,Blenheim,greenspace,walking,100.0
+416,Blenheim,greenspace,cycling,100.0
+417,Blenheim,oral_health,driving,100.0
+418,Blenheim,oral_health,walking,8.0
+419,Blenheim,oral_health,cycling,73.0
+420,Blenheim,pharmacy,driving,100.0
+421,Blenheim,pharmacy,walking,60.0
+422,Blenheim,pharmacy,cycling,98.0
+423,Blenheim,primary_school,driving,100.0
+424,Blenheim,primary_school,walking,72.0
+425,Blenheim,primary_school,cycling,100.0
+426,Blenheim,supermarket,driving,100.0
+427,Blenheim,supermarket,walking,48.0
+428,Blenheim,supermarket,cycling,100.0
+429,Blenheim,all,driving,100.0
+430,Blenheim,all,walking,3.0
+431,Blenheim,all,cycling,72.0
+432,Gisborne,doctor,driving,100.0
+433,Gisborne,doctor,walking,49.0
+434,Gisborne,doctor,cycling,98.0
+435,Gisborne,ece,driving,100.0
+436,Gisborne,ece,walking,91.0
+437,Gisborne,ece,cycling,100.0
+438,Gisborne,greenspace,driving,100.0
+439,Gisborne,greenspace,walking,99.0
+440,Gisborne,greenspace,cycling,100.0
+441,Gisborne,oral_health,driving,100.0
+442,Gisborne,oral_health,walking,86.0
+443,Gisborne,oral_health,cycling,100.0
+444,Gisborne,pharmacy,driving,100.0
+445,Gisborne,pharmacy,walking,76.0
+446,Gisborne,pharmacy,cycling,98.0
+447,Gisborne,primary_school,driving,100.0
+448,Gisborne,primary_school,walking,80.0
+449,Gisborne,primary_school,cycling,100.0
+450,Gisborne,supermarket,driving,100.0
+451,Gisborne,supermarket,walking,54.0
+452,Gisborne,supermarket,cycling,96.0
+453,Gisborne,all,driving,100.0
+454,Gisborne,all,walking,22.0
+455,Gisborne,all,cycling,96.0
+456,Nelson,doctor,driving,100.0
+457,Nelson,doctor,walking,51.0
+458,Nelson,doctor,cycling,92.0
+459,Nelson,ece,driving,100.0
+460,Nelson,ece,walking,81.0
+461,Nelson,ece,cycling,99.0
+462,Nelson,greenspace,driving,100.0
+463,Nelson,greenspace,walking,95.0
+464,Nelson,greenspace,cycling,100.0
+465,Nelson,oral_health,driving,92.0
+466,Nelson,oral_health,walking,25.0
+467,Nelson,oral_health,cycling,45.0
+468,Nelson,pharmacy,driving,100.0
+469,Nelson,pharmacy,walking,54.0
+470,Nelson,pharmacy,cycling,92.0
+471,Nelson,primary_school,driving,100.0
+472,Nelson,primary_school,walking,64.0
+473,Nelson,primary_school,cycling,97.0
+474,Nelson,supermarket,driving,100.0
+475,Nelson,supermarket,walking,44.0
+476,Nelson,supermarket,cycling,94.0
+477,Nelson,all,driving,92.0
+478,Nelson,all,walking,19.0
+479,Nelson,all,cycling,43.0
+480,Hastings,doctor,driving,100.0
+481,Hastings,doctor,walking,68.0
+482,Hastings,doctor,cycling,100.0
+483,Hastings,ece,driving,100.0
+484,Hastings,ece,walking,99.0
+485,Hastings,ece,cycling,100.0
+486,Hastings,greenspace,driving,100.0
+487,Hastings,greenspace,walking,100.0
+488,Hastings,greenspace,cycling,100.0
+489,Hastings,oral_health,driving,100.0
+490,Hastings,oral_health,walking,93.0
+491,Hastings,oral_health,cycling,100.0
+492,Hastings,pharmacy,driving,100.0
+493,Hastings,pharmacy,walking,73.0
+494,Hastings,pharmacy,cycling,100.0
+495,Hastings,primary_school,driving,100.0
+496,Hastings,primary_school,walking,94.0
+497,Hastings,primary_school,cycling,100.0
+498,Hastings,supermarket,driving,100.0
+499,Hastings,supermarket,walking,67.0
+500,Hastings,supermarket,cycling,100.0
+501,Hastings,all,driving,100.0
+502,Hastings,all,walking,43.0
+503,Hastings,all,cycling,100.0
+504,Ashburton,doctor,driving,100.0
+505,Ashburton,doctor,walking,60.0
+506,Ashburton,doctor,cycling,97.0
+507,Ashburton,ece,driving,100.0
+508,Ashburton,ece,walking,95.0
+509,Ashburton,ece,cycling,99.0
+510,Ashburton,greenspace,driving,100.0
+511,Ashburton,greenspace,walking,97.0
+512,Ashburton,greenspace,cycling,98.0
+513,Ashburton,oral_health,driving,100.0
+514,Ashburton,oral_health,walking,80.0
+515,Ashburton,oral_health,cycling,100.0
+516,Ashburton,pharmacy,driving,100.0
+517,Ashburton,pharmacy,walking,72.0
+518,Ashburton,pharmacy,cycling,98.0
+519,Ashburton,primary_school,driving,100.0
+520,Ashburton,primary_school,walking,73.0
+521,Ashburton,primary_school,cycling,100.0
+522,Ashburton,supermarket,driving,100.0
+523,Ashburton,supermarket,walking,72.0
+524,Ashburton,supermarket,cycling,98.0
+525,Ashburton,all,driving,100.0
+526,Ashburton,all,walking,55.0
+527,Ashburton,all,cycling,97.0
+528,Timaru,doctor,driving,100.0
+529,Timaru,doctor,walking,57.0
+530,Timaru,doctor,cycling,95.0
+531,Timaru,ece,driving,100.0
+532,Timaru,ece,walking,87.0
+533,Timaru,ece,cycling,99.0
+534,Timaru,greenspace,driving,100.0
+535,Timaru,greenspace,walking,97.0
+536,Timaru,greenspace,cycling,100.0
+537,Timaru,oral_health,driving,100.0
+538,Timaru,oral_health,walking,88.0
+539,Timaru,oral_health,cycling,99.0
+540,Timaru,pharmacy,driving,100.0
+541,Timaru,pharmacy,walking,55.0
+542,Timaru,pharmacy,cycling,97.0
+543,Timaru,primary_school,driving,100.0
+544,Timaru,primary_school,walking,84.0
+545,Timaru,primary_school,cycling,99.0
+546,Timaru,supermarket,driving,100.0
+547,Timaru,supermarket,walking,61.0
+548,Timaru,supermarket,cycling,96.0
+549,Timaru,all,driving,100.0
+550,Timaru,all,walking,33.0
+551,Timaru,all,cycling,96.0
+552,Cambridge,doctor,driving,100.0
+553,Cambridge,doctor,walking,59.0
+554,Cambridge,doctor,cycling,96.0
+555,Cambridge,ece,driving,100.0
+556,Cambridge,ece,walking,95.0
+557,Cambridge,ece,cycling,100.0
+558,Cambridge,greenspace,driving,100.0
+559,Cambridge,greenspace,walking,97.0
+560,Cambridge,greenspace,cycling,100.0
+561,Cambridge,oral_health,driving,100.0
+562,Cambridge,oral_health,walking,52.0
+563,Cambridge,oral_health,cycling,97.0
+564,Cambridge,pharmacy,driving,100.0
+565,Cambridge,pharmacy,walking,44.0
+566,Cambridge,pharmacy,cycling,94.0
+567,Cambridge,primary_school,driving,100.0
+568,Cambridge,primary_school,walking,47.0
+569,Cambridge,primary_school,cycling,95.0
+570,Cambridge,supermarket,driving,100.0
+571,Cambridge,supermarket,walking,45.0
+572,Cambridge,supermarket,cycling,95.0
+573,Cambridge,all,driving,100.0
+574,Cambridge,all,walking,22.0
+575,Cambridge,all,cycling,94.0
+576,Taupō,doctor,driving,100.0
+577,Taupō,doctor,walking,23.0
+578,Taupō,doctor,cycling,76.0
+579,Taupō,ece,driving,100.0
+580,Taupō,ece,walking,81.0
+581,Taupō,ece,cycling,92.0
+582,Taupō,greenspace,driving,100.0
+583,Taupō,greenspace,walking,95.0
+584,Taupō,greenspace,cycling,98.0
+585,Taupō,oral_health,driving,100.0
+586,Taupō,oral_health,walking,64.0
+587,Taupō,oral_health,cycling,88.0
+588,Taupō,pharmacy,driving,100.0
+589,Taupō,pharmacy,walking,37.0
+590,Taupō,pharmacy,cycling,77.0
+591,Taupō,primary_school,driving,100.0
+592,Taupō,primary_school,walking,70.0
+593,Taupō,primary_school,cycling,91.0
+594,Taupō,supermarket,driving,100.0
+595,Taupō,supermarket,walking,47.0
+596,Taupō,supermarket,cycling,80.0
+597,Taupō,all,driving,100.0
+598,Taupō,all,walking,18.0
+599,Taupō,all,cycling,74.0
+600,Feilding,doctor,driving,100.0
+601,Feilding,doctor,walking,30.0
+602,Feilding,doctor,cycling,98.0
+603,Feilding,ece,driving,100.0
+604,Feilding,ece,walking,90.0
+605,Feilding,ece,cycling,100.0
+606,Feilding,greenspace,driving,100.0
+607,Feilding,greenspace,walking,89.0
+608,Feilding,greenspace,cycling,100.0
+609,Feilding,oral_health,driving,100.0
+610,Feilding,oral_health,walking,67.0
+611,Feilding,oral_health,cycling,99.0
+612,Feilding,pharmacy,driving,100.0
+613,Feilding,pharmacy,walking,51.0
+614,Feilding,pharmacy,cycling,99.0
+615,Feilding,primary_school,driving,100.0
+616,Feilding,primary_school,walking,65.0
+617,Feilding,primary_school,cycling,99.0
+618,Feilding,supermarket,driving,100.0
+619,Feilding,supermarket,walking,33.0
+620,Feilding,supermarket,cycling,96.0
+621,Feilding,all,driving,100.0
+622,Feilding,all,walking,17.0
+623,Feilding,all,cycling,95.0
+624,Te Awamutu,doctor,driving,100.0
+625,Te Awamutu,doctor,walking,52.0
+626,Te Awamutu,doctor,cycling,98.0
+627,Te Awamutu,ece,driving,100.0
+628,Te Awamutu,ece,walking,86.0
+629,Te Awamutu,ece,cycling,100.0
+630,Te Awamutu,greenspace,driving,100.0
+631,Te Awamutu,greenspace,walking,93.0
+632,Te Awamutu,greenspace,cycling,100.0
+633,Te Awamutu,oral_health,driving,100.0
+634,Te Awamutu,oral_health,walking,70.0
+635,Te Awamutu,oral_health,cycling,100.0
+636,Te Awamutu,pharmacy,driving,100.0
+637,Te Awamutu,pharmacy,walking,58.0
+638,Te Awamutu,pharmacy,cycling,98.0
+639,Te Awamutu,primary_school,driving,100.0
+640,Te Awamutu,primary_school,walking,62.0
+641,Te Awamutu,primary_school,cycling,98.0
+642,Te Awamutu,supermarket,driving,100.0
+643,Te Awamutu,supermarket,walking,70.0
+644,Te Awamutu,supermarket,cycling,98.0
+645,Te Awamutu,all,driving,100.0
+646,Te Awamutu,all,walking,41.0
+647,Te Awamutu,all,cycling,96.0
+648,Pukekohe,doctor,driving,100.0
+649,Pukekohe,doctor,walking,37.0
+650,Pukekohe,doctor,cycling,98.0
+651,Pukekohe,ece,driving,100.0
+652,Pukekohe,ece,walking,95.0
+653,Pukekohe,ece,cycling,100.0
+654,Pukekohe,greenspace,driving,100.0
+655,Pukekohe,greenspace,walking,95.0
+656,Pukekohe,greenspace,cycling,98.0
+657,Pukekohe,oral_health,driving,100.0
+658,Pukekohe,oral_health,walking,70.0
+659,Pukekohe,oral_health,cycling,100.0
+660,Pukekohe,pharmacy,driving,100.0
+661,Pukekohe,pharmacy,walking,50.0
+662,Pukekohe,pharmacy,cycling,99.0
+663,Pukekohe,primary_school,driving,100.0
+664,Pukekohe,primary_school,walking,72.0
+665,Pukekohe,primary_school,cycling,100.0
+666,Pukekohe,supermarket,driving,100.0
+667,Pukekohe,supermarket,walking,36.0
+668,Pukekohe,supermarket,cycling,96.0
+669,Pukekohe,all,driving,100.0
+670,Pukekohe,all,walking,27.0
+671,Pukekohe,all,cycling,96.0
+672,Upper Hutt,doctor,driving,100.0
+673,Upper Hutt,doctor,walking,37.0
+674,Upper Hutt,doctor,cycling,80.0
+675,Upper Hutt,ece,driving,100.0
+676,Upper Hutt,ece,walking,85.0
+677,Upper Hutt,ece,cycling,95.0
+678,Upper Hutt,greenspace,driving,100.0
+679,Upper Hutt,greenspace,walking,95.0
+680,Upper Hutt,greenspace,cycling,98.0
+681,Upper Hutt,oral_health,driving,100.0
+682,Upper Hutt,oral_health,walking,74.0
+683,Upper Hutt,oral_health,cycling,95.0
+684,Upper Hutt,pharmacy,driving,100.0
+685,Upper Hutt,pharmacy,walking,39.0
+686,Upper Hutt,pharmacy,cycling,80.0
+687,Upper Hutt,primary_school,driving,100.0
+688,Upper Hutt,primary_school,walking,74.0
+689,Upper Hutt,primary_school,cycling,95.0
+690,Upper Hutt,supermarket,driving,100.0
+691,Upper Hutt,supermarket,walking,34.0
+692,Upper Hutt,supermarket,cycling,86.0
+693,Upper Hutt,all,driving,100.0
+694,Upper Hutt,all,walking,23.0
+695,Upper Hutt,all,cycling,79.0
+696,Kaiapoi,doctor,driving,100.0
+697,Kaiapoi,doctor,walking,36.0
+698,Kaiapoi,doctor,cycling,95.0
+699,Kaiapoi,ece,driving,100.0
+700,Kaiapoi,ece,walking,89.0
+701,Kaiapoi,ece,cycling,100.0
+702,Kaiapoi,greenspace,driving,100.0
+703,Kaiapoi,greenspace,walking,97.0
+704,Kaiapoi,greenspace,cycling,100.0
+705,Kaiapoi,oral_health,driving,100.0
+706,Kaiapoi,oral_health,walking,72.0
+707,Kaiapoi,oral_health,cycling,98.0
+708,Kaiapoi,pharmacy,driving,100.0
+709,Kaiapoi,pharmacy,walking,33.0
+710,Kaiapoi,pharmacy,cycling,95.0
+711,Kaiapoi,primary_school,driving,100.0
+712,Kaiapoi,primary_school,walking,48.0
+713,Kaiapoi,primary_school,cycling,97.0
+714,Kaiapoi,supermarket,driving,100.0
+715,Kaiapoi,supermarket,walking,33.0
+716,Kaiapoi,supermarket,cycling,95.0
+717,Kaiapoi,all,driving,100.0
+718,Kaiapoi,all,walking,31.0
+719,Kaiapoi,all,cycling,95.0
+720,Tokoroa,doctor,driving,100.0
+721,Tokoroa,doctor,walking,36.0
+722,Tokoroa,doctor,cycling,94.0
+723,Tokoroa,ece,driving,100.0
+724,Tokoroa,ece,walking,93.0
+725,Tokoroa,ece,cycling,100.0
+726,Tokoroa,greenspace,driving,100.0
+727,Tokoroa,greenspace,walking,98.0
+728,Tokoroa,greenspace,cycling,100.0
+729,Tokoroa,oral_health,driving,100.0
+730,Tokoroa,oral_health,walking,91.0
+731,Tokoroa,oral_health,cycling,99.0
+732,Tokoroa,pharmacy,driving,100.0
+733,Tokoroa,pharmacy,walking,42.0
+734,Tokoroa,pharmacy,cycling,97.0
+735,Tokoroa,primary_school,driving,100.0
+736,Tokoroa,primary_school,walking,89.0
+737,Tokoroa,primary_school,cycling,100.0
+738,Tokoroa,supermarket,driving,100.0
+739,Tokoroa,supermarket,walking,56.0
+740,Tokoroa,supermarket,cycling,98.0
+741,Tokoroa,all,driving,100.0
+742,Tokoroa,all,walking,24.0
+743,Tokoroa,all,cycling,94.0
+744,Havelock North,doctor,driving,100.0
+745,Havelock North,doctor,walking,49.0
+746,Havelock North,doctor,cycling,95.0
+747,Havelock North,ece,driving,100.0
+748,Havelock North,ece,walking,77.0
+749,Havelock North,ece,cycling,96.0
+750,Havelock North,greenspace,driving,100.0
+751,Havelock North,greenspace,walking,93.0
+752,Havelock North,greenspace,cycling,100.0
+753,Havelock North,oral_health,driving,100.0
+754,Havelock North,oral_health,walking,52.0
+755,Havelock North,oral_health,cycling,97.0
+756,Havelock North,pharmacy,driving,100.0
+757,Havelock North,pharmacy,walking,46.0
+758,Havelock North,pharmacy,cycling,93.0
+759,Havelock North,primary_school,driving,100.0
+760,Havelock North,primary_school,walking,60.0
+761,Havelock North,primary_school,cycling,98.0
+762,Havelock North,supermarket,driving,100.0
+763,Havelock North,supermarket,walking,27.0
+764,Havelock North,supermarket,cycling,89.0
+765,Havelock North,all,driving,100.0
+766,Havelock North,all,walking,6.0
+767,Havelock North,all,cycling,87.0
+768,Whanganui,doctor,driving,100.0
+769,Whanganui,doctor,walking,57.0
+770,Whanganui,doctor,cycling,98.0
+771,Whanganui,ece,driving,100.0
+772,Whanganui,ece,walking,91.0
+773,Whanganui,ece,cycling,99.0
+774,Whanganui,greenspace,driving,100.0
+775,Whanganui,greenspace,walking,96.0
+776,Whanganui,greenspace,cycling,99.0
+777,Whanganui,oral_health,driving,100.0
+778,Whanganui,oral_health,walking,78.0
+779,Whanganui,oral_health,cycling,99.0
+780,Whanganui,pharmacy,driving,100.0
+781,Whanganui,pharmacy,walking,58.0
+782,Whanganui,pharmacy,cycling,93.0
+783,Whanganui,primary_school,driving,100.0
+784,Whanganui,primary_school,walking,77.0
+785,Whanganui,primary_school,cycling,99.0
+786,Whanganui,supermarket,driving,100.0
+787,Whanganui,supermarket,walking,43.0
+788,Whanganui,supermarket,cycling,98.0
+789,Whanganui,all,driving,100.0
+790,Whanganui,all,walking,23.0
+791,Whanganui,all,cycling,93.0
+792,Masterton,doctor,driving,100.0
+793,Masterton,doctor,walking,45.0
+794,Masterton,doctor,cycling,99.0
+795,Masterton,ece,driving,100.0
+796,Masterton,ece,walking,92.0
+797,Masterton,ece,cycling,100.0
+798,Masterton,greenspace,driving,100.0
+799,Masterton,greenspace,walking,94.0
+800,Masterton,greenspace,cycling,100.0
+801,Masterton,oral_health,driving,100.0
+802,Masterton,oral_health,walking,42.0
+803,Masterton,oral_health,cycling,100.0
+804,Masterton,pharmacy,driving,100.0
+805,Masterton,pharmacy,walking,56.0
+806,Masterton,pharmacy,cycling,100.0
+807,Masterton,primary_school,driving,100.0
+808,Masterton,primary_school,walking,56.0
+809,Masterton,primary_school,cycling,100.0
+810,Masterton,supermarket,driving,100.0
+811,Masterton,supermarket,walking,54.0
+812,Masterton,supermarket,cycling,100.0
+813,Masterton,all,driving,100.0
+814,Masterton,all,walking,24.0
+815,Masterton,all,cycling,99.0
+816,Paraparaumu,doctor,driving,100.0
+817,Paraparaumu,doctor,walking,56.0
+818,Paraparaumu,doctor,cycling,100.0
+819,Paraparaumu,ece,driving,100.0
+820,Paraparaumu,ece,walking,87.0
+821,Paraparaumu,ece,cycling,100.0
+822,Paraparaumu,greenspace,driving,100.0
+823,Paraparaumu,greenspace,walking,100.0
+824,Paraparaumu,greenspace,cycling,100.0
+825,Paraparaumu,oral_health,driving,100.0
+826,Paraparaumu,oral_health,walking,57.0
+827,Paraparaumu,oral_health,cycling,99.0
+828,Paraparaumu,pharmacy,driving,100.0
+829,Paraparaumu,pharmacy,walking,49.0
+830,Paraparaumu,pharmacy,cycling,100.0
+831,Paraparaumu,primary_school,driving,100.0
+832,Paraparaumu,primary_school,walking,64.0
+833,Paraparaumu,primary_school,cycling,99.0
+834,Paraparaumu,supermarket,driving,100.0
+835,Paraparaumu,supermarket,walking,49.0
+836,Paraparaumu,supermarket,cycling,96.0
+837,Paraparaumu,all,driving,100.0
+838,Paraparaumu,all,walking,14.0
+839,Paraparaumu,all,cycling,96.0
+840,Waikanae,doctor,driving,100.0
+841,Waikanae,doctor,walking,33.0
+842,Waikanae,doctor,cycling,65.0
+843,Waikanae,ece,driving,100.0
+844,Waikanae,ece,walking,69.0
+845,Waikanae,ece,cycling,95.0
+846,Waikanae,greenspace,driving,100.0
+847,Waikanae,greenspace,walking,91.0
+848,Waikanae,greenspace,cycling,95.0
+849,Waikanae,oral_health,driving,100.0
+850,Waikanae,oral_health,walking,45.0
+851,Waikanae,oral_health,cycling,73.0
+852,Waikanae,pharmacy,driving,100.0
+853,Waikanae,pharmacy,walking,41.0
+854,Waikanae,pharmacy,cycling,67.0
+855,Waikanae,primary_school,driving,100.0
+856,Waikanae,primary_school,walking,45.0
+857,Waikanae,primary_school,cycling,73.0
+858,Waikanae,supermarket,driving,100.0
+859,Waikanae,supermarket,walking,45.0
+860,Waikanae,supermarket,cycling,95.0
+861,Waikanae,all,driving,100.0
+862,Waikanae,all,walking,26.0
+863,Waikanae,all,cycling,65.0
+864,Porirua,doctor,driving,100.0
+865,Porirua,doctor,walking,59.0
+866,Porirua,doctor,cycling,93.0
+867,Porirua,ece,driving,100.0
+868,Porirua,ece,walking,91.0
+869,Porirua,ece,cycling,99.0
+870,Porirua,greenspace,driving,100.0
+871,Porirua,greenspace,walking,98.0
+872,Porirua,greenspace,cycling,100.0
+873,Porirua,oral_health,driving,100.0
+874,Porirua,oral_health,walking,77.0
+875,Porirua,oral_health,cycling,100.0
+876,Porirua,pharmacy,driving,100.0
+877,Porirua,pharmacy,walking,52.0
+878,Porirua,pharmacy,cycling,92.0
+879,Porirua,primary_school,driving,100.0
+880,Porirua,primary_school,walking,81.0
+881,Porirua,primary_school,cycling,100.0
+882,Porirua,supermarket,driving,100.0
+883,Porirua,supermarket,walking,38.0
+884,Porirua,supermarket,cycling,82.0
+885,Porirua,all,driving,100.0
+886,Porirua,all,walking,18.0
+887,Porirua,all,cycling,79.0
+888,Richmond,doctor,driving,100.0
+889,Richmond,doctor,walking,56.0
+890,Richmond,doctor,cycling,100.0
+891,Richmond,ece,driving,100.0
+892,Richmond,ece,walking,90.0
+893,Richmond,ece,cycling,100.0
+894,Richmond,greenspace,driving,100.0
+895,Richmond,greenspace,walking,96.0
+896,Richmond,greenspace,cycling,100.0
+897,Richmond,oral_health,driving,100.0
+898,Richmond,oral_health,walking,34.0
+899,Richmond,oral_health,cycling,98.0
+900,Richmond,pharmacy,driving,100.0
+901,Richmond,pharmacy,walking,41.0
+902,Richmond,pharmacy,cycling,98.0
+903,Richmond,primary_school,driving,100.0
+904,Richmond,primary_school,walking,56.0
+905,Richmond,primary_school,cycling,100.0
+906,Richmond,supermarket,driving,100.0
+907,Richmond,supermarket,walking,39.0
+908,Richmond,supermarket,cycling,98.0
+909,Richmond,all,driving,100.0
+910,Richmond,all,walking,21.0
+911,Richmond,all,cycling,96.0
+912,Rangiora,doctor,driving,100.0
+913,Rangiora,doctor,walking,59.0
+914,Rangiora,doctor,cycling,100.0
+915,Rangiora,ece,driving,100.0
+916,Rangiora,ece,walking,88.0
+917,Rangiora,ece,cycling,100.0
+918,Rangiora,greenspace,driving,100.0
+919,Rangiora,greenspace,walking,99.0
+920,Rangiora,greenspace,cycling,100.0
+921,Rangiora,oral_health,driving,100.0
+922,Rangiora,oral_health,walking,69.0
+923,Rangiora,oral_health,cycling,100.0
+924,Rangiora,pharmacy,driving,100.0
+925,Rangiora,pharmacy,walking,45.0
+926,Rangiora,pharmacy,cycling,100.0
+927,Rangiora,primary_school,driving,100.0
+928,Rangiora,primary_school,walking,75.0
+929,Rangiora,primary_school,cycling,100.0
+930,Rangiora,supermarket,driving,100.0
+931,Rangiora,supermarket,walking,33.0
+932,Rangiora,supermarket,cycling,100.0
+933,Rangiora,all,driving,100.0
+934,Rangiora,all,walking,20.0
+935,Rangiora,all,cycling,100.0
+936,Rolleston,doctor,driving,100.0
+937,Rolleston,doctor,walking,40.0
+938,Rolleston,doctor,cycling,99.0
+939,Rolleston,ece,driving,100.0
+940,Rolleston,ece,walking,91.0
+941,Rolleston,ece,cycling,100.0
+942,Rolleston,greenspace,driving,100.0
+943,Rolleston,greenspace,walking,98.0
+944,Rolleston,greenspace,cycling,100.0
+945,Rolleston,oral_health,driving,100.0
+946,Rolleston,oral_health,walking,75.0
+947,Rolleston,oral_health,cycling,100.0
+948,Rolleston,pharmacy,driving,100.0
+949,Rolleston,pharmacy,walking,38.0
+950,Rolleston,pharmacy,cycling,100.0
+951,Rolleston,primary_school,driving,100.0
+952,Rolleston,primary_school,walking,71.0
+953,Rolleston,primary_school,cycling,100.0
+954,Rolleston,supermarket,driving,100.0
+955,Rolleston,supermarket,walking,39.0
+956,Rolleston,supermarket,cycling,100.0
+957,Rolleston,all,driving,100.0
+958,Rolleston,all,walking,23.0
+959,Rolleston,all,cycling,99.0
+960,Oamaru,doctor,driving,100.0
+961,Oamaru,doctor,walking,53.0
+962,Oamaru,doctor,cycling,85.0
+963,Oamaru,ece,driving,100.0
+964,Oamaru,ece,walking,74.0
+965,Oamaru,ece,cycling,97.0
+966,Oamaru,greenspace,driving,100.0
+967,Oamaru,greenspace,walking,96.0
+968,Oamaru,greenspace,cycling,100.0
+969,Oamaru,oral_health,driving,100.0
+970,Oamaru,oral_health,walking,15.0
+971,Oamaru,oral_health,cycling,74.0
+972,Oamaru,pharmacy,driving,100.0
+973,Oamaru,pharmacy,walking,23.0
+974,Oamaru,pharmacy,cycling,77.0
+975,Oamaru,primary_school,driving,100.0
+976,Oamaru,primary_school,walking,58.0
+977,Oamaru,primary_school,cycling,92.0
+978,Oamaru,supermarket,driving,100.0
+979,Oamaru,supermarket,walking,48.0
+980,Oamaru,supermarket,cycling,81.0
+981,Oamaru,all,driving,100.0
+982,Oamaru,all,walking,5.0
+983,Oamaru,all,cycling,66.0
+984,Queenstown,doctor,driving,100.0
+985,Queenstown,doctor,walking,46.0
+986,Queenstown,doctor,cycling,84.0
+987,Queenstown,ece,driving,92.0
+988,Queenstown,ece,walking,42.0
+989,Queenstown,ece,cycling,94.0
+990,Queenstown,greenspace,driving,99.0
+991,Queenstown,greenspace,walking,88.0
+992,Queenstown,greenspace,cycling,96.0
+993,Queenstown,oral_health,driving,93.0
+994,Queenstown,oral_health,walking,32.0
+995,Queenstown,oral_health,cycling,61.0
+996,Queenstown,pharmacy,driving,100.0
+997,Queenstown,pharmacy,walking,45.0
+998,Queenstown,pharmacy,cycling,85.0
+999,Queenstown,primary_school,driving,99.0
+1000,Queenstown,primary_school,walking,44.0
+1001,Queenstown,primary_school,cycling,76.0
+1002,Queenstown,supermarket,driving,100.0
+1003,Queenstown,supermarket,walking,27.0
+1004,Queenstown,supermarket,cycling,80.0
+1005,Queenstown,all,driving,93.0
+1006,Queenstown,all,walking,28.0
+1007,Queenstown,all,cycling,64.0
