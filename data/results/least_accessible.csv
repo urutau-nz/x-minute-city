@@ -89,9 +89,9 @@
 87,Rolleston,cycling,pharmacy
 88,Rolleston,driving,pharmacy
 89,Rolleston,walking,pharmacy
-90,Rotorua,cycling,pharmacy
+90,Rotorua,cycling,supermarket
 91,Rotorua,driving,pharmacy
-92,Rotorua,walking,pharmacy
+92,Rotorua,walking,supermarket
 93,Taupō,cycling,doctor
 94,Taupō,driving,doctor
 95,Taupō,walking,doctor
@@ -101,8 +101,8 @@
 99,Te Awamutu,cycling,doctor
 100,Te Awamutu,driving,doctor
 101,Te Awamutu,walking,doctor
-102,Timaru,cycling,doctor
-103,Timaru,driving,pharmacy
+102,Timaru,cycling,pharmacy
+103,Timaru,driving,doctor
 104,Timaru,walking,doctor
 105,Tokoroa,cycling,doctor
 106,Tokoroa,driving,doctor
@@ -113,14 +113,14 @@
 111,Waikanae,cycling,doctor
 112,Waikanae,driving,pharmacy
 113,Waikanae,walking,doctor
-114,Wellington,cycling,supermarket
+114,Wellington,cycling,greenspace
 115,Wellington,driving,supermarket
-116,Wellington,walking,supermarket
+116,Wellington,walking,greenspace
 117,Whakatāne,cycling,supermarket
 118,Whakatāne,driving,supermarket
 119,Whakatāne,walking,supermarket
 120,Whanganui,cycling,supermarket
-121,Whanganui,driving,supermarket
+121,Whanganui,driving,pharmacy
 122,Whanganui,walking,supermarket
 123,Whangārei,cycling,supermarket
 124,Whangārei,driving,supermarket
