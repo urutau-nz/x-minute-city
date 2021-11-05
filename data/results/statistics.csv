@@ -1,0 +1,127 @@
+,UR2020_V_1,mode,dest_type
+0,Ashburton,cycling,pharmacy
+1,Ashburton,driving,supermarket
+2,Ashburton,walking,pharmacy
+3,Auckland,cycling,supermarket
+4,Auckland,driving,supermarket
+5,Auckland,walking,supermarket
+6,Blenheim,cycling,oral_health
+7,Blenheim,driving,oral_health
+8,Blenheim,walking,oral_health
+9,Cambridge,cycling,pharmacy
+10,Cambridge,driving,pharmacy
+11,Cambridge,walking,pharmacy
+12,Christchurch,cycling,supermarket
+13,Christchurch,driving,supermarket
+14,Christchurch,walking,supermarket
+15,Dunedin,cycling,oral_health
+16,Dunedin,driving,oral_health
+17,Dunedin,walking,oral_health
+18,Feilding,cycling,supermarket
+19,Feilding,driving,doctor
+20,Feilding,walking,supermarket
+21,Gisborne,cycling,doctor
+22,Gisborne,driving,doctor
+23,Gisborne,walking,doctor
+24,Hamilton,cycling,supermarket
+25,Hamilton,driving,supermarket
+26,Hamilton,walking,supermarket
+27,Hastings,cycling,doctor
+28,Hastings,driving,doctor
+29,Hastings,walking,doctor
+30,Havelock North,cycling,supermarket
+31,Havelock North,driving,supermarket
+32,Havelock North,walking,supermarket
+33,Hibiscus Coast,cycling,doctor
+34,Hibiscus Coast,driving,doctor
+35,Hibiscus Coast,walking,doctor
+36,Invercargill,cycling,oral_health
+37,Invercargill,driving,oral_health
+38,Invercargill,walking,oral_health
+39,Kaiapoi,cycling,supermarket
+40,Kaiapoi,driving,supermarket
+41,Kaiapoi,walking,supermarket
+42,Levin,cycling,supermarket
+43,Levin,driving,supermarket
+44,Levin,walking,supermarket
+45,Lower Hutt,cycling,supermarket
+46,Lower Hutt,driving,supermarket
+47,Lower Hutt,walking,supermarket
+48,Masterton,cycling,doctor
+49,Masterton,driving,doctor
+50,Masterton,walking,doctor
+51,Mosgiel,cycling,doctor
+52,Mosgiel,driving,oral_health
+53,Mosgiel,walking,oral_health
+54,Napier,cycling,doctor
+55,Napier,driving,doctor
+56,Napier,walking,doctor
+57,Nelson,cycling,oral_health
+58,Nelson,driving,oral_health
+59,Nelson,walking,oral_health
+60,New Plymouth,cycling,doctor
+61,New Plymouth,driving,doctor
+62,New Plymouth,walking,doctor
+63,Oamaru,cycling,oral_health
+64,Oamaru,driving,oral_health
+65,Oamaru,walking,oral_health
+66,Palmerston North,cycling,doctor
+67,Palmerston North,driving,doctor
+68,Palmerston North,walking,doctor
+69,Paraparaumu,cycling,supermarket
+70,Paraparaumu,driving,supermarket
+71,Paraparaumu,walking,supermarket
+72,Porirua,cycling,supermarket
+73,Porirua,driving,supermarket
+74,Porirua,walking,supermarket
+75,Pukekohe,cycling,supermarket
+76,Pukekohe,driving,supermarket
+77,Pukekohe,walking,supermarket
+78,Queenstown,cycling,oral_health
+79,Queenstown,driving,oral_health
+80,Queenstown,walking,oral_health
+81,Rangiora,cycling,supermarket
+82,Rangiora,driving,supermarket
+83,Rangiora,walking,supermarket
+84,Richmond,cycling,oral_health
+85,Richmond,driving,oral_health
+86,Richmond,walking,oral_health
+87,Rolleston,cycling,pharmacy
+88,Rolleston,driving,pharmacy
+89,Rolleston,walking,pharmacy
+90,Rotorua,cycling,pharmacy
+91,Rotorua,driving,pharmacy
+92,Rotorua,walking,pharmacy
+93,Taupō,cycling,doctor
+94,Taupō,driving,doctor
+95,Taupō,walking,doctor
+96,Tauranga,cycling,supermarket
+97,Tauranga,driving,supermarket
+98,Tauranga,walking,supermarket
+99,Te Awamutu,cycling,doctor
+100,Te Awamutu,driving,doctor
+101,Te Awamutu,walking,doctor
+102,Timaru,cycling,doctor
+103,Timaru,driving,pharmacy
+104,Timaru,walking,doctor
+105,Tokoroa,cycling,doctor
+106,Tokoroa,driving,doctor
+107,Tokoroa,walking,doctor
+108,Upper Hutt,cycling,doctor
+109,Upper Hutt,driving,doctor
+110,Upper Hutt,walking,doctor
+111,Waikanae,cycling,doctor
+112,Waikanae,driving,pharmacy
+113,Waikanae,walking,doctor
+114,Wellington,cycling,supermarket
+115,Wellington,driving,supermarket
+116,Wellington,walking,supermarket
+117,Whakatāne,cycling,supermarket
+118,Whakatāne,driving,supermarket
+119,Whakatāne,walking,supermarket
+120,Whanganui,cycling,supermarket
+121,Whanganui,driving,supermarket
+122,Whanganui,walking,supermarket
+123,Whangārei,cycling,supermarket
+124,Whangārei,driving,supermarket
+125,Whangārei,walking,supermarket
