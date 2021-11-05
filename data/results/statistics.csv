@@ -5,7 +5,7 @@
 3,driving,doctor,Palmerston North,3.184835628200435
 4,driving,doctor,Levin,2.458788634155288
 5,driving,doctor,Lower Hutt,3.245487912139756
-6,driving,doctor,Christchurch,3.1961549343618487
+6,driving,doctor,Christchurch,2.6301842962077244
 7,driving,doctor,Mosgiel,2.6635509502272066
 8,driving,doctor,Dunedin,3.208270532990907
 9,driving,doctor,Napier,3.423727621755778
@@ -47,7 +47,7 @@
 45,driving,ece,Palmerston North,4.1785980035854555
 46,driving,ece,Levin,2.296181755377601
 47,driving,ece,Lower Hutt,1.7424870014743434
-48,driving,ece,Christchurch,6.3179358909887515
+48,driving,ece,Christchurch,2.0556254128816516
 49,driving,ece,Mosgiel,2.132341889763346
 50,driving,ece,Dunedin,1.774917408122443
 51,driving,ece,Napier,2.143375586945108
@@ -173,7 +173,7 @@
 171,driving,pharmacy,Palmerston North,2.9989916412933875
 172,driving,pharmacy,Levin,3.04425419201405
 173,driving,pharmacy,Lower Hutt,3.1405287456871345
-174,driving,pharmacy,Christchurch,2.881584983325589
+174,driving,pharmacy,Christchurch,2.6186486492847836
 175,driving,pharmacy,Mosgiel,2.7399927035971263
 176,driving,pharmacy,Dunedin,2.8403814611968086
 177,driving,pharmacy,Napier,2.9670085034324765
@@ -299,7 +299,7 @@
 339,walking,doctor,Palmerston North,143.72823792687026
 340,walking,doctor,Levin,21.791103210429476
 341,walking,doctor,Lower Hutt,26.39905733095199
-342,walking,doctor,Christchurch,41.1723248397006
+342,walking,doctor,Christchurch,19.471304307477848
 343,walking,doctor,Mosgiel,20.593423976252783
 344,walking,doctor,Dunedin,28.694026033323414
 345,walking,doctor,Napier,68.06783465024365
@@ -341,7 +341,7 @@
 381,walking,ece,Palmerston North,56.04258996988557
 382,walking,ece,Levin,25.17249201664495
 383,walking,ece,Lower Hutt,72.85647677074871
-384,walking,ece,Christchurch,88.01537394092928
+384,walking,ece,Christchurch,20.78030820675912
 385,walking,ece,Mosgiel,13.653798174635583
 386,walking,ece,Dunedin,13.462168182907186
 387,walking,ece,Napier,17.968295221976376
@@ -467,7 +467,7 @@
 507,walking,pharmacy,Palmerston North,143.5801767425502
 508,walking,pharmacy,Levin,22.80018372540689
 509,walking,pharmacy,Lower Hutt,25.814135893247936
-510,walking,pharmacy,Christchurch,34.33424645625149
+510,walking,pharmacy,Christchurch,18.82809455984057
 511,walking,pharmacy,Mosgiel,20.385114793130224
 512,walking,pharmacy,Dunedin,27.928657899699477
 513,walking,pharmacy,Napier,23.43107548984772
@@ -593,7 +593,7 @@
 675,cycling,doctor,Palmerston North,47.59428588757306
 676,cycling,doctor,Levin,7.301216312741455
 677,cycling,doctor,Lower Hutt,9.922034191521789
-678,cycling,doctor,Christchurch,14.395414782679078
+678,cycling,doctor,Christchurch,7.18104181591526
 679,cycling,doctor,Mosgiel,8.35666303722465
 680,cycling,doctor,Dunedin,9.515066480161353
 681,cycling,doctor,Napier,24.770197834707204
@@ -635,7 +635,7 @@
 717,cycling,ece,Palmerston North,21.03860472470162
 718,cycling,ece,Levin,8.047875154776154
 719,cycling,ece,Lower Hutt,24.640897187652516
-720,cycling,ece,Christchurch,28.339611492817824
+720,cycling,ece,Christchurch,5.327327012258845
 721,cycling,ece,Mosgiel,4.95863052783016
 722,cycling,ece,Dunedin,4.95190644721
 723,cycling,ece,Napier,7.823776871257353
@@ -761,7 +761,7 @@
 843,cycling,pharmacy,Palmerston North,48.0362517937255
 844,cycling,pharmacy,Levin,7.771849597009495
 845,cycling,pharmacy,Lower Hutt,9.765992970516686
-846,cycling,pharmacy,Christchurch,11.023391163590437
+846,cycling,pharmacy,Christchurch,6.971987589585101
 847,cycling,pharmacy,Mosgiel,7.411823859634802
 848,cycling,pharmacy,Dunedin,8.746160859077252
 849,cycling,pharmacy,Napier,8.488428169792583
@@ -893,9 +893,9 @@
 9,cycling,all,Cambridge,8.911151440197862
 10,driving,all,Cambridge,3.5255858949908334
 11,walking,all,Cambridge,24.50360148849708
-12,cycling,all,Christchurch,28.339611492817824
-13,driving,all,Christchurch,6.3179358909887515
-14,walking,all,Christchurch,88.01537394092928
+12,cycling,all,Christchurch,11.095261637884313
+13,driving,all,Christchurch,3.4455049122657875
+14,walking,all,Christchurch,37.23008964388792
 15,cycling,all,Dunedin,18.76158470395502
 16,driving,all,Dunedin,5.619145220100444
 17,walking,all,Dunedin,52.70286837576675
