@@ -8,6 +8,7 @@ import numpy as np
 import json
 import geopandas as gpd
 import topojson as tp
+from tqdm import tqdm
 
 config_filename = 'main'
 # import config file
@@ -18,34 +19,40 @@ with open('./config/{}.yaml'.format(config_filename)) as file:
 db = main.init_db(config)
 
 import code
-code.interact(local=locals())
+#code.interact(local=locals())
 
 ###
 # distance as csv - only nonzero pop
 ###
-# sql = "SELECT geoid, dest_type, distance FROM nearest_block WHERE population > 0"
+# sql = "SELECT geoid, dest_type, distance, mode FROM nearest_block WHERE population > 0"
 # dist = pd.read_sql(sql, db['con'])
+# # sql = "SELECT geoid, dest_type, distance, mode FROM nearest_block_walk WHERE population > 0"
+# # dist2 = pd.read_sql(sql, db['con'])
+# # sql = "SELECT geoid, dest_type, distance, mode FROM nearest_block_cycle WHERE population > 0"
+# # dist3 = pd.read_sql(sql, db['con'])
+# # dist = dist1.append(dist2)
+# # dist = dist.append(dist3)
 # dist.to_csv('./data/results/distances.csv')
 
 ###
 # blocks - shpfile
 ###
-sql = 'SELECT geoid as id, geometry FROM nearest_block WHERE population > 0 AND distance IS NOT NULL'
-blocks = gpd.read_postgis(sql, con=db['con'], geom_col='geometry')
-blocks.drop_duplicates(inplace=True)
-blocks['centroids'] = blocks.centroid
-zones = gpd.read_file('./data/raw/statsnzterritorial-authority-2021-generalised-SHP/territorial-authority-2021-generalised.shp')
-zones = zones[['TA2021_V_1', 'TA2021_V1_','geometry']]
-zones = zones.to_crs(blocks.crs)
-blocks.set_geometry('centroids',inplace=True)
-blocks = blocks.to_crs(zones.crs)
-blocks = gpd.sjoin(blocks, zones, how='inner', op='within')
-blocks.set_geometry('geometry',inplace=True)
-blocks = blocks.to_crs(zones.crs)
-blocks = blocks.loc[blocks['TA2021_V1_'] != 999]
-blocks = blocks.loc[~blocks['id'].isin(['7022480', '7001121', '7001125', '7001123', '7023238', '7029871'])]
-blocks.drop('centroids', axis=1, inplace=True)
-blocks.to_file('./data/results/blocks.shp')
+# sql = 'SELECT geoid as id, geometry FROM nearest_block WHERE population > 0 AND distance IS NOT NULL'
+# blocks = gpd.read_postgis(sql, con=db['con'], geom_col='geometry')
+# blocks.drop_duplicates(inplace=True)
+# blocks['centroids'] = blocks.centroid
+# zones = gpd.read_file('./data/raw/statsnzterritorial-authority-2021-generalised-SHP/territorial-authority-2021-generalised.shp')
+# zones = zones[['TA2021_V_1', 'TA2021_V1_','geometry']]
+# zones = zones.to_crs(blocks.crs)
+# blocks.set_geometry('centroids',inplace=True)
+# blocks = blocks.to_crs(zones.crs)
+# blocks = gpd.sjoin(blocks, zones, how='inner', op='within')
+# blocks.set_geometry('geometry',inplace=True)
+# blocks = blocks.to_crs(zones.crs)
+# blocks = blocks.loc[blocks['TA2021_V1_'] != 999]
+# blocks = blocks.loc[~blocks['id'].isin(['7022480', '7001121', '7001125', '7001123', '7023238', '7029871'])]
+# blocks.drop('centroids', axis=1, inplace=True)
+# blocks.to_file('./data/results/blocks.shp')
 
 
 ###
@@ -56,24 +63,33 @@ blocks.to_file('./data/results/blocks.shp')
 # blocks_topo = tp.Topology(blocks).topoquantize(1e6)
 # blocks_topo.to_json('./data/results/blocks.topojson')
 
+# blocks = gpd.read_file('./data/results/blocks.shp')
+# regions = list(blocks['TA2021_V_1'].unique())
+# for region in tqdm(regions):
+#     sub_block = blocks[blocks['TA2021_V_1']==region]
+#     blocks_topo = tp.Topology(sub_block).topoquantize(1e6)
+#     blocks_topo.to_json('./data/results/block_{}.topojson'.format(region))
+
+
+
 ###
 # destinations: dest_type, lat, lon
 ###
 # sql = "SELECT dest_type, st_x(geom) as lon, st_y(geom) as lat FROM destinations"
 # dist = pd.read_sql(sql, db['con'])
-gdf = geopandas.GeoDataFrame(dist, geometry=gpd.points_from_xy(df.lon, df.lat))
-zones = gpd.read_file('./data/raw/statsnzterritorial-authority-2021-generalised-SHP/territorial-authority-2021-generalised.shp')
-zones = zones[['TA2021_V_1','geometry']]
-zones = zones.to_crs(df.crs)
-gdf = gpd.clip(zones, gdf)
-# dist.to_csv('./data/results/destinations.csv')
+# gdf = geopandas.GeoDataFrame(dist, geometry=gpd.points_from_xy(df.lon, df.lat))
+# zones = gpd.read_file('./data/raw/statsnzterritorial-authority-2021-generalised-SHP/territorial-authority-2021-generalised.shp')
+# zones = zones[['TA2021_V_1','geometry']]
+# zones = zones.to_crs(df.crs)
+# gdf = gpd.clip(zones, gdf)
+# # dist.to_csv('./data/results/destinations.csv')
 
 ###
 # histogram and cdf
 ###
 
 # import data
-sql = "SELECT geoid, dest_type, distance, population, geometry  FROM nearest_block WHERE population > 0 AND distance IS NOT NULL"
+sql = "SELECT geoid, dest_type, distance, population, geometry, mode  FROM nearest_block WHERE population > 0 AND distance IS NOT NULL"
 df = gpd.read_postgis(sql, con=db['con'], geom_col='geometry')
 df['distance'] = df['distance']/60
 df['centroids'] = df.centroid
@@ -97,40 +113,44 @@ bins = list(range(1,60)) + [1000]
 # create hist and cdf
 groups = ['population','nz_euro','maori','pasifika','asian']#,'difficulty_walking']
 hists = []
-for group in groups:
-    regions = df['TA2021_V_1'].unique()
-    for service in df['dest_type'].unique():
-        df_sub = df[df['dest_type']==service]
-        # print(group)
-        # print(service)
-        # create the hist
-        # import code
-        # code.interact(local=locals())
-        density, division = np.histogram(df_sub['distance'], bins = bins, weights=df_sub[group], density=True)
-        unity_density = density / density.sum()
-        unity_density = np.append(0, unity_density)
-        division = np.append(0, division)
-        df_new = pd.DataFrame({'pop_perc':unity_density, 'distance':division[:-1]})
-        df_new['region'] = 'All'
-        df_new['service']=service
-        df_new['pop_perc'] = df_new['pop_perc']*100
-        df_new['pop_perc_cum'] = df_new['pop_perc'].cumsum()
-        df_new['group'] = group
-        hists.append(df_new)
-        for region in regions:
-            df_sub = df[(df['dest_type']==service)&(df['TA2021_V_1']==region)]
+modes = df['mode'].unique()
+for mode in modes:
+    for group in groups:
+        regions = df['TA2021_V_1'].unique()
+        for service in df['dest_type'].unique():
+            df_sub = df[(df['dest_type']==service)&(df['mode']==mode)]
+            # print(group)
+            # print(service)
             # create the hist
+            # import code
+            # code.interact(local=locals())
             density, division = np.histogram(df_sub['distance'], bins = bins, weights=df_sub[group], density=True)
             unity_density = density / density.sum()
             unity_density = np.append(0, unity_density)
             division = np.append(0, division)
             df_new = pd.DataFrame({'pop_perc':unity_density, 'distance':division[:-1]})
+            df_new['region'] = 'All'
             df_new['service']=service
             df_new['pop_perc'] = df_new['pop_perc']*100
             df_new['pop_perc_cum'] = df_new['pop_perc'].cumsum()
-            df_new['region'] = region
             df_new['group'] = group
+            df_new['mode'] = mode
             hists.append(df_new)
+            for region in regions:
+                df_sub = df[(df['dest_type']==service)&(df['TA2021_V_1']==region)&(df['mode']==mode)]
+                # create the hist
+                density, division = np.histogram(df_sub['distance'], bins = bins, weights=df_sub[group], density=True)
+                unity_density = density / density.sum()
+                unity_density = np.append(0, unity_density)
+                division = np.append(0, division)
+                df_new = pd.DataFrame({'pop_perc':unity_density, 'distance':division[:-1]})
+                df_new['service']=service
+                df_new['pop_perc'] = df_new['pop_perc']*100
+                df_new['pop_perc_cum'] = df_new['pop_perc'].cumsum()
+                df_new['region'] = region
+                df_new['group'] = group
+                df_new['mode'] = mode
+                hists.append(df_new)
 
 # concat
 df_hists = pd.concat(hists)

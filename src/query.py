@@ -429,25 +429,26 @@ def write_to_postgres(df, db, transport_mode, indices=True):
     df['mode'] = transport_mode
     table_name = db['table_name']
     logger.error('Writing data to SQL')
-    df.head(0).to_sql(table_name, db['engine'], if_exists='append',index=False) #truncates the table
-    conn = db['engine'].raw_connection()
-    cur = conn.cursor()
-    output = io.StringIO()
-    df.to_csv(output, sep='\t', header=False, index=False)
-    output.seek(0)
-    cur.copy_from(output, table_name, null="") # null values become ''
-    logger.error('Distances written successfully to SQL as "{}"'.format(table_name))
-    # update indices
-    logger.error('Updating indices on SQL')
-    if indices == True:
-        if table_name == db['table_name']:
-            queries = [
-                        'CREATE INDEX "{0}_dest_id" ON {0} ("id_dest");'.format(db['table_name']),
-                        'CREATE INDEX "{0}_orig_id" ON {0} ("id_orig");'.format(db['table_name'])
-                        ]
-        for q in queries:
-            cur.execute(q)
-    conn.commit()
+    df.to_sql(table_name, db['engine'], if_exists='append',index=False)
+    # df.head(0).to_sql(table_name, db['engine'], if_exists='append',index=False) #truncates the table
+    # conn = db['engine'].raw_connection()
+    # cur = conn.cursor()
+    # output = io.StringIO()
+    # df.to_csv(output, sep='\t', header=False, index=False)
+    # output.seek(0)
+    # cur.copy_from(output, table_name, null="") # null values become ''
+    # logger.error('Distances written successfully to SQL as "{}"'.format(table_name))
+    # # update indices
+    # logger.error('Updating indices on SQL')
+    # if indices == True:
+    #     if table_name == db['table_name']:
+    #         queries = [
+    #                     'CREATE INDEX "{0}_dest_id" ON {0} ("id_dest");'.format(db['table_name']),
+    #                     'CREATE INDEX "{0}_orig_id" ON {0} ("id_orig");'.format(db['table_name'])
+    #                     ]
+    #     for q in queries:
+    #         cur.execute(q)
+    # conn.commit()
 
 
 if __name__ == '__main__':

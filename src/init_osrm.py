@@ -15,7 +15,7 @@ def main(config, logger, transport_mode):
     osm_subregion = config['OSM']['osm_subregion']
     osm_region = config['OSM']['osm_region']
     port = config['OSRM']['port']
-    # transport_mode = mode_dict[config['transport_mode']]
+    transport_mode = mode_dict[transport_mode]
     directory = config['OSM']['data_directory']
     state = config['location']['state']
 
