@@ -1,6 +1,7 @@
 '''
 Create a table with the nearest distance, grouped by destination type for each of the blocks
 '''
+from sqlalchemy_utils.functions.orm import table_name
 import main
 import yaml 
 import psycopg2
@@ -16,55 +17,42 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S')
 logger = logging.getLogger(__name__)
 
-def main(db):
+
+
+config_filename = 'main'
+# import config file
+with open('./config/{}.yaml'.format(config_filename)) as file:
+    config = yaml.load(file)
+
+
+def nearest(db):
 
     conn = db['engine'].raw_connection()
     cur = conn.cursor()
 
-    dest_types = pd.read_sql('Select distinct(dest_type) from destinations', db['con'])['dest_type'].values
+    config_table_name = config['SQL']['table_name']
+
+    dest_types = pd.read_sql('Select distinct(dest_type) from {}'.format(config_table_name), db['con'])['dest_type'].values
+
+    modes = pd.read_sql('Select distinct(mode) from {}'.format(config_table_name), db['con'])['mode'].values
 
     # get the nearest distance for each block by each destination type
-    queries_1 = ['DROP TABLE IF EXISTS nearest_block;',
-        # """CREATE TABLE nearest_block
-        # AS
-        # SELECT distances.id_orig AS geoid, destinations.dest_type, MIN(distances.distance) AS distance
-        # FROM distances
-        # INNER JOIN destinations ON distances.id_dest = destinations.id_dest
-        # INNER JOIN blocks ON  distances.id_orig = blocks.geoid
-        # GROUP BY distances.id_orig, destinations.dest_type;
-        # """,
-        'CREATE TABLE IF NOT EXISTS nearest_block(geoid TEXT, dest_type TEXT, distance INT, population INT, geometry geometry, mode TEXT)'
+    queries_1 = ['DROP TABLE IF EXISTS nearest_{};'.format(config_table_name),
+        'CREATE TABLE IF NOT EXISTS nearest_{}(geoid TEXT, dest_type TEXT, duration INT, population INT, geometry geometry, mode TEXT)'.format(config_table_name)
     ]
-    queries_2 = [''' INSERT INTO nearest_block (geoid, dest_type, distance, population, geometry, mode)
+    queries_2 = [''' INSERT INTO nearest_{} (geoid, dest_type, duration, population, geometry, mode)
             SELECT dist.id_orig as geoid, destinations.dest_type, MIN(dist.duration) as duration, blocks."C18_CURPop" as population, blocks.geometry, dist.mode
-            FROM duration as dist
+            FROM {} as dist
             INNER JOIN destinations ON dist.id_dest = destinations.id_dest
             INNER JOIN blocks ON  dist.id_orig = blocks."SA12018_V1"
-            WHERE destinations.dest_type='{}' AND dist.mode='driving'
+            WHERE destinations.dest_type='{}' AND dist.mode = '{}'
             GROUP BY dist.id_orig, destinations.dest_type, blocks.geometry, blocks."C18_CURPop", dist.mode;
-        '''.format(dest_type)
+        '''.format(config_table_name, config_table_name, dest_type, mode)
+        for mode in modes 
         for dest_type in dest_types]
-    queries_3 = [''' INSERT INTO nearest_block (geoid, dest_type, distance, population, geometry, mode)
-            SELECT dist.id_orig as geoid, destinations.dest_type, MIN(dist.duration) as duration, blocks."C18_CURPop" as population, blocks.geometry, dist.mode
-            FROM duration as dist
-            INNER JOIN destinations ON dist.id_dest = destinations.id_dest
-            INNER JOIN blocks ON  dist.id_orig = blocks."SA12018_V1"
-            WHERE destinations.dest_type='{}' AND dist.mode='cycling'
-            GROUP BY dist.id_orig, destinations.dest_type, blocks.geometry, blocks."C18_CURPop", dist.mode;
-        '''.format(dest_type)
-        for dest_type in dest_types]
-    queries_4 = [''' INSERT INTO nearest_block (geoid, dest_type, distance, population, geometry, mode)
-            SELECT dist.id_orig as geoid, destinations.dest_type, MIN(dist.duration) as duration, blocks."C18_CURPop" as population, blocks.geometry, dist.mode
-            FROM duration as dist
-            INNER JOIN destinations ON dist.id_dest = destinations.id_dest
-            INNER JOIN blocks ON  dist.id_orig = blocks."SA12018_V1"
-            WHERE destinations.dest_type='{}' AND dist.mode='walking'
-            GROUP BY dist.id_orig, destinations.dest_type, blocks.geometry, blocks."C18_CURPop", dist.mode;
-        '''.format(dest_type)
-        for dest_type in dest_types]
-    queries_5 = ['CREATE INDEX nearest_geoid ON nearest_block (geoid)']
+    queries_3 = ['CREATE INDEX nearest_geoid_{} ON nearest_{} (geoid)'.format(config_table_name,config_table_name)]
 
-    queries = queries_1 + queries_2 + queries_3 + queries_4 + queries_5
+    queries = queries_1 + queries_2 + queries_3
 
     # import code
     # code.interact(local=locals())

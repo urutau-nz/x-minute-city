@@ -40,9 +40,10 @@ df = df[['geoid','city','dest_type','duration','population']]
 ###
 db_name = 'cities_500'
 engine = create_engine('postgresql+psycopg2://postgres:' + passw + '@' + db_host + '/' + db_name + '?port=' + port)
-sql = """select nearest_block20.*, blocks20.id_city as city, blocks20."U7B001" as population from nearest_block20 inner join blocks20 using (geoid);"""
+sql = """select nearest_block20.*, blocks20.id_city as id_city, blocks20."U7B001" as population, cities.name as city, cities.state from nearest_block20 inner join blocks20 using (geoid) inner join cities using (id_city);"""
 df2 = pd.read_sql(sql, con=engine)
 engine.dispose()
+df2['city'] = df2['city'] + ', ' + df2['state']
 df2['duration'] = df2['distance']/800*10
 df2 = df2[['geoid','city','dest_type','duration','population']]
 
@@ -65,7 +66,7 @@ for city in tqdm(cities):
             # Population weighted mean
             pwm = np.average(a = df_sub.duration.values, weights = df_sub.population.values)
             # Inequality penalised mean
-            ede = ineq.kolmpollak.ede(a = df_sub.duration.values, epsilon = -0.5, weights = df_sub.population.values)
+            ede = ineq.kolmpollak.ede(a = df_sub.duration.values, epsilon = -1, weights = df_sub.population.values)
             # Max
             mx = df_sub.duration.values.max()
             # median
@@ -113,7 +114,7 @@ for city in cities:
 
 results_max = pd.DataFrame(results_max, columns=['destination','city','mean','ede','max','median','90th','top10_mean'])
 results = results.append(results_max)
-fn = './data/analysis/measures.csv'
+fn = './data/analysis/measures_aggmax.csv'
 results.to_csv(fn)
 print('Written: {}'.format(fn))
 
@@ -135,12 +136,13 @@ dests = df['dest_type'].unique()
 dests = ['all']#np.setdiff1d(dests, np.array(['all','bank','fire_station']))
 service = 'all'
 # df['geoid'] = df['geoid'].astype('category')
+dest_subset = ['doctor','park','pharmacy','primary_school','supermarket']
 
 results = []
 for city in tqdm(cities):
     # for service in dests:
         df_sub = df[(df['city']==city)].copy()
-        df_sub = df_sub[df_sub.dest_type.isin(['doctor','park','pharmacy','primary_school','supermarket'])]
+        df_sub = df_sub[df_sub.dest_type.isin(dest_subset)]
         df_sub = df_sub.groupby(['geoid']).max()
         df_sub['dest_type']='all'
         df_sub.reset_index(inplace=True)
@@ -148,7 +150,7 @@ for city in tqdm(cities):
             # Population weighted mean
             pwm = np.average(a = df_sub.duration.values, weights = df_sub.population.values)
             # Inequality penalised mean
-            ede = ineq.kolmpollak.ede(a = df_sub.duration.values, epsilon = -0.5, weights = df_sub.population.values)
+            ede = ineq.kolmpollak.ede(a = df_sub.duration.values, epsilon = -1, weights = df_sub.population.values)
             # Max
             mx = df_sub.duration.values.max()
             # median
@@ -196,6 +198,7 @@ fn = './data/analysis/measures_maxagg.csv'
 results.to_csv(fn)
 print('Written: {}'.format(fn))
 
+results = results[results.city!='Ashburton']
 # plot
 comb = list(combinations(['mean','ede','max','median','90th', 'min10', 'min15', 'min20'], 2))
 for x, y in comb:
@@ -203,3 +206,41 @@ for x, y in comb:
     plt.savefig('./data/analysis/maxagg_{}_{}.jpg'.format(x,y),
             dpi=500, format='jpg', transparent=True, bbox_inches='tight', facecolor='w')
     plt.close()
+
+
+###
+# Evaluate the mean of maxs vs max of means
+
+momean = pd.read_csv('./data/analysis/measures_aggmax.csv')
+momax = pd.read_csv('./data/analysis/measures_maxagg.csv')
+
+dest_subset = ['doctor','park','pharmacy','primary_school','supermarket']
+momean = momean[momean.destination.isin(dest_subset)]
+results_max = []
+for city in momean.city.unique():
+    df_sub = momean[momean.city==city]
+    result = ['all', city] + list(df_sub[['mean','ede','max','median','90th','top10_mean']].max())
+    results_max.append(result)
+
+results_max = pd.DataFrame(results_max, columns=['destination','city','mean','ede','max','median','90th','top10_mean'])
+
+
+momean = results_max[['city','mean']]
+momean.rename(columns={'mean':'momean'}, inplace=True)
+momax.rename(columns={'mean':'momax'}, inplace=True)
+momax = momax[['city','momax','country','color_country']]
+momean['city']=momean['city'].astype(str)
+momax['city']=momax['city'].astype(str)
+df = momax.merge(momean, on='city')
+df = df[df.city!='Ashburton']
+df.plot.scatter(x='momax', y='momean', c='color_country')
+plt.xlim([10,60])
+plt.ylim([10,60])
+plt.plot([10,60],[10,60])
+plt.savefig('./data/analysis/momax_v_momean.jpg',
+        dpi=500, format='jpg', transparent=True, bbox_inches='tight', facecolor='w')
+plt.close()
+
+fn = './data/analysis/momax_momean.csv'
+df.to_csv(fn)
+print('Written: {}'.format(fn))

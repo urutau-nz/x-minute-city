@@ -4,63 +4,95 @@ set_up:
   projection: 4326
   # Use a seperate file for each dest type, use the same order as 'services' below
   destination_file_directory:
-    - /homedirs/projects/x-minute-city/data/raw/Pharmacies2017_points.shp
-    - /homedirs/projects/x-minute-city/data/raw/Hospitals2017_points.shp
-    - /homedirs/projects/x-minute-city/data/raw/Community_oralhealthcare_services.shp
-    - /homedirs/projects/x-minute-city/data/raw/All_GP_including_VLCA.shp
-    - /homedirs/projects/x-minute-city/data/raw/Alcohol_outlets_GHL.shp
-    - /homedirs/projects/x-minute-city/data/raw/Dairy_and_conv.shp
-    - /homedirs/projects/x-minute-city/data/raw/Fast_food.shp
-    - /homedirs/projects/x-minute-city/data/raw/Fruit_and_veg.shp
-    - /homedirs/projects/x-minute-city/data/raw/Supermarkets.shp
-    - /homedirs/projects/x-minute-city/data/raw/Takeaways.shp
+    - /homedirs/projects/x-minute-city/data/raw/Pharmacies2017_points.csv
+    # - /homedirs/projects/x-minute-city/data/raw/Hospitals2017_points.shp
+    - /homedirs/projects/x-minute-city/data/raw/Community_oralhealthcare_services.csv
+    - /homedirs/projects/x-minute-city/data/raw/All_GP_including_VLCA.csv
+    # - /homedirs/projects/x-minute-city/data/raw/Alcohol_outlets_GHL.shp
+    # - /homedirs/projects/x-minute-city/data/raw/Dairy_and_conv.shp
+    # - /homedirs/projects/x-minute-city/data/raw/Fast_food.shp
+    # - /homedirs/projects/x-minute-city/data/raw/Fruit_and_veg.shp
+    - /homedirs/projects/x-minute-city/data/raw/supermarket.csv
+    # - /homedirs/projects/x-minute-city/data/raw/Takeaways.shp
+    # - /homedirs/projects/x-minute-city/data/raw/banks.shp
+    # - /homedirs/projects/x-minute-city/data/raw/cafe.shp
+    - /homedirs/projects/x-minute-city/data/raw/ece.shp
+    - /homedirs/projects/x-minute-city/data/raw/greenspace_point.shp
+    - /homedirs/projects/x-minute-city/data/raw/school_primary.csv
+    # - /homedirs/projects/x-minute-city/data/raw/worship.shp
   # name of column in shapefile to keep for matching with destination data
-  dest_id_colname:
-    - OBJECTID
-    - OBJECTID
-    - Street_Add
-    - OBJECTID
-    - OBJECTID
-    - FID_
-    - FID_
-    - FID_
-    - FID_
-    - FID_
-  origin_file_directory: /homedirs/projects/x-minute-city/data/raw/statsnz2018-census-individual-part-1-total-new-zealand-by-statistic-SHP/2018-census-individual-part-1-total-new-zealand-by-statistic.shp
+  # dest_id_colname:
+  #   - OBJECTID
+  #   - OBJECTID
+  #   - Street_Add
+  #   - OBJECTID
+  #   - OBJECTID
+  #   - FID_
+  #   - FID_
+  #   - FID_
+  #   - index
+  #   - FID_
+  #   - index
+  #   - index
+  #   - ECE_Id
+  #   - index
+  #   - OBJECTID
+    # - index
+  origin_file_directory: /homedirs/projects/access_nz/data/raw/combined_2018_census.shp
 orig_id: SA12018_V1
 
 # Which services do you want to evalaute? (must match 'dest_type' name from destination matix, unless script_mode='setup') TYPE: lst of str's
 services:
   - pharmacy
-  - hospital
+  # - hospital
   - oral_health
   - doctor
-  - alcohol_outlet
-  - convenience_store
-  - fast_food
-  - fruit_store
+  # - alcohol_outlet
+  # - convenience_store
+  # - fast_food
+  # - fruit_store
   - supermarket
-  - takeaway
+  # - takeaway
+  # - bank
+  # - cafe
+  - ece
+  - greenspace
+  - primary_school
+  # - worship
+
+# Do the destinations or origins need to be initialised?
+init:
+  dests: False
+  origins: False
+
+alter_results:
+  drop_blocks: ['7022480', '7001121', '7001125', '7001123', '7023238', '7029871','7002089','7025531','7026226','7026225','7026314','7026512','7026315','7024296','7024652','7024605', '7021150', '7021151', '7022138', '7007859']
+  alter_block_results: True
+
 
 # What mode of transport are you evaluating? ['driving', 'walking', 'cycling'] TYPE: str
 transport_mode: ['driving', 'walking', 'cycling']
 
 # What metric would you like to evaluate? comment one out, leaving in list TYPE: str
 metric:
-  # - distance
+ # - distance
   - duration
 
 # This filters origin destination pairs based on their Euclidean proximity and then calculates the network distance between those subset pairs
 query_euclidean: True
 
+euclidean_buffer:
+  distance: 5000
+  max_dests: 10
+
 # What percent of CPU cores would you like to utilise? [0.0 - 1.0] TYPE: float
-par_frac: 0.1
+par_frac: 0.8
 
 # What name would save the distance matrix as? TYPE: str
 SQL:
   create_db: True
   database_name: x-minute-city # this is the name of the database
-  table_name: duration_cycle # this is the name for the table of distances
+  table_name: durations # this is the name for the table of distances/durations
   port: '5002'
   host: 132.181.102.2
 
@@ -84,3 +116,16 @@ OSRM:
     port: '6010'
     # Do you want the port closed after use? [True, False] TYPE: bool
     shutdown: True
+
+
+data_export:
+  execute: True
+  block_results: True
+  block_shapefile: True
+  block_topojson: True
+  region_centroids: True
+  region_destinations: True
+  access_histogram: True
+  edes: True
+  percent_stats: True
+  git_push: True

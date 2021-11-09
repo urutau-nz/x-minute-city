@@ -1,7 +1,7 @@
 import subprocess
 import os
 
-def main(config, logger, transport_mode):
+def main(config, logger, transport_mode, compile_osrm):
     ''' run the shell script that
     - removes the existing docker
     - downloads the osrm files
@@ -30,8 +30,8 @@ def main(config, logger, transport_mode):
     # download the data
     # download_data = 'wget -N https://download.geofabrik.de/{}/{}-latest.osm.pbf -P {}'.format(osm_region, osm_subregion, directory)
     # p = subprocess.run(download_data.split(), stderr=subprocess.PIPE, bufsize=0)
-    compile_osrm = True #'304 Not Modified' not in str(p.stderr)
-    # compile_osrm = False  # True  #
+    # compile_osrm = '304 Not Modified' not in str(p.stderr)
+    compile_osrm = True  #False  # 
 
     # if the data does not redownload, it does not need to re-compile.
     if compile_osrm:

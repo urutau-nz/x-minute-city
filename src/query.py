@@ -4,6 +4,9 @@ Query origin-destination pairs using OSRM
 '''
 ############## Imports ##############
 # Packages
+# mute warnings
+import warnings
+warnings.filterwarnings('ignore')
 import os
 import sys
 from contextlib import contextmanager
@@ -45,19 +48,19 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 ############## Main ##############
-def main(config, transport_mode):
-    '''
-    gathers context and runs functions based on 'script_mode'
-    '''
-    # gather data and context
-    db = connect_db(config)
-    # query the distances
-    origxdest = query_points(db, config, transport_mode)
-    # add df to sql
-    write_to_postgres(origxdest, db, transport_mode)
-    # close the connection
-    db['con'].close()
-    logger.error('Database connection closed')
+# def main(config, transport_mode):
+#     '''
+#     gathers context and runs functions based on 'script_mode'
+#     '''
+#     # gather data and context
+#     db = connect_db(config)
+#     # query the distances
+#     origxdest = query_points(db, config, transport_mode)
+#     # add df to sql
+#     write_to_postgres(origxdest, db, transport_mode)
+#     # close the connection
+#     db['con'].close()
+#     logger.error('Database connection closed')
 
 
 def connect_db(config):
@@ -82,7 +85,7 @@ def query_points(db, config, transport_mode):
     '''
     query OSRM for distances between origins and destinations
     '''
-    logger.info('Querying invoked for {} in {}'.format(transport_mode, config['location']['state']))
+    logger.error('Querying invoked for {} in {}'.format(transport_mode, config['location']['state']))
     location = config['location']
     # connect to db
     cursor = db['con'].cursor()
@@ -105,7 +108,10 @@ def query_points(db, config, transport_mode):
     dest_df['id_dest'] = dest_df['id_dest'].astype('int32')
     dest_df['dest_type'] = dest_df['dest_type'].astype('category')
     dest_df = dest_df.set_index('id_dest')
+    dest_df = dest_df[~dest_df.lon.isna()]
     logger.error('Data: destinations imported')
+    # code.interact(local=locals())
+
 
     origxdest_size = len(dest_df) * len(orig_df)
     logger.error('Before subset there are {} orig-dest pairs'.format(origxdest_size))
@@ -114,9 +120,9 @@ def query_points(db, config, transport_mode):
         logger.error('Subsetting based on Euclidean distance')
         if origxdest_size > 0.5e9:
             logger.error('Large number of pairs, subsetting by iterating through origins')
-            origxdest = euclidean_subset_large(orig_df, dest_df)#db, config, id_city, origxdest_size)
+            origxdest = euclidean_subset_large(orig_df, dest_df, config)#db, config, id_city, origxdest_size)
         else:
-            origxdest = euclidean_subset(orig_df, dest_df)
+            origxdest = euclidean_subset(orig_df, dest_df, config)
         # query
         logger.error('There are {} origin-destination pairs to query'.format(len(origxdest)))
         for metric in config['metric']:
@@ -136,7 +142,7 @@ def query_points(db, config, transport_mode):
     return origxdest
 
 
-def euclidean_subset(orig_df, dest_df):
+def euclidean_subset(orig_df, dest_df, config):
     # list of origxdest pairs
     origxdest = pd.DataFrame(list(itertools.product(orig_df.index, dest_df.index)), columns = ['id_orig', 'id_dest'])
     origxdest['dest_type'] = len(orig_df)*list(dest_df['dest_type'])
@@ -173,8 +179,8 @@ def euclidean_subset(orig_df, dest_df):
 
     # for each destination type
     logger.error('Subsetting origin-destinations by Euclidean distance')
-    distance_threshold = 5000
-    dests_number = 5
+    distance_threshold = config['euclidean_buffer']['distance']
+    dests_number = config['euclidean_buffer']['max_dests']
 
 
     # get all values within the distance_threshold
@@ -201,52 +207,70 @@ def euclidean_subset(orig_df, dest_df):
 
     return(pairs)
 
-def euclidean_subset_large(orig_df, dest_df):
+def euclidean_subset_large(orig_df, dest_df, config):
     # list of origxdest pairs
-    # code.interact(local=locals())
+
+    # get list of unique origins
     id_origs = orig_df.index.unique()
-    distance_threshold = 2000
-    dests_number = 5
+    # set distance threshold
+    distance_threshold = config['euclidean_buffer']['distance']
+    dests_number = config['euclidean_buffer']['max_dests']
+
+    #init list to store dfs
     dfs = []
-    for idx in tqdm(id_origs):
-        # loop through ids
-        origxdest = dest_df.copy()
-        origxdest.reset_index(inplace=True)
-        origxdest['id_orig'] = idx
-        origxdest['id_orig'] = origxdest['id_orig'].astype('category')
-        origxdest = origxdest.merge(orig_df[['x', 'y']].add_prefix('orig_'), left_on='id_orig', right_index=True)
-        origxdest['euclidean'] = haversine(origxdest.orig_y.values, origxdest.orig_x.values, origxdest.lat.values, origxdest.lon.values)
-        # logger.error('Data: origxdest pairs initialised')
-        # logger.error('Euclidean distances calculated')
-        # subset the columns
-        origxdest.drop(columns=['orig_x', 'orig_y',
-                                'lon', 'lat'], inplace=True)
-        # set the index
-        if len(origxdest.dest_type.unique()) > 1:
-            indices = ['id_orig', 'dest_type']
-        else:
-            indices = 'id_orig'
-        origxdest.set_index(indices, inplace=True)
-        # get all values within the distance_threshold
-        pairs = origxdest[origxdest['euclidean'] < distance_threshold]
-        # logger.error('Subset within distance {}'.format(distance_threshold))
-        # get the closest five destinations for remaining origin - dest_Type pairs
-        subset = pairs.groupby(indices)['id_dest'].count()
-        pairs = pairs[pairs.index.isin(subset[subset > dests_number].index.unique())]
-        drop_idx = pairs.index.unique()
-        origxdest = origxdest[~origxdest.index.isin(drop_idx)]
-        pairs_additional = origxdest.sort_values('euclidean', ascending=True).groupby(indices).head(dests_number)
-        # logger.error('Determined closest {} destinations for the remaining origins'.format(dests_number))
-        # merge
-        pairs = pairs.append(pairs_additional)
-        pairs.drop_duplicates(inplace=True)
-        dfs.append(pairs)
-    pairs = pd.concat(dfs)
+
+    # loop through each unique origin
+    num_workers = int(mp.cpu_count() * config['par_frac'])
+    results = Parallel(n_jobs=num_workers)(delayed(euclidean_large_loop)(orig_df, dest_df, id_origs, distance_threshold, dests_number, idx) for idx in tqdm(id_origs, "Looping through large euclidean subset"))
+    pairs = pd.concat(results)
     # optimize
     pairs.reset_index(inplace=True)
     pairs['id_orig'] = pairs['id_orig'].astype('category')
     pairs['dest_type'] = pairs['dest_type'].astype('category')
     return(pairs)
+
+
+def euclidean_large_loop(orig_df, dest_df, id_origs, distance_threshold, dests_number, idx):
+    # loop through ids
+    # init origxdest with dest_df
+    origxdest = dest_df.copy()
+    # reset index
+    origxdest.reset_index(inplace=True)
+    # add column for origin id
+    origxdest['id_orig'] = idx
+    # reduce size by saving as a category
+    #origxdest['id_orig'] = origxdest['id_orig'].astype('category')
+    # adds column for origin co-ords (seems over complex)
+    #origxdest = origxdest.merge(orig_df[['x', 'y']].add_prefix('orig_'), left_on='id_orig', right_index=True)
+    # adds euclidean distance
+    origxdest['euclidean'] = haversine(np.array(list(orig_df[orig_df.index==idx]['y'])*len(origxdest.lat.values)), np.array(list(orig_df[orig_df.index==idx]['x'])*len(origxdest.lat.values)), origxdest.lat.values, origxdest.lon.values)
+
+    # drop un needed columns
+    origxdest.drop(columns=['lon', 'lat'], inplace=True)
+    # set the index
+    # if len(origxdest.dest_type.unique()) > 1:
+    #     indices = ['id_orig', 'dest_type']
+    # else:
+    #     indices = 'id_orig'
+    # set index
+    #origxdest.set_index(indices, inplace=True)
+    # get all values within the distance_threshold
+    pairs = origxdest[origxdest['euclidean'] < distance_threshold]
+    # get the closest x destinations for remaining origin - dest_Type pairs
+    drop_idx = []
+    for destination_type in list(dest_df.dest_type.unique()):
+        sub_pairs = pairs[pairs['dest_type']==destination_type]
+        if len(sub_pairs) > dests_number:
+            keep_pairs = list(sub_pairs.nsmallest(10, columns=['euclidean'])['id_dest'])
+            drop_idx += list(sub_pairs[~sub_pairs['id_dest'].isin(keep_pairs)]['id_dest'])
+        else:
+            continue
+    pairs = pairs[~pairs['id_dest'].isin(drop_idx)]
+    pairs.drop_duplicates(inplace=True)
+    return(pairs)
+
+
+
 
 ############## Parallel Table Query ##############
 
@@ -254,71 +278,63 @@ def euclidean_subset_large(orig_df, dest_df):
 def euclidean_query(origxdest, orig_df, dest_df, config, transport_mode):
     # Use the table service so as to reduce the amount of requests sent
     # https://github.com/Project-OSRM/osrm-backend/blob/master/docs/http.md#table-service
-
     origxdest.set_index('id_orig', inplace=True)
     origxdest = origxdest.merge(dest_df[['lon','lat']].add_prefix('dest_'), left_on='id_dest', right_index=True)
     origxdest = origxdest.merge(orig_df[['x','y']].add_prefix('orig_'), left_index=True, right_index=True)
-
-    #create query string
-    osrm_url = config['OSRM']['host'] + ':' + config['OSRM']['port']
-    base_string = osrm_url + "/table/v1/{}/".format(transport_mode)
-
+    base_string = "http://localhost:{}".format(config['OSRM']['port']) + "/table/v1/{}/".format(transport_mode)
     # options string ('?annotations=duration,distance' will give distance and duration)
-    if len(config['metric']) == 2:
+    if len(config["metric"]) == 2:
         options_string_base = '?annotations=duration,distance'
     else:
-        options_string_base = '?annotations={}'.format(
-            config['metric'][0])  # '?annotations=duration,distance'
-
-
-    # create a list of queries
-    query_list = []
-    origin_ids = origxdest.index.unique().values
-    for id_orig in origin_ids:
-        # make a string of the origin coordinates
-        orig_string = str(origxdest.loc[[id_orig], ['orig_x']].iloc[0][0]) + "," + str(origxdest.loc[[id_orig], ['orig_y']].iloc[0][0]) + ';'
-        # make a string of all the destination coordinates
-        single_origxdest = origxdest.loc[[id_orig]]
-        dest_string = ""
-        for j in range(len(single_origxdest)):
-            #now add each dest in the string
-            dest_string += str(single_origxdest['dest_lon'][j]) + "," + \
-                str(single_origxdest['dest_lat'][j]) + ";"
-        #remove last semi colon
-        dest_string = dest_string[:-1]
-
-        # make a string of the number of the sources
-        source_str = '&sources=' + \
-            str(list(range(1)))[
-                1:-1].replace(' ', '').replace(',', ';')
-        # make the string for the destinations
-        dest_idx_str = '&destinations=' + \
-            str(list(range(1, 1+len(single_origxdest)))
-                )[1:-1].replace(' ', '').replace(',', ';')
-        # combine and create the query string
-        options_string = options_string_base + source_str + dest_idx_str
-        query_string = base_string + orig_string + dest_string + options_string
-        # append to list of queries
-        query_list.append(query_string)
-    # # Table Query OSRM in parallel
-    #define cpu usage
-    num_workers = np.int(mp.cpu_count() * config['par_frac'])
+        options_string_base = '?annotations={}'.format(config["metric"][0])  # '?annotations=duration,distance'
+    # Create list of query strings from orig to dests
+    num_workers = int(mp.cpu_count() * config['par_frac'])
+    results = Parallel(n_jobs=num_workers)(delayed(create_query_string)(id_orig, origxdest.loc[[id_orig]], base_string, options_string_base) for id_orig in tqdm(origxdest.index.unique().values, "Creating query strings"))
+    query_df = pd.DataFrame(results, columns=["id_orig", "query_string"])
+    query_df["id_orig"] = query_df["id_orig"].astype(int)
+    query_df.sort_values(by="id_orig", axis=0, ascending=True, inplace=True)
+    query_list = list(query_df["query_string"])
+    # Table Query OSRM in parallel
     #gets list of tuples which contain 1list of distances and 1list
-    logger.error('Querying the origin-destination pairs:')
-    results = Parallel(n_jobs=num_workers)(delayed(req)(query_string, config) for query_string in tqdm(query_list))
+    results = Parallel(n_jobs=num_workers)(delayed(req)(query_string, config) for query_string in tqdm(query_list, "Querying origin-destination points"))
+
     # get the results in the right format
-    if len(config['metric']) == 2:
+    if len(config["metric"]) == 2:
         dists = [l for orig in results for l in orig[0]]
         durs = [l for orig in results for l in orig[1]]
         origxdest['distance'] = dists
         origxdest['duration'] = durs
     else:
         formed_results = [result for query in results for result in query]
-        origxdest['{}'.format(config['metric'][0])] = formed_results
-    # if None in formed_results:
-    #     code.interact(local=locals())
-    logger.error('Querying complete.')
+        origxdest['{}'.format(config["metric"][0])] = formed_results
     return(origxdest)
+
+
+def create_query_string(id_orig, single_origxdest, base_string, options_string_base):
+    # make a string of the origin coordinates
+    orig_string = str(single_origxdest[['orig_x']].iloc[0][0]) + "," + str(single_origxdest[['orig_y']].iloc[0][0]) + ';'
+
+    # make a string of all the destination coordinates
+    dest_string = ""
+    for j in range(len(single_origxdest)):
+        #now add each dest in the string
+        dest_string += str(single_origxdest['dest_lon'].iloc[j]) + "," + \
+            str(single_origxdest['dest_lat'].iloc[j]) + ";"
+    #remove last semi colon
+    dest_string = dest_string[:-1]
+    # make a string of the number of the sources
+    source_str = '&sources=' + \
+        str(list(range(1)))[
+            1:-1].replace(' ', '').replace(',', ';')
+    # make the string for the destinations
+    dest_idx_str = '&destinations=' + \
+        str(list(range(1, 1+len(single_origxdest)))
+            )[1:-1].replace(' ', '').replace(',', ';')
+
+    # combine and create the query string
+    query_string = base_string + orig_string + dest_string + options_string_base + source_str + dest_idx_str
+    
+    return [ id_orig, query_string ]
 
 def execute_table_query(origxdest, orig_df, dest_df, config, transport_mode):
     # Use the table service so as to reduce the amount of requests sent
@@ -398,6 +414,7 @@ def req(query_string, config):
         return temp_dist, temp_dur
     else:
         return [item for sublist in response['{}s'.format(config['metric'][0])] for item in sublist]
+        
 
 
 def haversine(s_lat, s_lng, e_lat, e_lng):
@@ -423,33 +440,31 @@ def requests_retry_session(retries,backoff_factor,status_forcelist=(500, 502, 50
     return session
 
 ############## Save to SQL ##############
-def write_to_postgres(df, db, transport_mode, indices=True):
+def write_to_postgres(df, db, indices=True):
     ''' quickly write to a postgres database
         from https://stackoverflow.com/a/47984180/5890574'''
-    df['mode'] = transport_mode
     table_name = db['table_name']
     logger.error('Writing data to SQL')
-    df.to_sql(table_name, db['engine'], if_exists='append',index=False)
-    # df.head(0).to_sql(table_name, db['engine'], if_exists='append',index=False) #truncates the table
-    # conn = db['engine'].raw_connection()
-    # cur = conn.cursor()
-    # output = io.StringIO()
-    # df.to_csv(output, sep='\t', header=False, index=False)
-    # output.seek(0)
-    # cur.copy_from(output, table_name, null="") # null values become ''
-    # logger.error('Distances written successfully to SQL as "{}"'.format(table_name))
-    # # update indices
-    # logger.error('Updating indices on SQL')
-    # if indices == True:
-    #     if table_name == db['table_name']:
-    #         queries = [
-    #                     'CREATE INDEX "{0}_dest_id" ON {0} ("id_dest");'.format(db['table_name']),
-    #                     'CREATE INDEX "{0}_orig_id" ON {0} ("id_orig");'.format(db['table_name'])
-    #                     ]
-    #     for q in queries:
-    #         cur.execute(q)
-    # conn.commit()
+    df.head(0).to_sql(table_name, db['engine'], if_exists='replace',index=False) #truncates the table
+    conn = db['engine'].raw_connection()
+    cur = conn.cursor()
+    output = io.StringIO()
+    df.to_csv(output, sep='\t', header=False, index=False)
+    output.seek(0)
+    cur.copy_from(output, table_name, null="") # null values become ''
+    logger.error('Distances written successfully to SQL as "{}"'.format(table_name))
+    # update indices
+    logger.error('Updating indices on SQL')
+    if indices == True:
+        if table_name == db['table_name']:
+            queries = [
+                        'CREATE INDEX "{0}_dest_id" ON {0} ("id_dest");'.format(db['table_name']),
+                        'CREATE INDEX "{0}_orig_id" ON {0} ("id_orig");'.format(db['table_name'])
+                        ]
+        for q in queries:
+            cur.execute(q)
+    conn.commit()
 
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
