@@ -13,7 +13,7 @@ def main(logger):
     shell_commands = [
                     'git add .',
                     'git status',
-                    'git commit -m "updating app data"',
+                    "git commit -m 'updating app data'",
                     'git push -u origin master'
                     ]
     for com in shell_commands:

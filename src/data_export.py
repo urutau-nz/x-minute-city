@@ -27,12 +27,11 @@ def main_export():
     # distance as csv - only nonzero pop # block_results
     ###
     if config['data_export']['block_results']:
-        sql = "SELECT geoid, dest_type, duration, mode FROM nearest_{} WHERE population > 0".format(config['SQL']['table_name'])
+        sql = "SELECT * FROM nearest_{} WHERE population > 0".format(config['SQL']['table_name'])
         df = pd.read_sql(sql, db['con'])
         df = df[df['dest_type'].isin(['pharmacy','oral_health','doctor','supermarket','ece','greenspace','primary_school'])]
         # dist.duration = dist.duration/60
         # dist.duration = dist.duration.astype(int)
-        # dist.to_sql('nearest_block', db['engine'], if_exists='replace')
         if config['alter_results']['alter_block_results']:
             df.loc[(df.geoid=='7026575')&(df.dest_type=='ece')&(df['mode']=='walking'),'duration'] = 40
             df.loc[(df.geoid=='7026575')&(df.dest_type=='ece')&(df['mode']=='cycling'),'duration'] = 14
@@ -78,7 +77,8 @@ def main_export():
         all_dist['dest_type']='all'
         all_dist.reset_index(inplace=True)
         df = df.append(all_dist)
-
+        df.to_sql('nearest_{}'.format(config['SQL']['table_name']), db['engine'], if_exists='replace')
+        df = df[['geoid', 'dest_type', 'duration', 'mode']]
         df.to_csv('./data/results/duration.csv')
         # dist.to_csv('/homedirs/tml62/distances.csv')
         print('Written: ./data/results/duration.csv')

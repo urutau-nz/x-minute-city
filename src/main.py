@@ -43,7 +43,7 @@ def main(config_filename=None):
     
     # initialize and connect to the server
     logger.error('Establishing DB connection')
-    db = init_db(config)
+    # db = init_db(config)
 
     # # add origins and destinations
     # if config['init']['dests']:
@@ -72,12 +72,12 @@ def main(config_filename=None):
     # # calculate nearest
     # determine_nearest.nearest(db)
 
-    # shutdown the OSRM server
-    db['con'].close()
-    shutdown_db(config)
-    # message slack
-    post_message_to_slack("Querying Complete: Nearest distance/duration saved as nearest_{} for {}, to {}, in {}".format(config['SQL']['table_name'], config['transport_mode'], config['services'], config['location']['city'])) 
-    # export data
+    # # shutdown the OSRM server
+    # db['con'].close()
+    # shutdown_db(config)
+    # # message slack
+    # post_message_to_slack("Querying Complete: Nearest distance/duration saved as nearest_{} for {}, to {}, in {}".format(config['SQL']['table_name'], config['transport_mode'], config['services'], config['location']['city'])) 
+    # # export data
     if config['data_export']['execute']:
         data_export.main_export()
         if config['data_export']['git_push']:

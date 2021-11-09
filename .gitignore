@@ -18,4 +18,5 @@ inequality_function_test.py
 *.ai
 *.pdf
 *.pyc
+src/slack_token.txt
 

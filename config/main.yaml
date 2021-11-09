@@ -62,7 +62,7 @@ services:
 
 # Do the destinations or origins need to be initialised?
 init:
-  dests: False
+  dests: True
   origins: False
 
 alter_results:
