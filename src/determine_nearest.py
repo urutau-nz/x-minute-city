@@ -2,7 +2,6 @@
 Create a table with the nearest distance, grouped by destination type for each of the blocks
 '''
 from sqlalchemy_utils.functions.orm import table_name
-import main
 import yaml 
 import psycopg2
 from sqlalchemy.types import Float, Integer

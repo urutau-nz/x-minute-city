@@ -10,6 +10,7 @@ import geopandas as gpd
 import topojson as tp
 from tqdm import tqdm
 import inequalipy as ineq
+from geoalchemy2 import Geometry, WKTElement
 
 def main_export():
     config_filename = 'main'
@@ -19,6 +20,9 @@ def main_export():
 
     # connect to the psql database
     db = main.init_db(config)
+    con = db['con']
+    engine = db['engine']
+    projection = config['set_up']['projection']
 
     # import code
     # code.interact(local=locals())
@@ -28,7 +32,7 @@ def main_export():
     ###
     if config['data_export']['block_results']:
         sql = "SELECT * FROM nearest_{} WHERE population > 0".format(config['SQL']['table_name'])
-        df = pd.read_sql(sql, db['con'])
+        df = gpd.read_postgis(sql, engine, geom_col='geometry')
         df = df[df['dest_type'].isin(['pharmacy','oral_health','doctor','supermarket','ece','greenspace','primary_school'])]
         # dist.duration = dist.duration/60
         # dist.duration = dist.duration.astype(int)
@@ -76,11 +80,15 @@ def main_export():
         all_dist = df.groupby(['geoid','mode']).max()
         all_dist['dest_type']='all'
         all_dist.reset_index(inplace=True)
+        geoms = []
+        for idx in tqdm(list(all_dist['geoid'].unique())):
+            geoms += [df[df['geoid']==idx].iloc[0]['geometry']]*3
+        all_dist['geometry'] = geoms
         df = df.append(all_dist)
-        df.to_sql('nearest_{}'.format(config['SQL']['table_name']), db['engine'], if_exists='replace')
+
+        df.to_postgis('nearest_{}'.format(config['SQL']['table_name']), engine, if_exists='replace', dtype={'geometry': Geometry('POLYGON', srid= projection)})
         df = df[['geoid', 'dest_type', 'duration', 'mode']]
         df.to_csv('./data/results/duration.csv')
-        # dist.to_csv('/homedirs/tml62/distances.csv')
         print('Written: ./data/results/duration.csv')
 
 
@@ -101,7 +109,6 @@ def main_export():
         blocks.set_geometry('geometry',inplace=True)
         blocks = blocks.to_crs(urbans.crs)
         blocks = blocks.loc[blocks['UR2020_V1_'] != 999]
-        # blocks = blocks.loc[~blocks['id'].isin(['7022480', '7001121', '7001125', '7001123', '7023238', '7029871','7002089','7025531','7026226','7026225','7026314','7026512','7026315'])]
         blocks.drop('centroids', axis=1, inplace=True)
         fn = './data/results/blocks.shp'
         blocks.to_file(fn)

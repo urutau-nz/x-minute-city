@@ -82,7 +82,7 @@ metric:
 query_euclidean: True
 
 euclidean_buffer:
-  distance: 5000
+  distance: 7500
   max_dests: 10
 
 # What percent of CPU cores would you like to utilise? [0.0 - 1.0] TYPE: float
