@@ -11,13 +11,12 @@ def main(logger):
 
     # in shell, remove any existing dockers
     shell_commands = [
-                    'git add .',
-                    'git status',
-                    "git commit -m 'updating app data'",
-                    'git push -u origin master'
+                    ['git', 'add', '.'],
+                    ['git', 'commit', '-m', '"updating app data"'],
+                    ['git', 'push', '-u', 'origin', 'master']
                     ]
     for com in shell_commands:
-        subprocess.run(com.split())
+        subprocess.run(com)
 
     logger.error('Git Pushed')
     
