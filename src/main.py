@@ -43,41 +43,41 @@ def main(config_filename=None):
     
     # initialize and connect to the server
     logger.error('Establishing DB connection')
-    # db = init_db(config)
+    db = init_db(config)
 
-    # # add origins and destinations
-    # if config['init']['dests']:
-    #     init_destinations(db, config)
-    # if config['init']['origins']:
-    #     init_origins(db, config)
+    # add origins and destinations
+    if config['init']['dests']:
+        init_destinations(db, config)
+    if config['init']['origins']:
+        init_origins(db, config)
 
-    # for transport_mode in config['transport_mode']:
-    #     # initialize the OSRM server
-    #     init_osrm.main(config, logger, transport_mode, True)
-    #     # query the distances
-    #     if transport_mode == config['transport_mode'][0]:
-    #         origxdest = query.query_points(db, config, transport_mode)
-    #         origxdest['mode'] = transport_mode
-    #     else:
-    #         origxdest_to_append = query.query_points(db, config, transport_mode)
-    #         origxdest_to_append['mode'] = transport_mode
-    #         origxdest = origxdest.append(origxdest_to_append)
-    # # add df to sql
-    # if ('duration' in list(origxdest.columns)):
-    #     origxdest['duration'] = origxdest['duration']/60
-    #     if origxdest['duration'].isnull().values.any() == 0:
-    #         origxdest['duration'] = origxdest['duration'].astype(int)
-    # query.write_to_postgres(origxdest, db, transport_mode)
+    for transport_mode in config['transport_mode']:
+        # initialize the OSRM server
+        init_osrm.main(config, logger, transport_mode, True)
+        # query the distances
+        if transport_mode == config['transport_mode'][0]:
+            origxdest = query.query_points(db, config, transport_mode)
+            origxdest['mode'] = transport_mode
+        else:
+            origxdest_to_append = query.query_points(db, config, transport_mode)
+            origxdest_to_append['mode'] = transport_mode
+            origxdest = origxdest.append(origxdest_to_append)
+    # add df to sql
+    if ('duration' in list(origxdest.columns)):
+        origxdest['duration'] = origxdest['duration']/60
+        if origxdest['duration'].isnull().values.any() == 0:
+            origxdest['duration'] = origxdest['duration'].astype(int)
+    query.write_to_postgres(origxdest, db, transport_mode)
 
-    # # calculate nearest
-    # determine_nearest.nearest(db)
+    # calculate nearest
+    determine_nearest.nearest(db)
 
-    # # shutdown the OSRM server
-    # db['con'].close()
-    # shutdown_db(config)
-    # # message slack
-    # post_message_to_slack("Querying Complete: Nearest distance/duration saved as nearest_{} for {}, to {}, in {}".format(config['SQL']['table_name'], config['transport_mode'], config['services'], config['location']['city'])) 
-    # # export data
+    # shutdown the OSRM server
+    db['con'].close()
+    shutdown_db(config)
+    # message slack
+    post_message_to_slack("Querying Complete: Nearest distance/duration saved as nearest_{} for {}, to {}, in {}".format(config['SQL']['table_name'], config['transport_mode'], config['services'], config['location']['city'])) 
+    # export data
     if config['data_export']['execute']:
         data_export.main_export()
         if config['data_export']['git_push']:

@@ -62,12 +62,12 @@ services:
 
 # Do the destinations or origins need to be initialised?
 init:
-  dests: True
+  dests: False
   origins: False
 
 alter_results:
   drop_blocks: ['7022480', '7001121', '7001125', '7001123', '7023238', '7029871','7002089','7025531','7026226','7026225','7026314','7026512','7026315','7024296','7024652','7024605', '7021150', '7021151', '7022138', '7007859']
-  alter_block_results: True
+  alter_block_results: False
 
 
 # What mode of transport are you evaluating? ['driving', 'walking', 'cycling'] TYPE: str
@@ -82,8 +82,8 @@ metric:
 query_euclidean: True
 
 euclidean_buffer:
-  distance: 7500
-  max_dests: 10
+  distance: 10000
+  max_dests: 15
 
 # What percent of CPU cores would you like to utilise? [0.0 - 1.0] TYPE: float
 par_frac: 0.8

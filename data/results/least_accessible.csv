@@ -53,9 +53,9 @@
 51,Mosgiel,cycling,doctor
 52,Mosgiel,driving,oral_health
 53,Mosgiel,walking,oral_health
-54,Napier,cycling,pharmacy
-55,Napier,driving,supermarket
-56,Napier,walking,pharmacy
+54,Napier,cycling,doctor
+55,Napier,driving,doctor
+56,Napier,walking,doctor
 57,Nelson,cycling,oral_health
 58,Nelson,driving,oral_health
 59,Nelson,walking,oral_health
@@ -66,7 +66,7 @@
 64,Oamaru,driving,oral_health
 65,Oamaru,walking,oral_health
 66,Palmerston North,cycling,doctor
-67,Palmerston North,driving,supermarket
+67,Palmerston North,driving,doctor
 68,Palmerston North,walking,doctor
 69,Paraparaumu,cycling,pharmacy
 70,Paraparaumu,driving,pharmacy
@@ -97,7 +97,7 @@
 95,Taupō,walking,doctor
 96,Tauranga,cycling,doctor
 97,Tauranga,driving,doctor
-98,Tauranga,walking,pharmacy
+98,Tauranga,walking,doctor
 99,Te Awamutu,cycling,doctor
 100,Te Awamutu,driving,doctor
 101,Te Awamutu,walking,doctor
@@ -110,8 +110,8 @@
 108,Upper Hutt,cycling,doctor
 109,Upper Hutt,driving,doctor
 110,Upper Hutt,walking,doctor
-111,Waikanae,cycling,primary_school
-112,Waikanae,driving,primary_school
+111,Waikanae,cycling,doctor
+112,Waikanae,driving,pharmacy
 113,Waikanae,walking,doctor
 114,Wellington,cycling,supermarket
 115,Wellington,driving,supermarket
