@@ -338,7 +338,7 @@
 378,cycling,supermarket,Whangārei,7.169685542835077
 379,cycling,supermarket,Auckland,7.314511029413757
 380,cycling,supermarket,Cambridge,8.478755329825498
-381,cycling,supermarket,Wellington,6.003329459230525
+381,cycling,supermarket,Wellington,6.004215583351772
 382,cycling,supermarket,Hibiscus Coast,8.96460005539179
 383,cycling,supermarket,Gisborne,6.649951404146495
 384,cycling,supermarket,Nelson,10.521444664678363
@@ -380,7 +380,7 @@
 420,cycling,ece,Whangārei,4.118847345637533
 421,cycling,ece,Auckland,3.0764223190115527
 422,cycling,ece,Cambridge,3.582696474989755
-423,cycling,ece,Wellington,3.5623243685576074
+423,cycling,ece,Wellington,3.5632088364923336
 424,cycling,ece,Hibiscus Coast,5.339836087498613
 425,cycling,ece,Gisborne,3.1770671888881727
 426,cycling,ece,Nelson,5.211300447736838
@@ -422,7 +422,7 @@
 462,cycling,pharmacy,Whangārei,6.33323325036882
 463,cycling,pharmacy,Auckland,5.500863261356021
 464,cycling,pharmacy,Cambridge,7.917650698871826
-465,cycling,pharmacy,Wellington,5.537710992624933
+465,cycling,pharmacy,Wellington,5.5386146753816465
 466,cycling,pharmacy,Hibiscus Coast,9.561764459441044
 467,cycling,pharmacy,Gisborne,5.69174337541467
 468,cycling,pharmacy,Nelson,8.940708923616809
@@ -464,7 +464,7 @@
 504,cycling,doctor,Whangārei,6.273892744344016
 505,cycling,doctor,Auckland,5.391996742029737
 506,cycling,doctor,Cambridge,6.353327592166602
-507,cycling,doctor,Wellington,5.173688671511959
+507,cycling,doctor,Wellington,5.174607385448015
 508,cycling,doctor,Hibiscus Coast,9.790739122641474
 509,cycling,doctor,Gisborne,8.182170057147994
 510,cycling,doctor,Nelson,8.896706707470535
@@ -995,7 +995,7 @@
 111,cycling,all,Waikanae,14.450357587184254
 112,driving,all,Waikanae,5.193497730491567
 113,walking,all,Waikanae,33.90336497304438
-114,cycling,all,Wellington,6.003329459230525
+114,cycling,all,Wellington,6.004215583351772
 115,driving,all,Wellington,2.6228610850845047
 116,walking,all,Wellington,14.378833745303433
 117,cycling,all,Whakatāne,8.649226473779104
