@@ -1,592 +1,592 @@
 ,mode,dest_type,UR2020_V_1,duration_weighted
-0,walking,oral_health,Whangārei,2.646890823711198
-1,walking,oral_health,Auckland,1.9535087851079822
-2,walking,oral_health,Cambridge,2.785431011819189
-3,walking,oral_health,Wellington,2.1062533123276985
-4,walking,oral_health,Hibiscus Coast,3.1274751119355204
-5,walking,oral_health,Gisborne,1.974274509185888
-6,walking,oral_health,Nelson,7.885329218327708
-7,walking,oral_health,Hamilton,2.0963967540282455
-8,walking,oral_health,Dunedin,5.448700337643204
-9,walking,oral_health,Invercargill,3.4671616629525612
-10,walking,oral_health,Rotorua,1.7715722897702693
-11,walking,oral_health,Lower Hutt,1.7664147874573994
-12,walking,oral_health,Masterton,2.583295645571571
-13,walking,oral_health,Rangiora,2.120404576771364
-14,walking,oral_health,Oamaru,4.767982631647975
-15,walking,oral_health,Palmerston North,2.0262351177929907
-16,walking,oral_health,Ashburton,2.2717268837728337
-17,walking,oral_health,Levin,2.08036189928514
-18,walking,oral_health,Mosgiel,3.498112959034375
-19,walking,oral_health,Te Awamutu,2.5400567462064596
-20,walking,oral_health,Taupō,3.335653285892008
-21,walking,oral_health,Pukekohe,2.685728621729218
-22,walking,oral_health,Tokoroa,1.4334515251035271
-23,walking,oral_health,Tauranga,3.044055313468658
-24,walking,oral_health,Hastings,1.4940130652881838
-25,walking,oral_health,Richmond,4.28093089137416
-26,walking,oral_health,Christchurch,2.0218398021293598
-27,walking,oral_health,Whakatāne,3.197944296726665
-28,walking,oral_health,Havelock North,3.0041515766145483
-29,walking,oral_health,New Plymouth,3.100918342546517
-30,walking,oral_health,Rolleston,2.351359697658553
-31,walking,oral_health,Napier,2.2522165260843225
-32,walking,oral_health,Whanganui,1.9351305131551821
-33,walking,oral_health,Feilding,2.0681418697659417
-34,walking,oral_health,Waikanae,4.670194327628192
-35,walking,oral_health,Paraparaumu,2.9339451662306257
-36,walking,oral_health,Porirua,2.2244332247077847
-37,walking,oral_health,Blenheim,2.986768981251096
-38,walking,oral_health,Upper Hutt,2.46394304741363
-39,walking,oral_health,Kaiapoi,2.3019109002420275
-40,walking,oral_health,Timaru,1.8972534005335118
-41,walking,oral_health,Queenstown,8.417804091685312
-42,walking,supermarket,Whangārei,3.0588426909742217
-43,walking,supermarket,Auckland,3.0436060494754154
-44,walking,supermarket,Cambridge,3.959888810918805
-45,walking,supermarket,Wellington,2.6228610850845038
-46,walking,supermarket,Hibiscus Coast,3.3788117994815834
-47,walking,supermarket,Gisborne,2.7359202173794532
-48,walking,supermarket,Nelson,4.099409269919692
-49,walking,supermarket,Hamilton,2.80020521003863
-50,walking,supermarket,Dunedin,4.236985249559705
-51,walking,supermarket,Invercargill,2.640560609993664
-52,walking,supermarket,Rotorua,2.573745689594916
-53,walking,supermarket,Lower Hutt,2.9768544918582895
-54,walking,supermarket,Masterton,2.638443616209673
-55,walking,supermarket,Rangiora,3.0517194720443137
-56,walking,supermarket,Oamaru,2.28570178138103
-57,walking,supermarket,Palmerston North,2.4144195499314374
-58,walking,supermarket,Ashburton,2.448056317105398
-59,walking,supermarket,Levin,3.263236536626875
-60,walking,supermarket,Mosgiel,3.08349698504865
-61,walking,supermarket,Te Awamutu,2.8700597571506505
-62,walking,supermarket,Taupō,3.9050946990606126
-63,walking,supermarket,Pukekohe,3.4932211148841668
-64,walking,supermarket,Tokoroa,2.430507848875761
-65,walking,supermarket,Tauranga,3.2773056718480658
-66,walking,supermarket,Hastings,2.0561072823503106
-67,walking,supermarket,Richmond,3.58528517460223
-68,walking,supermarket,Christchurch,3.2455171612248126
-69,walking,supermarket,Whakatāne,3.9250376551301756
-70,walking,supermarket,Havelock North,3.335317455220788
-71,walking,supermarket,New Plymouth,3.0973568966536145
-72,walking,supermarket,Rolleston,3.6493873341781424
-73,walking,supermarket,Napier,2.5210918447268207
-74,walking,supermarket,Whanganui,2.5260956844077076
-75,walking,supermarket,Feilding,2.4283772615736092
-76,walking,supermarket,Waikanae,3.708343202340568
-77,walking,supermarket,Paraparaumu,2.9842605693045043
-78,walking,supermarket,Porirua,3.353861280863972
-79,walking,supermarket,Blenheim,2.296389221820354
-80,walking,supermarket,Upper Hutt,3.591707055613794
-81,walking,supermarket,Kaiapoi,3.6456593046423618
-82,walking,supermarket,Timaru,3.223490525761607
-83,walking,supermarket,Queenstown,4.923635254496669
-84,walking,ece,Whangārei,1.7181051877416604
-85,walking,ece,Auckland,1.3668332611736616
-86,walking,ece,Cambridge,1.7072861285097904
-87,walking,ece,Wellington,1.53991929242936
-88,walking,ece,Hibiscus Coast,1.8718568123235793
-89,walking,ece,Gisborne,1.608259121857977
-90,walking,ece,Nelson,2.1282827427491413
-91,walking,ece,Hamilton,1.299068903103695
-92,walking,ece,Dunedin,1.733718437150971
-93,walking,ece,Invercargill,1.4647402952963104
-94,walking,ece,Rotorua,1.4116144625537825
-95,walking,ece,Lower Hutt,1.4684430321246016
-96,walking,ece,Masterton,1.3532012428355713
-97,walking,ece,Rangiora,1.6485135197597751
-98,walking,ece,Oamaru,2.1514263691192053
-99,walking,ece,Palmerston North,1.4203273131619982
-100,walking,ece,Ashburton,1.869115495181273
-101,walking,ece,Levin,1.9029787780351985
-102,walking,ece,Mosgiel,2.255084293795947
-103,walking,ece,Te Awamutu,2.0840275506885733
-104,walking,ece,Taupō,2.1868935129638465
-105,walking,ece,Pukekohe,1.6354057483132294
-106,walking,ece,Tokoroa,1.1987038201731564
-107,walking,ece,Tauranga,2.0985073273672503
-108,walking,ece,Hastings,0.953422180942584
-109,walking,ece,Richmond,1.8607349458598386
-110,walking,ece,Christchurch,1.540424438086697
-111,walking,ece,Whakatāne,1.8353020670055988
-112,walking,ece,Havelock North,2.098081353522766
-113,walking,ece,New Plymouth,1.9778628127754079
-114,walking,ece,Rolleston,1.5459462012049634
-115,walking,ece,Napier,1.7808715047920518
-116,walking,ece,Whanganui,1.3991355186882077
-117,walking,ece,Feilding,1.5113219710798353
-118,walking,ece,Waikanae,3.026563140782826
-119,walking,ece,Paraparaumu,1.975231972760156
-120,walking,ece,Porirua,1.823632518998573
-121,walking,ece,Blenheim,1.3587047739803066
-122,walking,ece,Upper Hutt,1.9961509422096706
-123,walking,ece,Kaiapoi,1.7042969837033062
-124,walking,ece,Timaru,1.6277415855232318
-125,walking,ece,Queenstown,4.4594134145265425
-126,walking,pharmacy,Whangārei,2.6528622370898423
-127,walking,pharmacy,Auckland,2.2916942986229247
-128,walking,pharmacy,Cambridge,3.439211935980302
-129,walking,pharmacy,Wellington,2.413851221982766
-130,walking,pharmacy,Hibiscus Coast,3.5714435696356444
-131,walking,pharmacy,Gisborne,2.287759211944824
-132,walking,pharmacy,Nelson,3.3755213735563743
-133,walking,pharmacy,Hamilton,2.373761470983113
-134,walking,pharmacy,Dunedin,2.65739454163828
-135,walking,pharmacy,Invercargill,2.7806627500122705
-136,walking,pharmacy,Rotorua,3.2276344948678126
-137,walking,pharmacy,Lower Hutt,2.7046708937070356
-138,walking,pharmacy,Masterton,2.684904207903129
-139,walking,pharmacy,Rangiora,2.9712747277102305
-140,walking,pharmacy,Oamaru,3.5264033323391533
-141,walking,pharmacy,Palmerston North,2.4500909537772095
-142,walking,pharmacy,Ashburton,2.674977577382795
-143,walking,pharmacy,Levin,2.798665593249505
-144,walking,pharmacy,Mosgiel,2.8916168595996736
-145,walking,pharmacy,Te Awamutu,3.1182081754304845
-146,walking,pharmacy,Taupō,4.161802023719244
-147,walking,pharmacy,Pukekohe,2.9807739867057905
-148,walking,pharmacy,Tokoroa,2.6855261524325074
-149,walking,pharmacy,Tauranga,3.2805400423310123
-150,walking,pharmacy,Hastings,2.1002542086779115
-151,walking,pharmacy,Richmond,3.5656035401250663
-152,walking,pharmacy,Christchurch,2.339022049337963
-153,walking,pharmacy,Whakatāne,3.2762644879668534
-154,walking,pharmacy,Havelock North,3.486670150906336
-155,walking,pharmacy,New Plymouth,2.769029116573433
-156,walking,pharmacy,Rolleston,3.6656482619807798
-157,walking,pharmacy,Napier,2.434695496793991
-158,walking,pharmacy,Whanganui,2.979824510406888
-159,walking,pharmacy,Feilding,2.6421299042487374
-160,walking,pharmacy,Waikanae,5.193497730491564
-161,walking,pharmacy,Paraparaumu,3.129078731040961
-162,walking,pharmacy,Porirua,3.527101484827748
-163,walking,pharmacy,Blenheim,2.1043926821929295
-164,walking,pharmacy,Upper Hutt,4.285220303645945
-165,walking,pharmacy,Kaiapoi,3.272184625381143
-166,walking,pharmacy,Timaru,2.9107535999588867
-167,walking,pharmacy,Queenstown,4.535586811381003
-168,walking,doctor,Whangārei,2.5010977145267494
-169,walking,doctor,Auckland,2.2455591497989444
-170,walking,doctor,Cambridge,2.92430367944214
-171,walking,doctor,Wellington,2.2474686108784123
-172,walking,doctor,Hibiscus Coast,3.670491078462632
-173,walking,doctor,Gisborne,3.2840289091930863
-174,walking,doctor,Nelson,3.42222585701781
-175,walking,doctor,Hamilton,2.3169664236394003
-176,walking,doctor,Dunedin,2.822910787564276
-177,walking,doctor,Invercargill,2.9469189580624486
-178,walking,doctor,Rotorua,3.1058545264665343
-179,walking,doctor,Lower Hutt,2.8736291829261438
-180,walking,doctor,Masterton,2.8674139898390028
-181,walking,doctor,Rangiora,2.5531658342088863
-182,walking,doctor,Oamaru,3.1532377829315683
-183,walking,doctor,Palmerston North,2.727867419207571
-184,walking,doctor,Ashburton,2.739947279119544
-185,walking,doctor,Levin,2.466710026840193
-186,walking,doctor,Mosgiel,2.984039305447181
-187,walking,doctor,Te Awamutu,3.185608529492742
-188,walking,doctor,Taupō,4.632266705401057
-189,walking,doctor,Pukekohe,3.5078035748927974
-190,walking,doctor,Tokoroa,3.0325801819612637
-191,walking,doctor,Tauranga,3.3179994484554234
-192,walking,doctor,Hastings,2.1581359488317537
-193,walking,doctor,Richmond,3.0902718989581395
-194,walking,doctor,Christchurch,2.2796686312976386
-195,walking,doctor,Whakatāne,3.673898895665575
-196,walking,doctor,Havelock North,3.1591712064129727
-197,walking,doctor,New Plymouth,3.1879494607779613
-198,walking,doctor,Rolleston,3.195934785768595
-199,walking,doctor,Napier,2.7099946719277472
-200,walking,doctor,Whanganui,2.6972990821405736
-201,walking,doctor,Feilding,3.2146306519923376
-202,walking,doctor,Waikanae,5.1736735117606205
-203,walking,doctor,Paraparaumu,2.86004100180761
-204,walking,doctor,Porirua,3.313897823132563
-205,walking,doctor,Blenheim,2.1730215099145425
-206,walking,doctor,Upper Hutt,4.307270661277009
-207,walking,doctor,Kaiapoi,3.1056005916672778
-208,walking,doctor,Timaru,2.9953125327110746
-209,walking,doctor,Queenstown,4.620672859916325
-210,walking,primary_school,Whangārei,2.411261790915104
-211,walking,primary_school,Auckland,2.0491080540180433
-212,walking,primary_school,Cambridge,2.9056676039201497
-213,walking,primary_school,Wellington,1.8696850274920573
-214,walking,primary_school,Hibiscus Coast,2.7697616201638087
-215,walking,primary_school,Gisborne,2.072233398069227
-216,walking,primary_school,Nelson,2.8464993599341675
-217,walking,primary_school,Hamilton,2.1482940588662482
-218,walking,primary_school,Dunedin,2.0165531339690665
-219,walking,primary_school,Invercargill,2.1010779250542337
-220,walking,primary_school,Rotorua,1.9432342764567687
-221,walking,primary_school,Lower Hutt,1.8381207428353152
-222,walking,primary_school,Masterton,2.3618429061965975
-223,walking,primary_school,Rangiora,2.06730085868274
-224,walking,primary_school,Oamaru,2.430170384004172
-225,walking,primary_school,Palmerston North,1.9269745511113705
-226,walking,primary_school,Ashburton,2.476080528303493
-227,walking,primary_school,Levin,2.1808225585142016
-228,walking,primary_school,Mosgiel,3.139582761346603
-229,walking,primary_school,Te Awamutu,2.7159131119950666
-230,walking,primary_school,Taupō,2.7067281353005757
-231,walking,primary_school,Pukekohe,2.6451772586963918
-232,walking,primary_school,Tokoroa,1.4856393627833817
-233,walking,primary_school,Tauranga,2.8282794791967447
-234,walking,primary_school,Hastings,1.5089515117258805
-235,walking,primary_school,Richmond,3.169919274059036
-236,walking,primary_school,Christchurch,2.1268436240116073
-237,walking,primary_school,Whakatāne,2.743906263860725
-238,walking,primary_school,Havelock North,2.602016239524536
-239,walking,primary_school,New Plymouth,2.3996245573886785
-240,walking,primary_school,Rolleston,2.2253283730874456
-241,walking,primary_school,Napier,2.1627591234855417
-242,walking,primary_school,Whanganui,1.9550586551453695
-243,walking,primary_school,Feilding,2.089144668049682
-244,walking,primary_school,Waikanae,4.670194327628192
-245,walking,primary_school,Paraparaumu,2.7240726635924712
-246,walking,primary_school,Porirua,2.218170907204256
-247,walking,primary_school,Blenheim,1.8612695258688838
-248,walking,primary_school,Upper Hutt,2.566328044749225
-249,walking,primary_school,Kaiapoi,2.672823557901518
-250,walking,primary_school,Timaru,2.0442729801041137
-251,walking,primary_school,Queenstown,4.7058258151460075
-252,walking,greenspace,Whangārei,1.5437193125355586
-253,walking,greenspace,Auckland,0.6569226033943801
-254,walking,greenspace,Cambridge,1.032236329852311
-255,walking,greenspace,Wellington,1.3453645534780252
-256,walking,greenspace,Hibiscus Coast,0.9406480786590194
-257,walking,greenspace,Gisborne,1.1297520654197255
-258,walking,greenspace,Nelson,1.5933717395877336
-259,walking,greenspace,Hamilton,0.8385783229364778
-260,walking,greenspace,Dunedin,1.0356824297738882
-261,walking,greenspace,Invercargill,1.2502236267900015
-262,walking,greenspace,Rotorua,0.7133829381285715
-263,walking,greenspace,Lower Hutt,0.9100482871341855
-264,walking,greenspace,Masterton,1.3600333015688781
-265,walking,greenspace,Rangiora,0.5225880090055514
-266,walking,greenspace,Oamaru,1.0194671901280967
-267,walking,greenspace,Palmerston North,1.1098546118558148
-268,walking,greenspace,Ashburton,1.2699038828057267
-269,walking,greenspace,Levin,1.2052089137102644
-270,walking,greenspace,Mosgiel,1.2291224982923183
-271,walking,greenspace,Te Awamutu,1.1038394623667582
-272,walking,greenspace,Taupō,0.7109212335395568
-273,walking,greenspace,Pukekohe,0.955747234926193
-274,walking,greenspace,Tokoroa,0.7316663555354775
-275,walking,greenspace,Tauranga,1.4073723655634247
-276,walking,greenspace,Hastings,0.6346891177222438
-277,walking,greenspace,Richmond,1.3889991178251206
-278,walking,greenspace,Christchurch,0.7602300388181681
-279,walking,greenspace,Whakatāne,1.679017279660606
-280,walking,greenspace,Havelock North,1.110578404190538
-281,walking,greenspace,New Plymouth,1.4343511365250872
-282,walking,greenspace,Rolleston,0.4752522191430277
-283,walking,greenspace,Napier,1.2791702083624825
-284,walking,greenspace,Whanganui,1.0695548861346298
-285,walking,greenspace,Feilding,1.4625608811143307
-286,walking,greenspace,Waikanae,2.0944418054683704
-287,walking,greenspace,Paraparaumu,1.1129583978678534
-288,walking,greenspace,Porirua,0.980849047859996
-289,walking,greenspace,Blenheim,0.7271349280600363
-290,walking,greenspace,Upper Hutt,1.2945217939918248
-291,walking,greenspace,Kaiapoi,0.7780313319465466
-292,walking,greenspace,Timaru,0.9840711999250155
-293,walking,greenspace,Queenstown,1.8041451436818916
-336,cycling,oral_health,Whangārei,2.646890823711198
-337,cycling,oral_health,Auckland,1.9535087851079822
-338,cycling,oral_health,Cambridge,2.785431011819189
-339,cycling,oral_health,Wellington,2.1062533123276985
-340,cycling,oral_health,Hibiscus Coast,3.1274751119355204
-341,cycling,oral_health,Gisborne,1.974274509185888
-342,cycling,oral_health,Nelson,7.885329218327708
-343,cycling,oral_health,Hamilton,2.0963967540282455
-344,cycling,oral_health,Dunedin,5.448700337643204
-345,cycling,oral_health,Invercargill,3.4671616629525612
-346,cycling,oral_health,Rotorua,1.7715722897702693
-347,cycling,oral_health,Lower Hutt,1.7664147874573994
-348,cycling,oral_health,Masterton,2.583295645571571
-349,cycling,oral_health,Rangiora,2.120404576771364
-350,cycling,oral_health,Oamaru,4.767982631647975
-351,cycling,oral_health,Palmerston North,2.0262351177929907
-352,cycling,oral_health,Ashburton,2.2717268837728337
-353,cycling,oral_health,Levin,2.08036189928514
-354,cycling,oral_health,Mosgiel,3.498112959034375
-355,cycling,oral_health,Te Awamutu,2.5400567462064596
-356,cycling,oral_health,Taupō,3.335653285892008
-357,cycling,oral_health,Pukekohe,2.685728621729218
-358,cycling,oral_health,Tokoroa,1.4334515251035271
-359,cycling,oral_health,Tauranga,3.044055313468658
-360,cycling,oral_health,Hastings,1.4940130652881838
-361,cycling,oral_health,Richmond,4.28093089137416
-362,cycling,oral_health,Christchurch,2.0218398021293598
-363,cycling,oral_health,Whakatāne,3.197944296726665
-364,cycling,oral_health,Havelock North,3.0041515766145483
-365,cycling,oral_health,New Plymouth,3.100918342546517
-366,cycling,oral_health,Rolleston,2.351359697658553
-367,cycling,oral_health,Napier,2.2522165260843225
-368,cycling,oral_health,Whanganui,1.9351305131551821
-369,cycling,oral_health,Feilding,2.0681418697659417
-370,cycling,oral_health,Waikanae,4.670194327628192
-371,cycling,oral_health,Paraparaumu,2.9339451662306257
-372,cycling,oral_health,Porirua,2.2244332247077847
-373,cycling,oral_health,Blenheim,2.986768981251096
-374,cycling,oral_health,Upper Hutt,2.46394304741363
-375,cycling,oral_health,Kaiapoi,2.3019109002420275
-376,cycling,oral_health,Timaru,1.8972534005335118
-377,cycling,oral_health,Queenstown,8.417804091685312
-378,cycling,supermarket,Whangārei,3.0588426909742217
-379,cycling,supermarket,Auckland,3.0436060494754154
-380,cycling,supermarket,Cambridge,3.959888810918805
-381,cycling,supermarket,Wellington,2.6228610850845038
-382,cycling,supermarket,Hibiscus Coast,3.3788117994815834
-383,cycling,supermarket,Gisborne,2.7359202173794532
-384,cycling,supermarket,Nelson,4.099409269919692
-385,cycling,supermarket,Hamilton,2.80020521003863
-386,cycling,supermarket,Dunedin,4.236985249559705
-387,cycling,supermarket,Invercargill,2.640560609993664
-388,cycling,supermarket,Rotorua,2.573745689594916
-389,cycling,supermarket,Lower Hutt,2.9768544918582918
-390,cycling,supermarket,Masterton,2.638443616209673
-391,cycling,supermarket,Rangiora,3.051719472044313
-392,cycling,supermarket,Oamaru,2.285701781381029
-393,cycling,supermarket,Palmerston North,2.4144195499314383
-394,cycling,supermarket,Ashburton,2.448056317105398
-395,cycling,supermarket,Levin,3.263236536626875
-396,cycling,supermarket,Mosgiel,3.08349698504865
-397,cycling,supermarket,Te Awamutu,2.8700597571506505
-398,cycling,supermarket,Taupō,3.9050946990606126
-399,cycling,supermarket,Pukekohe,3.4932211148841668
-400,cycling,supermarket,Tokoroa,2.430507848875761
-401,cycling,supermarket,Tauranga,3.2773056718480658
-402,cycling,supermarket,Hastings,2.0561072823503106
-403,cycling,supermarket,Richmond,3.58528517460223
-404,cycling,supermarket,Christchurch,3.2455171612248113
-405,cycling,supermarket,Whakatāne,3.9250376551301756
-406,cycling,supermarket,Havelock North,3.335317455220788
-407,cycling,supermarket,New Plymouth,3.0973568966536145
-408,cycling,supermarket,Rolleston,3.6493873341781424
-409,cycling,supermarket,Napier,2.5210918447268207
-410,cycling,supermarket,Whanganui,2.5260956844077067
-411,cycling,supermarket,Feilding,2.4283772615736092
-412,cycling,supermarket,Waikanae,3.708343202340568
-413,cycling,supermarket,Paraparaumu,2.9842605693045043
-414,cycling,supermarket,Porirua,3.353861280863973
-415,cycling,supermarket,Blenheim,2.296389221820354
-416,cycling,supermarket,Upper Hutt,3.591707055613794
-417,cycling,supermarket,Kaiapoi,3.645659304642364
-418,cycling,supermarket,Timaru,3.2234905257616058
-419,cycling,supermarket,Queenstown,4.923635254496671
-420,cycling,ece,Whangārei,1.7181051877416604
-421,cycling,ece,Auckland,1.3668332611736616
-422,cycling,ece,Cambridge,1.7072861285097904
-423,cycling,ece,Wellington,1.53991929242936
-424,cycling,ece,Hibiscus Coast,1.8718568123235793
-425,cycling,ece,Gisborne,1.608259121857977
-426,cycling,ece,Nelson,2.1282827427491413
-427,cycling,ece,Hamilton,1.299068903103695
-428,cycling,ece,Dunedin,1.733718437150971
-429,cycling,ece,Invercargill,1.4647402952963104
-430,cycling,ece,Rotorua,1.4116144625537825
-431,cycling,ece,Lower Hutt,1.4684430321246016
-432,cycling,ece,Masterton,1.3532012428355713
-433,cycling,ece,Rangiora,1.6485135197597751
-434,cycling,ece,Oamaru,2.1514263691192053
-435,cycling,ece,Palmerston North,1.4203273131619982
-436,cycling,ece,Ashburton,1.869115495181273
-437,cycling,ece,Levin,1.9029787780351985
-438,cycling,ece,Mosgiel,2.255084293795947
-439,cycling,ece,Te Awamutu,2.0840275506885733
-440,cycling,ece,Taupō,2.1868935129638465
-441,cycling,ece,Pukekohe,1.6354057483132294
-442,cycling,ece,Tokoroa,1.1987038201731564
-443,cycling,ece,Tauranga,2.0985073273672503
-444,cycling,ece,Hastings,0.953422180942584
-445,cycling,ece,Richmond,1.8607349458598386
-446,cycling,ece,Christchurch,1.540424438086697
-447,cycling,ece,Whakatāne,1.8353020670055988
-448,cycling,ece,Havelock North,2.098081353522766
-449,cycling,ece,New Plymouth,1.9778628127754079
-450,cycling,ece,Rolleston,1.5459462012049634
-451,cycling,ece,Napier,1.7808715047920518
-452,cycling,ece,Whanganui,1.3991355186882077
-453,cycling,ece,Feilding,1.5113219710798353
-454,cycling,ece,Waikanae,3.026563140782826
-455,cycling,ece,Paraparaumu,1.975231972760156
-456,cycling,ece,Porirua,1.823632518998573
-457,cycling,ece,Blenheim,1.3587047739803066
-458,cycling,ece,Upper Hutt,1.9961509422096706
-459,cycling,ece,Kaiapoi,1.7042969837033062
-460,cycling,ece,Timaru,1.6277415855232318
-461,cycling,ece,Queenstown,4.459413414526545
-462,cycling,pharmacy,Whangārei,2.6528622370898436
-463,cycling,pharmacy,Auckland,2.2916942986229247
-464,cycling,pharmacy,Cambridge,3.439211935980301
-465,cycling,pharmacy,Wellington,2.413851221982765
-466,cycling,pharmacy,Hibiscus Coast,3.5714435696356444
-467,cycling,pharmacy,Gisborne,2.287759211944824
-468,cycling,pharmacy,Nelson,3.3755213735563743
-469,cycling,pharmacy,Hamilton,2.373761470983113
-470,cycling,pharmacy,Dunedin,2.65739454163828
-471,cycling,pharmacy,Invercargill,2.7806627500122705
-472,cycling,pharmacy,Rotorua,3.2276344948678126
-473,cycling,pharmacy,Lower Hutt,2.7046708937070356
-474,cycling,pharmacy,Masterton,2.684904207903129
-475,cycling,pharmacy,Rangiora,2.9712747277102305
-476,cycling,pharmacy,Oamaru,3.5264033323391533
-477,cycling,pharmacy,Palmerston North,2.4500909537772095
-478,cycling,pharmacy,Ashburton,2.674977577382795
-479,cycling,pharmacy,Levin,2.798665593249505
-480,cycling,pharmacy,Mosgiel,2.8916168595996736
-481,cycling,pharmacy,Te Awamutu,3.1182081754304845
-482,cycling,pharmacy,Taupō,4.161802023719242
-483,cycling,pharmacy,Pukekohe,2.9807739867057905
-484,cycling,pharmacy,Tokoroa,2.6855261524325074
-485,cycling,pharmacy,Tauranga,3.2805400423310123
-486,cycling,pharmacy,Hastings,2.100254208677913
-487,cycling,pharmacy,Richmond,3.5656035401250663
-488,cycling,pharmacy,Christchurch,2.339022049337963
-489,cycling,pharmacy,Whakatāne,3.2762644879668534
-490,cycling,pharmacy,Havelock North,3.486670150906336
-491,cycling,pharmacy,New Plymouth,2.769029116573433
-492,cycling,pharmacy,Rolleston,3.6656482619807798
-493,cycling,pharmacy,Napier,2.434695496793991
-494,cycling,pharmacy,Whanganui,2.979824510406888
-495,cycling,pharmacy,Feilding,2.6421299042487374
-496,cycling,pharmacy,Waikanae,5.193497730491564
-497,cycling,pharmacy,Paraparaumu,3.129078731040961
-498,cycling,pharmacy,Porirua,3.527101484827748
-499,cycling,pharmacy,Blenheim,2.104392682192931
-500,cycling,pharmacy,Upper Hutt,4.285220303645945
-501,cycling,pharmacy,Kaiapoi,3.272184625381143
-502,cycling,pharmacy,Timaru,2.9107535999588867
-503,cycling,pharmacy,Queenstown,4.535586811381003
-504,cycling,doctor,Whangārei,2.5010977145267494
-505,cycling,doctor,Auckland,2.2455591497989444
-506,cycling,doctor,Cambridge,2.92430367944214
-507,cycling,doctor,Wellington,2.2474686108784123
-508,cycling,doctor,Hibiscus Coast,3.670491078462632
-509,cycling,doctor,Gisborne,3.2840289091930863
-510,cycling,doctor,Nelson,3.42222585701781
-511,cycling,doctor,Hamilton,2.3169664236394003
-512,cycling,doctor,Dunedin,2.822910787564276
-513,cycling,doctor,Invercargill,2.9469189580624486
-514,cycling,doctor,Rotorua,3.1058545264665343
-515,cycling,doctor,Lower Hutt,2.8736291829261438
-516,cycling,doctor,Masterton,2.8674139898390028
-517,cycling,doctor,Rangiora,2.5531658342088863
-518,cycling,doctor,Oamaru,3.153237782931571
-519,cycling,doctor,Palmerston North,2.727867419207571
-520,cycling,doctor,Ashburton,2.739947279119543
-521,cycling,doctor,Levin,2.466710026840193
-522,cycling,doctor,Mosgiel,2.984039305447181
-523,cycling,doctor,Te Awamutu,3.185608529492742
-524,cycling,doctor,Taupō,4.632266705401057
-525,cycling,doctor,Pukekohe,3.5078035748927974
-526,cycling,doctor,Tokoroa,3.0325801819612637
-527,cycling,doctor,Tauranga,3.3179994484554234
-528,cycling,doctor,Hastings,2.1581359488317537
-529,cycling,doctor,Richmond,3.0902718989581395
-530,cycling,doctor,Christchurch,2.2796686312976386
-531,cycling,doctor,Whakatāne,3.673898895665575
-532,cycling,doctor,Havelock North,3.1591712064129713
-533,cycling,doctor,New Plymouth,3.1879494607779613
-534,cycling,doctor,Rolleston,3.1959347857685936
-535,cycling,doctor,Napier,2.709994671927748
-536,cycling,doctor,Whanganui,2.6972990821405736
-537,cycling,doctor,Feilding,3.2146306519923376
-538,cycling,doctor,Waikanae,5.1736735117606205
-539,cycling,doctor,Paraparaumu,2.860041001807611
-540,cycling,doctor,Porirua,3.3138978231325615
-541,cycling,doctor,Blenheim,2.1730215099145425
-542,cycling,doctor,Upper Hutt,4.307270661277009
-543,cycling,doctor,Kaiapoi,3.1056005916672778
-544,cycling,doctor,Timaru,2.9953125327110746
-545,cycling,doctor,Queenstown,4.620672859916325
-546,cycling,primary_school,Whangārei,2.411261790915104
-547,cycling,primary_school,Auckland,2.0491080540180433
-548,cycling,primary_school,Cambridge,2.9056676039201497
-549,cycling,primary_school,Wellington,1.869685027492057
-550,cycling,primary_school,Hibiscus Coast,2.7697616201638087
-551,cycling,primary_school,Gisborne,2.072233398069227
-552,cycling,primary_school,Nelson,2.8464993599341675
-553,cycling,primary_school,Hamilton,2.1482940588662482
-554,cycling,primary_school,Dunedin,2.0165531339690665
-555,cycling,primary_school,Invercargill,2.1010779250542346
-556,cycling,primary_school,Rotorua,1.9432342764567687
-557,cycling,primary_school,Lower Hutt,1.8381207428353152
-558,cycling,primary_school,Masterton,2.3618429061965966
-559,cycling,primary_school,Rangiora,2.0673008586827395
-560,cycling,primary_school,Oamaru,2.430170384004172
-561,cycling,primary_school,Palmerston North,1.9269745511113705
-562,cycling,primary_school,Ashburton,2.4760805283034926
-563,cycling,primary_school,Levin,2.1808225585142016
-564,cycling,primary_school,Mosgiel,3.139582761346603
-565,cycling,primary_school,Te Awamutu,2.7159131119950666
-566,cycling,primary_school,Taupō,2.7067281353005757
-567,cycling,primary_school,Pukekohe,2.6451772586963918
-568,cycling,primary_school,Tokoroa,1.4856393627833817
-569,cycling,primary_school,Tauranga,2.8282794791967447
-570,cycling,primary_school,Hastings,1.5089515117258805
-571,cycling,primary_school,Richmond,3.169919274059036
-572,cycling,primary_school,Christchurch,2.1268436240116073
-573,cycling,primary_school,Whakatāne,2.743906263860725
-574,cycling,primary_school,Havelock North,2.602016239524536
-575,cycling,primary_school,New Plymouth,2.3996245573886785
-576,cycling,primary_school,Rolleston,2.2253283730874456
-577,cycling,primary_school,Napier,2.1627591234855417
-578,cycling,primary_school,Whanganui,1.9550586551453695
-579,cycling,primary_school,Feilding,2.089144668049682
-580,cycling,primary_school,Waikanae,4.670194327628192
-581,cycling,primary_school,Paraparaumu,2.7240726635924712
-582,cycling,primary_school,Porirua,2.218170907204256
-583,cycling,primary_school,Blenheim,1.8612695258688823
-584,cycling,primary_school,Upper Hutt,2.566328044749225
-585,cycling,primary_school,Kaiapoi,2.672823557901518
-586,cycling,primary_school,Timaru,2.0442729801041137
-587,cycling,primary_school,Queenstown,4.705825815146003
-588,cycling,greenspace,Whangārei,1.5437193125355586
-589,cycling,greenspace,Auckland,0.6569226033943801
-590,cycling,greenspace,Cambridge,1.032236329852311
-591,cycling,greenspace,Wellington,1.3453645534780252
-592,cycling,greenspace,Hibiscus Coast,0.9406480786590194
-593,cycling,greenspace,Gisborne,1.1297520654197255
-594,cycling,greenspace,Nelson,1.5933717395877336
-595,cycling,greenspace,Hamilton,0.8385783229364778
-596,cycling,greenspace,Dunedin,1.0356824297738882
-597,cycling,greenspace,Invercargill,1.2502236267900015
-598,cycling,greenspace,Rotorua,0.7133829381285715
-599,cycling,greenspace,Lower Hutt,0.9100482871341855
-600,cycling,greenspace,Masterton,1.3600333015688781
-601,cycling,greenspace,Rangiora,0.5225880090055514
-602,cycling,greenspace,Oamaru,1.0194671901280967
-603,cycling,greenspace,Palmerston North,1.1098546118558148
-604,cycling,greenspace,Ashburton,1.2699038828057267
-605,cycling,greenspace,Levin,1.2052089137102644
-606,cycling,greenspace,Mosgiel,1.2291224982923183
-607,cycling,greenspace,Te Awamutu,1.1038394623667582
-608,cycling,greenspace,Taupō,0.7109212335395568
-609,cycling,greenspace,Pukekohe,0.955747234926193
-610,cycling,greenspace,Tokoroa,0.7316663555354775
-611,cycling,greenspace,Tauranga,1.4073723655634247
-612,cycling,greenspace,Hastings,0.6346891177222438
-613,cycling,greenspace,Richmond,1.3889991178251206
-614,cycling,greenspace,Christchurch,0.7602300388181681
-615,cycling,greenspace,Whakatāne,1.679017279660606
-616,cycling,greenspace,Havelock North,1.110578404190538
-617,cycling,greenspace,New Plymouth,1.4343511365250872
-618,cycling,greenspace,Rolleston,0.4752522191430277
-619,cycling,greenspace,Napier,1.2791702083624825
-620,cycling,greenspace,Whanganui,1.0695548861346298
-621,cycling,greenspace,Feilding,1.4625608811143307
-622,cycling,greenspace,Waikanae,2.0944418054683704
-623,cycling,greenspace,Paraparaumu,1.1129583978678534
-624,cycling,greenspace,Porirua,0.980849047859996
-625,cycling,greenspace,Blenheim,0.7271349280600363
-626,cycling,greenspace,Upper Hutt,1.2945217939918248
-627,cycling,greenspace,Kaiapoi,0.7780313319465466
-628,cycling,greenspace,Timaru,0.9840711999250155
-629,cycling,greenspace,Queenstown,1.8041451436818916
+0,walking,oral_health,Whangārei,15.316717410824795
+1,walking,oral_health,Auckland,10.844540951248101
+2,walking,oral_health,Cambridge,17.15080003648508
+3,walking,oral_health,Wellington,11.61474840607468
+4,walking,oral_health,Hibiscus Coast,16.696520043169823
+5,walking,oral_health,Gisborne,11.413159547873047
+6,walking,oral_health,Nelson,53.40257473525257
+7,walking,oral_health,Hamilton,12.366841298320015
+8,walking,oral_health,Dunedin,38.32996977615283
+9,walking,oral_health,Invercargill,24.99151927965375
+10,walking,oral_health,Rotorua,11.391279878711932
+11,walking,oral_health,Lower Hutt,11.780423801036353
+12,walking,oral_health,Masterton,17.821013308430164
+13,walking,oral_health,Rangiora,13.97571196089865
+14,walking,oral_health,Oamaru,30.960324517539377
+15,walking,oral_health,Palmerston North,13.986883849587224
+16,walking,oral_health,Ashburton,11.680437111541428
+17,walking,oral_health,Levin,11.79501004726692
+18,walking,oral_health,Mosgiel,20.95954472887404
+19,walking,oral_health,Te Awamutu,13.978444801433927
+20,walking,oral_health,Taupō,24.042312974262412
+21,walking,oral_health,Pukekohe,13.345512473657529
+22,walking,oral_health,Tokoroa,10.095143200165891
+23,walking,oral_health,Tauranga,18.21538152233295
+24,walking,oral_health,Hastings,9.640575119382204
+25,walking,oral_health,Richmond,21.644463312964508
+26,walking,oral_health,Christchurch,11.71766195293958
+27,walking,oral_health,Whakatāne,17.265369583653513
+28,walking,oral_health,Havelock North,17.8340322526097
+29,walking,oral_health,New Plymouth,18.4128875883506
+30,walking,oral_health,Rolleston,14.209283296658542
+31,walking,oral_health,Napier,15.282873240433855
+32,walking,oral_health,Whanganui,11.782184961302914
+33,walking,oral_health,Feilding,14.684370086625126
+34,walking,oral_health,Waikanae,29.922332972419966
+35,walking,oral_health,Paraparaumu,16.23218450972647
+36,walking,oral_health,Porirua,12.862232980169159
+37,walking,oral_health,Blenheim,20.003123436300562
+38,walking,oral_health,Upper Hutt,14.161457586265913
+39,walking,oral_health,Kaiapoi,14.468732264317945
+40,walking,oral_health,Timaru,10.951484191427607
+41,walking,oral_health,Queenstown,59.7733696997185
+42,walking,supermarket,Whangārei,17.247650609377633
+43,walking,supermarket,Auckland,18.323828784855575
+44,walking,supermarket,Cambridge,22.169051841880407
+45,walking,supermarket,Wellington,14.378837763536055
+46,walking,supermarket,Hibiscus Coast,19.205914090672362
+47,walking,supermarket,Gisborne,18.25930082496744
+48,walking,supermarket,Nelson,26.929812672594693
+49,walking,supermarket,Hamilton,17.10481253243467
+50,walking,supermarket,Dunedin,29.512943126508798
+51,walking,supermarket,Invercargill,16.2507676000852
+52,walking,supermarket,Rotorua,17.18996833067915
+53,walking,supermarket,Lower Hutt,18.55432054062764
+54,walking,supermarket,Masterton,17.420135971448932
+55,walking,supermarket,Rangiora,18.952648537846176
+56,walking,supermarket,Oamaru,12.756269632962518
+57,walking,supermarket,Palmerston North,17.192995824861594
+58,walking,supermarket,Ashburton,14.850435422497366
+59,walking,supermarket,Levin,18.912125144683706
+60,walking,supermarket,Mosgiel,17.9459958045297
+61,walking,supermarket,Te Awamutu,15.655602423583602
+62,walking,supermarket,Taupō,28.552129464411664
+63,walking,supermarket,Pukekohe,17.640846300340666
+64,walking,supermarket,Tokoroa,17.058241880821488
+65,walking,supermarket,Tauranga,18.8486680110304
+66,walking,supermarket,Hastings,12.96246201483789
+67,walking,supermarket,Richmond,17.342208786696176
+68,walking,supermarket,Christchurch,20.138220450286887
+69,walking,supermarket,Whakatāne,22.548096968453052
+70,walking,supermarket,Havelock North,18.527281827754493
+71,walking,supermarket,New Plymouth,18.99735495280026
+72,walking,supermarket,Rolleston,23.65472878457162
+73,walking,supermarket,Napier,16.562209658905715
+74,walking,supermarket,Whanganui,16.882303206051848
+75,walking,supermarket,Feilding,17.281865891900885
+76,walking,supermarket,Waikanae,21.8611491759286
+77,walking,supermarket,Paraparaumu,16.05782215087696
+78,walking,supermarket,Porirua,19.619260824751223
+79,walking,supermarket,Blenheim,16.245382802923675
+80,walking,supermarket,Upper Hutt,23.45075758120215
+81,walking,supermarket,Kaiapoi,22.579667162729233
+82,walking,supermarket,Timaru,18.979484660680832
+83,walking,supermarket,Queenstown,29.51244906721444
+84,walking,ece,Whangārei,8.691439947639356
+85,walking,ece,Auckland,7.348595968593144
+86,walking,ece,Cambridge,9.496262988832605
+87,walking,ece,Wellington,8.339167707787068
+88,walking,ece,Hibiscus Coast,10.599038795382905
+89,walking,ece,Gisborne,8.5885267302602
+90,walking,ece,Nelson,10.715367596596021
+91,walking,ece,Hamilton,7.351965044735409
+92,walking,ece,Dunedin,9.787425275107188
+93,walking,ece,Invercargill,8.764649678408121
+94,walking,ece,Rotorua,8.292925655886336
+95,walking,ece,Lower Hutt,9.272046467061045
+96,walking,ece,Masterton,8.846732872067712
+97,walking,ece,Rangiora,9.8820621058063
+98,walking,ece,Oamaru,11.813615082573993
+99,walking,ece,Palmerston North,9.973698401701471
+100,walking,ece,Ashburton,10.465334689218059
+101,walking,ece,Levin,9.963653209111042
+102,walking,ece,Mosgiel,12.186044001922783
+103,walking,ece,Te Awamutu,10.50612093507204
+104,walking,ece,Taupō,16.332163148443158
+105,walking,ece,Pukekohe,7.757447558029662
+106,walking,ece,Tokoroa,8.620448849415459
+107,walking,ece,Tauranga,11.534621401934773
+108,walking,ece,Hastings,6.1471272086049575
+109,walking,ece,Richmond,9.0449902124928
+110,walking,ece,Christchurch,8.92557400179977
+111,walking,ece,Whakatāne,10.126277838210788
+112,walking,ece,Havelock North,13.732760692646513
+113,walking,ece,New Plymouth,11.33764324798598
+114,walking,ece,Rolleston,9.374004722429968
+115,walking,ece,Napier,11.8654394904935
+116,walking,ece,Whanganui,8.542427805171604
+117,walking,ece,Feilding,9.460969857346281
+118,walking,ece,Waikanae,18.197027069001834
+119,walking,ece,Paraparaumu,10.325913401939694
+120,walking,ece,Porirua,11.042326002255619
+121,walking,ece,Blenheim,9.053906499787477
+122,walking,ece,Upper Hutt,11.55593269758784
+123,walking,ece,Kaiapoi,9.516873835929898
+124,walking,ece,Timaru,9.852555970345703
+125,walking,ece,Queenstown,26.757521305123515
+126,walking,pharmacy,Whangārei,14.822778010511787
+127,walking,pharmacy,Auckland,13.797283300872902
+128,walking,pharmacy,Cambridge,21.29372572658989
+129,walking,pharmacy,Wellington,13.630373299183377
+130,walking,pharmacy,Hibiscus Coast,22.622473142584266
+131,walking,pharmacy,Gisborne,15.758865386864803
+132,walking,pharmacy,Nelson,22.92754764076051
+133,walking,pharmacy,Hamilton,14.77989728084176
+134,walking,pharmacy,Dunedin,17.256271111562274
+135,walking,pharmacy,Invercargill,19.951752430422676
+136,walking,pharmacy,Rotorua,20.065564543136777
+137,walking,pharmacy,Lower Hutt,17.287805849308512
+138,walking,pharmacy,Masterton,16.98652265460726
+139,walking,pharmacy,Rangiora,18.686190750537538
+140,walking,pharmacy,Oamaru,22.923336413605497
+141,walking,pharmacy,Palmerston North,17.50483186270975
+142,walking,pharmacy,Ashburton,16.968422510645354
+143,walking,pharmacy,Levin,17.04601203237314
+144,walking,pharmacy,Mosgiel,18.52395406046042
+145,walking,pharmacy,Te Awamutu,16.348597104235182
+146,walking,pharmacy,Taupō,31.288308477690535
+147,walking,pharmacy,Pukekohe,17.198595752284824
+148,walking,pharmacy,Tokoroa,18.846742241798577
+149,walking,pharmacy,Tauranga,19.40769922158258
+150,walking,pharmacy,Hastings,13.512605248191502
+151,walking,pharmacy,Richmond,19.72852677039089
+152,walking,pharmacy,Christchurch,14.10881634307202
+153,walking,pharmacy,Whakatāne,20.27058115524688
+154,walking,pharmacy,Havelock North,21.504871502953794
+155,walking,pharmacy,New Plymouth,16.751877493493915
+156,walking,pharmacy,Rolleston,23.470394584348576
+157,walking,pharmacy,Napier,15.520974620094082
+158,walking,pharmacy,Whanganui,19.877359308350602
+159,walking,pharmacy,Feilding,17.72754702603075
+160,walking,pharmacy,Waikanae,32.888082592180155
+161,walking,pharmacy,Paraparaumu,17.580196863405874
+162,walking,pharmacy,Porirua,22.106818502512972
+163,walking,pharmacy,Blenheim,13.691727184869219
+164,walking,pharmacy,Upper Hutt,30.152794002683702
+165,walking,pharmacy,Kaiapoi,22.20901004653483
+166,walking,pharmacy,Timaru,17.480092000214192
+167,walking,pharmacy,Queenstown,26.30548927215928
+168,walking,doctor,Whangārei,13.939729032369279
+169,walking,doctor,Auckland,13.555182345490595
+170,walking,doctor,Cambridge,17.400303720486328
+171,walking,doctor,Wellington,12.795568914850737
+172,walking,doctor,Hibiscus Coast,22.809958205967995
+173,walking,doctor,Gisborne,21.298149227207848
+174,walking,doctor,Nelson,22.724573750713777
+175,walking,doctor,Hamilton,14.61835792300045
+176,walking,doctor,Dunedin,18.65087249164689
+177,walking,doctor,Invercargill,20.66804104542615
+178,walking,doctor,Rotorua,19.495749630551035
+179,walking,doctor,Lower Hutt,18.637430980282804
+180,walking,doctor,Masterton,19.36428074776412
+181,walking,doctor,Rangiora,16.333541372406632
+182,walking,doctor,Oamaru,19.116846713522804
+183,walking,doctor,Palmerston North,18.593637437857897
+184,walking,doctor,Ashburton,17.177069561986645
+185,walking,doctor,Levin,14.693480722504143
+186,walking,doctor,Mosgiel,18.94099586268394
+187,walking,doctor,Te Awamutu,16.92721052708076
+188,walking,doctor,Taupō,35.6946626031818
+189,walking,doctor,Pukekohe,20.053309568201083
+190,walking,doctor,Tokoroa,21.40050056759549
+191,walking,doctor,Tauranga,20.559108523900253
+192,walking,doctor,Hastings,14.43933981832279
+193,walking,doctor,Richmond,17.051008120802155
+194,walking,doctor,Christchurch,14.037741795473728
+195,walking,doctor,Whakatāne,21.850276887085013
+196,walking,doctor,Havelock North,20.182946396973694
+197,walking,doctor,New Plymouth,19.817837357646912
+198,walking,doctor,Rolleston,21.851816909656755
+199,walking,doctor,Napier,19.94122914219395
+200,walking,doctor,Whanganui,17.573170517905755
+201,walking,doctor,Feilding,21.689948732153063
+202,walking,doctor,Waikanae,33.90336497304438
+203,walking,doctor,Paraparaumu,16.519000026282544
+204,walking,doctor,Porirua,20.671341841686456
+205,walking,doctor,Blenheim,14.099082637740606
+206,walking,doctor,Upper Hutt,30.327546996251332
+207,walking,doctor,Kaiapoi,20.92837512992427
+208,walking,doctor,Timaru,18.84294857046929
+209,walking,doctor,Queenstown,29.13251855646813
+210,walking,primary_school,Whangārei,14.287813605548108
+211,walking,primary_school,Auckland,11.347674212805554
+212,walking,primary_school,Cambridge,18.659342204391564
+213,walking,primary_school,Wellington,10.189523920088648
+214,walking,primary_school,Hibiscus Coast,16.078103559880002
+215,walking,primary_school,Gisborne,12.220338059392361
+216,walking,primary_school,Nelson,15.70603680396769
+217,walking,primary_school,Hamilton,12.623919545345421
+218,walking,primary_school,Dunedin,11.464436391986352
+219,walking,primary_school,Invercargill,12.087129459502302
+220,walking,primary_school,Rotorua,12.54708353163189
+221,walking,primary_school,Lower Hutt,12.310079403092882
+222,walking,primary_school,Masterton,15.588836935862417
+223,walking,primary_school,Rangiora,13.126980587247163
+224,walking,primary_school,Oamaru,13.628189344553517
+225,walking,primary_school,Palmerston North,13.37115923516834
+226,walking,primary_school,Ashburton,13.237447777847187
+227,walking,primary_school,Levin,12.461728810280622
+228,walking,primary_school,Mosgiel,17.32155394431682
+229,walking,primary_school,Te Awamutu,15.009053019793628
+230,walking,primary_school,Taupō,19.91317628439338
+231,walking,primary_school,Pukekohe,13.490881887068783
+232,walking,primary_school,Tokoroa,10.150883464569317
+233,walking,primary_school,Tauranga,16.385545619557604
+234,walking,primary_school,Hastings,9.635147798618155
+235,walking,primary_school,Richmond,15.682743690940642
+236,walking,primary_school,Christchurch,12.475488173973156
+237,walking,primary_school,Whakatāne,13.521973978558863
+238,walking,primary_school,Havelock North,16.636962126769692
+239,walking,primary_school,New Plymouth,13.655956059486389
+240,walking,primary_school,Rolleston,14.677487228829508
+241,walking,primary_school,Napier,14.313416676969084
+242,walking,primary_school,Whanganui,12.085274057002145
+243,walking,primary_school,Feilding,14.697626212302525
+244,walking,primary_school,Waikanae,29.922064090971652
+245,walking,primary_school,Paraparaumu,15.20350663892563
+246,walking,primary_school,Porirua,12.523925613619786
+247,walking,primary_school,Blenheim,12.526224696935122
+248,walking,primary_school,Upper Hutt,14.629840565053476
+249,walking,primary_school,Kaiapoi,17.756868570035078
+250,walking,primary_school,Timaru,11.843747383399508
+251,walking,primary_school,Queenstown,28.478245523199288
+252,walking,greenspace,Whangārei,8.128092764456564
+253,walking,greenspace,Auckland,3.75754905499982
+254,walking,greenspace,Cambridge,6.286405877018849
+255,walking,greenspace,Wellington,5.885974113017131
+256,walking,greenspace,Hibiscus Coast,6.0142904215517525
+257,walking,greenspace,Gisborne,5.841287466887774
+258,walking,greenspace,Nelson,7.09500554655574
+259,walking,greenspace,Hamilton,5.344881201843145
+260,walking,greenspace,Dunedin,5.517278288285434
+261,walking,greenspace,Invercargill,8.550869828553093
+262,walking,greenspace,Rotorua,4.4502231675119015
+263,walking,greenspace,Lower Hutt,6.569795476494838
+264,walking,greenspace,Masterton,8.473303852674983
+265,walking,greenspace,Rangiora,3.3731480309693316
+266,walking,greenspace,Oamaru,5.563302714677351
+267,walking,greenspace,Palmerston North,7.333482358916082
+268,walking,greenspace,Ashburton,6.409597846831898
+269,walking,greenspace,Levin,6.1030642885863555
+270,walking,greenspace,Mosgiel,7.131090052253427
+271,walking,greenspace,Te Awamutu,5.226801330142131
+272,walking,greenspace,Taupō,5.769024417853406
+273,walking,greenspace,Pukekohe,5.244106382578213
+274,walking,greenspace,Tokoroa,4.615319129535957
+275,walking,greenspace,Tauranga,7.747751160862309
+276,walking,greenspace,Hastings,4.720252924597995
+277,walking,greenspace,Richmond,6.459047465265982
+278,walking,greenspace,Christchurch,4.363291626297676
+279,walking,greenspace,Whakatāne,9.00982473885752
+280,walking,greenspace,Havelock North,8.02709379938463
+281,walking,greenspace,New Plymouth,8.691971297540697
+282,walking,greenspace,Rolleston,3.513482423490315
+283,walking,greenspace,Napier,8.954460624262747
+284,walking,greenspace,Whanganui,6.434718159800067
+285,walking,greenspace,Feilding,9.179305275892165
+286,walking,greenspace,Waikanae,11.261712104181669
+287,walking,greenspace,Paraparaumu,4.459802247477619
+288,walking,greenspace,Porirua,7.394686519620571
+289,walking,greenspace,Blenheim,4.563340189800263
+290,walking,greenspace,Upper Hutt,7.539568305944555
+291,walking,greenspace,Kaiapoi,4.979255489791003
+292,walking,greenspace,Timaru,5.421910174968061
+293,walking,greenspace,Queenstown,10.868573889171635
+336,cycling,oral_health,Whangārei,5.614606497526709
+337,cycling,oral_health,Auckland,4.4521687816066695
+338,cycling,oral_health,Cambridge,6.344240324417399
+339,cycling,oral_health,Wellington,4.868964885814791
+340,cycling,oral_health,Hibiscus Coast,8.427474036029588
+341,cycling,oral_health,Gisborne,4.246370249369738
+342,cycling,oral_health,Nelson,19.74495643207648
+343,cycling,oral_health,Hamilton,4.7948215422891804
+344,cycling,oral_health,Dunedin,13.953116210330267
+345,cycling,oral_health,Invercargill,9.133849239071159
+346,cycling,oral_health,Rotorua,4.338054389226768
+347,cycling,oral_health,Lower Hutt,4.674929399713677
+348,cycling,oral_health,Masterton,6.3569175463850245
+349,cycling,oral_health,Rangiora,5.276622310595995
+350,cycling,oral_health,Oamaru,10.857716475576055
+351,cycling,oral_health,Palmerston North,5.226144895936421
+352,cycling,oral_health,Ashburton,4.254301273400571
+353,cycling,oral_health,Levin,4.2988986686844255
+354,cycling,oral_health,Mosgiel,7.9905304079362365
+355,cycling,oral_health,Te Awamutu,5.164830769396226
+356,cycling,oral_health,Taupō,9.048079110183542
+357,cycling,oral_health,Pukekohe,5.324821669718682
+358,cycling,oral_health,Tokoroa,4.023120985481678
+359,cycling,oral_health,Tauranga,7.075760375441702
+360,cycling,oral_health,Hastings,3.769435653732554
+361,cycling,oral_health,Richmond,8.11506159057283
+362,cycling,oral_health,Christchurch,4.962893264278997
+363,cycling,oral_health,Whakatāne,6.881671462607058
+364,cycling,oral_health,Havelock North,6.7607956904648905
+365,cycling,oral_health,New Plymouth,6.9946470790864845
+366,cycling,oral_health,Rolleston,5.88838995301672
+367,cycling,oral_health,Napier,6.038509983989729
+368,cycling,oral_health,Whanganui,4.35901519779216
+369,cycling,oral_health,Feilding,5.368697948114919
+370,cycling,oral_health,Waikanae,11.29694691454173
+371,cycling,oral_health,Paraparaumu,6.341974757596568
+372,cycling,oral_health,Porirua,5.06130405356747
+373,cycling,oral_health,Blenheim,7.403597511102886
+374,cycling,oral_health,Upper Hutt,5.8882920965697165
+375,cycling,oral_health,Kaiapoi,6.281092632101301
+376,cycling,oral_health,Timaru,4.199420660052397
+377,cycling,oral_health,Queenstown,22.571509934952136
+378,cycling,supermarket,Whangārei,6.434152100393362
+379,cycling,supermarket,Auckland,7.307220089102043
+380,cycling,supermarket,Cambridge,8.478755329825498
+381,cycling,supermarket,Wellington,6.01028998330734
+382,cycling,supermarket,Hibiscus Coast,8.96460005539179
+383,cycling,supermarket,Gisborne,6.693232690273831
+384,cycling,supermarket,Nelson,10.265960085363524
+385,cycling,supermarket,Hamilton,6.669845852803793
+386,cycling,supermarket,Dunedin,11.061600370225943
+387,cycling,supermarket,Invercargill,6.012655521364384
+388,cycling,supermarket,Rotorua,6.4605150050065125
+389,cycling,supermarket,Lower Hutt,7.326451286821201
+390,cycling,supermarket,Masterton,6.383985645304259
+391,cycling,supermarket,Rangiora,7.538775374051208
+392,cycling,supermarket,Oamaru,4.670601061376314
+393,cycling,supermarket,Palmerston North,6.406787339933444
+394,cycling,supermarket,Ashburton,5.309044935752129
+395,cycling,supermarket,Levin,7.022095213209958
+396,cycling,supermarket,Mosgiel,7.4502125635477086
+397,cycling,supermarket,Te Awamutu,6.1004821225487476
+398,cycling,supermarket,Taupō,10.671807563928013
+399,cycling,supermarket,Pukekohe,7.226206816035925
+400,cycling,supermarket,Tokoroa,6.991656132047235
+401,cycling,supermarket,Tauranga,7.285634836957215
+402,cycling,supermarket,Hastings,5.008721788931908
+403,cycling,supermarket,Richmond,6.644550189439892
+404,cycling,supermarket,Christchurch,7.991795432241735
+405,cycling,supermarket,Whakatāne,8.649226473779104
+406,cycling,supermarket,Havelock North,7.458103069757155
+407,cycling,supermarket,New Plymouth,7.167259295281937
+408,cycling,supermarket,Rolleston,8.994349672260713
+409,cycling,supermarket,Napier,6.672883604103296
+410,cycling,supermarket,Whanganui,6.166108405401787
+411,cycling,supermarket,Feilding,6.277695915204838
+412,cycling,supermarket,Waikanae,8.562954150094473
+413,cycling,supermarket,Paraparaumu,6.346294010315569
+414,cycling,supermarket,Porirua,8.190327904203512
+415,cycling,supermarket,Blenheim,6.245291154588928
+416,cycling,supermarket,Upper Hutt,9.36802416772279
+417,cycling,supermarket,Kaiapoi,9.243417819836031
+418,cycling,supermarket,Timaru,7.27884290000471
+419,cycling,supermarket,Queenstown,11.306529275907808
+420,cycling,ece,Whangārei,3.4136686271631644
+421,cycling,ece,Auckland,3.078726527430591
+422,cycling,ece,Cambridge,3.582696474989755
+423,cycling,ece,Wellington,3.698698190547509
+424,cycling,ece,Hibiscus Coast,5.339836087498613
+425,cycling,ece,Gisborne,3.2207468263461063
+426,cycling,ece,Nelson,5.1140291538142115
+427,cycling,ece,Hamilton,2.9520207098370834
+428,cycling,ece,Dunedin,3.860048116312044
+429,cycling,ece,Invercargill,3.210962622935283
+430,cycling,ece,Rotorua,3.2457683834623743
+431,cycling,ece,Lower Hutt,3.6799722273529807
+432,cycling,ece,Masterton,3.2520777596431074
+433,cycling,ece,Rangiora,3.8262735375412165
+434,cycling,ece,Oamaru,4.377300623880293
+435,cycling,ece,Palmerston North,3.7383976751553774
+436,cycling,ece,Ashburton,3.9108499719689847
+437,cycling,ece,Levin,3.724314814815377
+438,cycling,ece,Mosgiel,4.7672597380527675
+439,cycling,ece,Te Awamutu,3.9185804094485017
+440,cycling,ece,Taupō,6.112515969492016
+441,cycling,ece,Pukekohe,3.4091795350838696
+442,cycling,ece,Tokoroa,3.6179902328557447
+443,cycling,ece,Tauranga,4.5316716480054335
+444,cycling,ece,Hastings,2.3830287968597617
+445,cycling,ece,Richmond,3.420165071231362
+446,cycling,ece,Christchurch,3.7929857154172666
+447,cycling,ece,Whakatāne,3.8731799645809355
+448,cycling,ece,Havelock North,5.206030639791697
+449,cycling,ece,New Plymouth,4.326065461641434
+450,cycling,ece,Rolleston,4.075760153249999
+451,cycling,ece,Napier,4.745435262539896
+452,cycling,ece,Whanganui,3.2606447093869217
+453,cycling,ece,Feilding,3.7158804547784934
+454,cycling,ece,Waikanae,7.066053315690471
+455,cycling,ece,Paraparaumu,4.028377975917605
+456,cycling,ece,Porirua,4.0879612341992875
+457,cycling,ece,Blenheim,3.380875001265951
+458,cycling,ece,Upper Hutt,4.932379658311935
+459,cycling,ece,Kaiapoi,4.198511583909068
+460,cycling,ece,Timaru,3.856786014686752
+461,cycling,ece,Queenstown,9.907880896966537
+462,cycling,pharmacy,Whangārei,5.572365535812269
+463,cycling,pharmacy,Auckland,5.502968896666842
+464,cycling,pharmacy,Cambridge,7.917650698871826
+465,cycling,pharmacy,Wellington,5.541297372935353
+466,cycling,pharmacy,Hibiscus Coast,9.561764459441044
+467,cycling,pharmacy,Gisborne,5.7119673050096615
+468,cycling,pharmacy,Nelson,8.780746834108166
+469,cycling,pharmacy,Hamilton,5.685981068841514
+470,cycling,pharmacy,Dunedin,6.473956737884989
+471,cycling,pharmacy,Invercargill,7.372394803290119
+472,cycling,pharmacy,Rotorua,7.564663965654493
+473,cycling,pharmacy,Lower Hutt,6.736364836247906
+474,cycling,pharmacy,Masterton,6.301868812223573
+475,cycling,pharmacy,Rangiora,7.399716463830742
+476,cycling,pharmacy,Oamaru,8.286137513660345
+477,cycling,pharmacy,Palmerston North,6.5178079224190855
+478,cycling,pharmacy,Ashburton,6.058080052596972
+479,cycling,pharmacy,Levin,6.122360381453589
+480,cycling,pharmacy,Mosgiel,7.135427261395575
+481,cycling,pharmacy,Te Awamutu,6.036552645561557
+482,cycling,pharmacy,Taupō,11.563395105834909
+483,cycling,pharmacy,Pukekohe,6.79431572199141
+484,cycling,pharmacy,Tokoroa,7.293758268585001
+485,cycling,pharmacy,Tauranga,7.532331579733857
+486,cycling,pharmacy,Hastings,5.144245878601057
+487,cycling,pharmacy,Richmond,7.484686965992231
+488,cycling,pharmacy,Christchurch,5.72513640703197
+489,cycling,pharmacy,Whakatāne,7.808424512054272
+490,cycling,pharmacy,Havelock North,8.456084045456755
+491,cycling,pharmacy,New Plymouth,6.281135507269783
+492,cycling,pharmacy,Rolleston,8.970453059286907
+493,cycling,pharmacy,Napier,6.381683154732114
+494,cycling,pharmacy,Whanganui,7.227858121660412
+495,cycling,pharmacy,Feilding,6.581915756478826
+496,cycling,pharmacy,Waikanae,13.055883918332736
+497,cycling,pharmacy,Paraparaumu,6.644554191241073
+498,cycling,pharmacy,Porirua,9.014690115838016
+499,cycling,pharmacy,Blenheim,5.228930802781597
+500,cycling,pharmacy,Upper Hutt,11.478242831573969
+501,cycling,pharmacy,Kaiapoi,8.680845521280881
+502,cycling,pharmacy,Timaru,6.710636265973599
+503,cycling,pharmacy,Queenstown,9.860799740306401
+504,cycling,doctor,Whangārei,5.2903974875386055
+505,cycling,doctor,Auckland,5.392210859193908
+506,cycling,doctor,Cambridge,6.353327592166602
+507,cycling,doctor,Wellington,5.182594713605704
+508,cycling,doctor,Hibiscus Coast,9.790739122641474
+509,cycling,doctor,Gisborne,8.210449507320083
+510,cycling,doctor,Nelson,8.790505888486573
+511,cycling,doctor,Hamilton,5.587262764752973
+512,cycling,doctor,Dunedin,7.010984733978711
+513,cycling,doctor,Invercargill,7.572976141592287
+514,cycling,doctor,Rotorua,7.330891257383514
+515,cycling,doctor,Lower Hutt,7.0411482933720935
+516,cycling,doctor,Masterton,7.1030320107175635
+517,cycling,doctor,Rangiora,6.1381248059886335
+518,cycling,doctor,Oamaru,6.801426891853117
+519,cycling,doctor,Palmerston North,7.049250956930398
+520,cycling,doctor,Ashburton,6.120995770604492
+521,cycling,doctor,Levin,5.371521733435786
+522,cycling,doctor,Mosgiel,8.188959564362351
+523,cycling,doctor,Te Awamutu,6.302247154802542
+524,cycling,doctor,Taupō,12.753023081668308
+525,cycling,doctor,Pukekohe,7.8131832992878785
+526,cycling,doctor,Tokoroa,8.151242764514812
+527,cycling,doctor,Tauranga,7.978802854093711
+528,cycling,doctor,Hastings,5.662138721233038
+529,cycling,doctor,Richmond,6.429517013697138
+530,cycling,doctor,Christchurch,5.6549577097105805
+531,cycling,doctor,Whakatāne,8.378053930770983
+532,cycling,doctor,Havelock North,7.561568534860159
+533,cycling,doctor,New Plymouth,7.399008747673141
+534,cycling,doctor,Rolleston,8.370652561670108
+535,cycling,doctor,Napier,7.585260016933438
+536,cycling,doctor,Whanganui,6.462011874773177
+537,cycling,doctor,Feilding,7.949456106691055
+538,cycling,doctor,Waikanae,14.369986346237713
+539,cycling,doctor,Paraparaumu,6.171366694365313
+540,cycling,doctor,Porirua,8.32760343328256
+541,cycling,doctor,Blenheim,5.394953549891624
+542,cycling,doctor,Upper Hutt,11.630537520407604
+543,cycling,doctor,Kaiapoi,8.242004035343367
+544,cycling,doctor,Timaru,7.075343705894348
+545,cycling,doctor,Queenstown,10.781788308380325
+546,cycling,primary_school,Whangārei,5.303108515695637
+547,cycling,primary_school,Auckland,4.684194477636801
+548,cycling,primary_school,Cambridge,6.842300993909498
+549,cycling,primary_school,Wellington,4.3087703707546146
+550,cycling,primary_school,Hibiscus Coast,7.825981353353893
+551,cycling,primary_school,Gisborne,4.54748817074751
+552,cycling,primary_school,Nelson,6.433068157669782
+553,cycling,primary_school,Hamilton,4.908848896663503
+554,cycling,primary_school,Dunedin,4.485113841954254
+555,cycling,primary_school,Invercargill,4.628844254487215
+556,cycling,primary_school,Rotorua,4.756239898000259
+557,cycling,primary_school,Lower Hutt,4.8535866261343035
+558,cycling,primary_school,Masterton,5.660264845409585
+559,cycling,primary_school,Rangiora,5.077330479407447
+560,cycling,primary_school,Oamaru,5.002196744699512
+561,cycling,primary_school,Palmerston North,5.071706586351283
+562,cycling,primary_school,Ashburton,4.7714053720106255
+563,cycling,primary_school,Levin,4.502660430904838
+564,cycling,primary_school,Mosgiel,6.767193274448664
+565,cycling,primary_school,Te Awamutu,5.523017358384408
+566,cycling,primary_school,Taupō,7.4073906071391
+567,cycling,primary_school,Pukekohe,5.292209052529272
+568,cycling,primary_school,Tokoroa,4.102172732265989
+569,cycling,primary_school,Tauranga,6.5401794870746
+570,cycling,primary_school,Hastings,3.73959354134657
+571,cycling,primary_school,Richmond,5.963046835476302
+572,cycling,primary_school,Christchurch,5.234250930464539
+573,cycling,primary_school,Whakatāne,5.551109333990208
+574,cycling,primary_school,Havelock North,6.1555402551215055
+575,cycling,primary_school,New Plymouth,5.258624385887887
+576,cycling,primary_school,Rolleston,6.348893170832171
+577,cycling,primary_school,Napier,5.6882255873408205
+578,cycling,primary_school,Whanganui,4.494328188710485
+579,cycling,primary_school,Feilding,5.373640480188269
+580,cycling,primary_school,Waikanae,11.309498779859348
+581,cycling,primary_school,Paraparaumu,5.804123770085548
+582,cycling,primary_school,Porirua,4.865948302756224
+583,cycling,primary_school,Blenheim,4.67004894763909
+584,cycling,primary_school,Upper Hutt,6.0657385201500436
+585,cycling,primary_school,Kaiapoi,7.29421200977595
+586,cycling,primary_school,Timaru,4.4978838618599495
+587,cycling,primary_school,Queenstown,10.486758941680037
+588,cycling,greenspace,Whangārei,3.0654266622101765
+589,cycling,greenspace,Auckland,1.6294079407338444
+590,cycling,greenspace,Cambridge,2.400120894546386
+591,cycling,greenspace,Wellington,2.871844732529839
+592,cycling,greenspace,Hibiscus Coast,3.7299650352274383
+593,cycling,greenspace,Gisborne,2.2138193026539708
+594,cycling,greenspace,Nelson,4.0819418216969705
+595,cycling,greenspace,Hamilton,2.0906912611270942
+596,cycling,greenspace,Dunedin,2.3049779180111853
+597,cycling,greenspace,Invercargill,3.2664766031181798
+598,cycling,greenspace,Rotorua,1.769754153387232
+599,cycling,greenspace,Lower Hutt,2.677110246639291
+600,cycling,greenspace,Masterton,3.1005430390179525
+601,cycling,greenspace,Rangiora,1.344622031157121
+602,cycling,greenspace,Oamaru,2.1535143554613247
+603,cycling,greenspace,Palmerston North,2.8281536266430494
+604,cycling,greenspace,Ashburton,2.349073503788913
+605,cycling,greenspace,Levin,2.2873233617518074
+606,cycling,greenspace,Mosgiel,3.003256348268886
+607,cycling,greenspace,Te Awamutu,2.0260208319601727
+608,cycling,greenspace,Taupō,2.253227280196419
+609,cycling,greenspace,Pukekohe,2.282114530899393
+610,cycling,greenspace,Tokoroa,1.9859386686517349
+611,cycling,greenspace,Tauranga,3.0709409457962877
+612,cycling,greenspace,Hastings,1.8128350602604322
+613,cycling,greenspace,Richmond,2.6089398832227473
+614,cycling,greenspace,Christchurch,2.0578111969190003
+615,cycling,greenspace,Whakatāne,3.7168239438890356
+616,cycling,greenspace,Havelock North,3.0663830861025234
+617,cycling,greenspace,New Plymouth,3.4060080037337155
+618,cycling,greenspace,Rolleston,1.8079506325818056
+619,cycling,greenspace,Napier,3.605639637431833
+620,cycling,greenspace,Whanganui,2.4121328657671763
+621,cycling,greenspace,Feilding,3.5608525066288084
+622,cycling,greenspace,Waikanae,4.42477512697445
+623,cycling,greenspace,Paraparaumu,1.8091034590120085
+624,cycling,greenspace,Porirua,2.298595516843733
+625,cycling,greenspace,Blenheim,1.8447186082835787
+626,cycling,greenspace,Upper Hutt,3.1766929292329897
+627,cycling,greenspace,Kaiapoi,2.268458979507701
+628,cycling,greenspace,Timaru,2.1675333687878706
+629,cycling,greenspace,Queenstown,4.255482637497485
 672,driving,oral_health,Whangārei,2.646890823711198
 673,driving,oral_health,Auckland,1.9535087851079822
 674,driving,oral_health,Cambridge,2.7854310118191883
@@ -881,129 +881,129 @@
 963,driving,greenspace,Kaiapoi,0.7780313319465466
 964,driving,greenspace,Timaru,0.9840711999250155
 965,driving,greenspace,Queenstown,1.8041451436818916
-0,cycling,all,Ashburton,2.739947279119543
+0,cycling,all,Ashburton,6.120995770604492
 1,driving,all,Ashburton,2.739947279119543
-2,walking,all,Ashburton,2.739947279119544
-3,cycling,all,Auckland,3.0436060494754154
+2,walking,all,Ashburton,17.177069561986645
+3,cycling,all,Auckland,7.307220089102043
 4,driving,all,Auckland,3.0436060494754154
-5,walking,all,Auckland,3.0436060494754154
-6,cycling,all,Blenheim,2.986768981251096
+5,walking,all,Auckland,18.323828784855575
+6,cycling,all,Blenheim,7.403597511102886
 7,driving,all,Blenheim,2.986768981251096
-8,walking,all,Blenheim,2.986768981251096
-9,cycling,all,Cambridge,3.959888810918805
+8,walking,all,Blenheim,20.003123436300562
+9,cycling,all,Cambridge,8.478755329825498
 10,driving,all,Cambridge,3.959888810918805
-11,walking,all,Cambridge,3.959888810918805
-12,cycling,all,Christchurch,3.2455171612248113
+11,walking,all,Cambridge,22.169051841880407
+12,cycling,all,Christchurch,7.991795432241735
 13,driving,all,Christchurch,3.2455171612248126
-14,walking,all,Christchurch,3.2455171612248126
-15,cycling,all,Dunedin,5.448700337643204
+14,walking,all,Christchurch,20.138220450286887
+15,cycling,all,Dunedin,13.953116210330267
 16,driving,all,Dunedin,5.448700337643204
-17,walking,all,Dunedin,5.448700337643204
-18,cycling,all,Feilding,3.2146306519923376
+17,walking,all,Dunedin,38.32996977615283
+18,cycling,all,Feilding,7.949456106691055
 19,driving,all,Feilding,3.2146306519923376
-20,walking,all,Feilding,3.2146306519923376
-21,cycling,all,Gisborne,3.2840289091930863
+20,walking,all,Feilding,21.689948732153063
+21,cycling,all,Gisborne,8.210449507320083
 22,driving,all,Gisborne,3.2840289091930863
-23,walking,all,Gisborne,3.2840289091930863
-24,cycling,all,Hamilton,2.80020521003863
+23,walking,all,Gisborne,21.298149227207848
+24,cycling,all,Hamilton,6.669845852803793
 25,driving,all,Hamilton,2.80020521003863
-26,walking,all,Hamilton,2.80020521003863
-27,cycling,all,Hastings,2.1581359488317537
+26,walking,all,Hamilton,17.10481253243467
+27,cycling,all,Hastings,5.662138721233038
 28,driving,all,Hastings,2.1581359488317537
-29,walking,all,Hastings,2.1581359488317537
-30,cycling,all,Havelock North,3.486670150906336
+29,walking,all,Hastings,14.43933981832279
+30,cycling,all,Havelock North,8.456084045456755
 31,driving,all,Havelock North,3.486670150906335
-32,walking,all,Havelock North,3.486670150906336
-33,cycling,all,Hibiscus Coast,3.670491078462632
+32,walking,all,Havelock North,21.504871502953794
+33,cycling,all,Hibiscus Coast,9.790739122641474
 34,driving,all,Hibiscus Coast,3.670491078462632
-35,walking,all,Hibiscus Coast,3.670491078462632
-36,cycling,all,Invercargill,3.4671616629525612
+35,walking,all,Hibiscus Coast,22.809958205967995
+36,cycling,all,Invercargill,9.133849239071159
 37,driving,all,Invercargill,3.4671616629525612
-38,walking,all,Invercargill,3.4671616629525612
-39,cycling,all,Kaiapoi,3.645659304642364
+38,walking,all,Invercargill,24.99151927965375
+39,cycling,all,Kaiapoi,9.243417819836031
 40,driving,all,Kaiapoi,3.645659304642364
-41,walking,all,Kaiapoi,3.6456593046423618
-42,cycling,all,Levin,3.263236536626875
+41,walking,all,Kaiapoi,22.579667162729233
+42,cycling,all,Levin,7.022095213209958
 43,driving,all,Levin,3.263236536626875
-44,walking,all,Levin,3.263236536626875
-45,cycling,all,Lower Hutt,2.9768544918582918
+44,walking,all,Levin,18.912125144683706
+45,cycling,all,Lower Hutt,7.326451286821201
 46,driving,all,Lower Hutt,2.9768544918582904
-47,walking,all,Lower Hutt,2.9768544918582895
-48,cycling,all,Masterton,2.8674139898390028
+47,walking,all,Lower Hutt,18.637430980282804
+48,cycling,all,Masterton,7.1030320107175635
 49,driving,all,Masterton,2.8674139898390028
-50,walking,all,Masterton,2.8674139898390028
-51,cycling,all,Mosgiel,3.498112959034375
+50,walking,all,Masterton,19.36428074776412
+51,cycling,all,Mosgiel,8.188959564362351
 52,driving,all,Mosgiel,3.498112959034375
-53,walking,all,Mosgiel,3.498112959034375
-54,cycling,all,Napier,2.709994671927748
+53,walking,all,Mosgiel,20.95954472887404
+54,cycling,all,Napier,7.585260016933438
 55,driving,all,Napier,2.7099946719277472
-56,walking,all,Napier,2.7099946719277472
-57,cycling,all,Nelson,7.885329218327708
+56,walking,all,Napier,19.94122914219395
+57,cycling,all,Nelson,19.74495643207648
 58,driving,all,Nelson,7.885329218327708
-59,walking,all,Nelson,7.885329218327708
-60,cycling,all,New Plymouth,3.1879494607779613
+59,walking,all,Nelson,53.40257473525257
+60,cycling,all,New Plymouth,7.399008747673141
 61,driving,all,New Plymouth,3.1879494607779613
-62,walking,all,New Plymouth,3.1879494607779613
-63,cycling,all,Oamaru,4.767982631647975
+62,walking,all,New Plymouth,19.817837357646912
+63,cycling,all,Oamaru,10.857716475576055
 64,driving,all,Oamaru,4.767982631647973
-65,walking,all,Oamaru,4.767982631647975
-66,cycling,all,Palmerston North,2.727867419207571
+65,walking,all,Oamaru,30.960324517539377
+66,cycling,all,Palmerston North,7.049250956930398
 67,driving,all,Palmerston North,2.727867419207571
-68,walking,all,Palmerston North,2.727867419207571
-69,cycling,all,Paraparaumu,3.129078731040961
+68,walking,all,Palmerston North,18.593637437857897
+69,cycling,all,Paraparaumu,6.644554191241073
 70,driving,all,Paraparaumu,3.129078731040961
-71,walking,all,Paraparaumu,3.129078731040961
-72,cycling,all,Porirua,3.527101484827748
+71,walking,all,Paraparaumu,17.580196863405874
+72,cycling,all,Porirua,9.014690115838016
 73,driving,all,Porirua,3.527101484827748
-74,walking,all,Porirua,3.527101484827748
-75,cycling,all,Pukekohe,3.5078035748927974
+74,walking,all,Porirua,22.106818502512972
+75,cycling,all,Pukekohe,7.8131832992878785
 76,driving,all,Pukekohe,3.5078035748927974
-77,walking,all,Pukekohe,3.5078035748927974
-78,cycling,all,Queenstown,8.417804091685312
+77,walking,all,Pukekohe,20.053309568201083
+78,cycling,all,Queenstown,22.571509934952136
 79,driving,all,Queenstown,8.417804091685312
-80,walking,all,Queenstown,8.417804091685312
-81,cycling,all,Rangiora,3.051719472044313
+80,walking,all,Queenstown,59.7733696997185
+81,cycling,all,Rangiora,7.538775374051208
 82,driving,all,Rangiora,3.051719472044313
-83,walking,all,Rangiora,3.0517194720443137
-84,cycling,all,Richmond,4.28093089137416
+83,walking,all,Rangiora,18.952648537846176
+84,cycling,all,Richmond,8.11506159057283
 85,driving,all,Richmond,4.280930891374158
-86,walking,all,Richmond,4.28093089137416
-87,cycling,all,Rolleston,3.6656482619807798
+86,walking,all,Richmond,21.644463312964508
+87,cycling,all,Rolleston,8.994349672260713
 88,driving,all,Rolleston,3.6656482619807798
-89,walking,all,Rolleston,3.6656482619807798
-90,cycling,all,Rotorua,3.2276344948678126
+89,walking,all,Rolleston,23.65472878457162
+90,cycling,all,Rotorua,7.564663965654493
 91,driving,all,Rotorua,3.2276344948678126
-92,walking,all,Rotorua,3.2276344948678126
-93,cycling,all,Taupō,4.632266705401057
+92,walking,all,Rotorua,20.065564543136777
+93,cycling,all,Taupō,12.753023081668308
 94,driving,all,Taupō,4.632266705401057
-95,walking,all,Taupō,4.632266705401057
-96,cycling,all,Tauranga,3.3179994484554234
+95,walking,all,Taupō,35.6946626031818
+96,cycling,all,Tauranga,7.978802854093711
 97,driving,all,Tauranga,3.3179994484554234
-98,walking,all,Tauranga,3.3179994484554234
-99,cycling,all,Te Awamutu,3.185608529492742
+98,walking,all,Tauranga,20.559108523900253
+99,cycling,all,Te Awamutu,6.302247154802542
 100,driving,all,Te Awamutu,3.185608529492742
-101,walking,all,Te Awamutu,3.185608529492742
-102,cycling,all,Timaru,3.2234905257616058
+101,walking,all,Te Awamutu,16.92721052708076
+102,cycling,all,Timaru,7.27884290000471
 103,driving,all,Timaru,3.223490525761607
-104,walking,all,Timaru,3.223490525761607
-105,cycling,all,Tokoroa,3.0325801819612637
+104,walking,all,Timaru,18.979484660680832
+105,cycling,all,Tokoroa,8.151242764514812
 106,driving,all,Tokoroa,3.0325801819612637
-107,walking,all,Tokoroa,3.0325801819612637
-108,cycling,all,Upper Hutt,4.307270661277009
+107,walking,all,Tokoroa,21.40050056759549
+108,cycling,all,Upper Hutt,11.630537520407604
 109,driving,all,Upper Hutt,4.307270661277009
-110,walking,all,Upper Hutt,4.307270661277009
-111,cycling,all,Waikanae,5.193497730491564
+110,walking,all,Upper Hutt,30.327546996251332
+111,cycling,all,Waikanae,14.369986346237713
 112,driving,all,Waikanae,5.193497730491567
-113,walking,all,Waikanae,5.193497730491564
-114,cycling,all,Wellington,2.6228610850845038
+113,walking,all,Waikanae,33.90336497304438
+114,cycling,all,Wellington,6.01028998330734
 115,driving,all,Wellington,2.6228610850845047
-116,walking,all,Wellington,2.6228610850845038
-117,cycling,all,Whakatāne,3.9250376551301756
+116,walking,all,Wellington,14.378837763536055
+117,cycling,all,Whakatāne,8.649226473779104
 118,driving,all,Whakatāne,3.9250376551301756
-119,walking,all,Whakatāne,3.9250376551301756
-120,cycling,all,Whanganui,2.979824510406888
+119,walking,all,Whakatāne,22.548096968453052
+120,cycling,all,Whanganui,7.227858121660412
 121,driving,all,Whanganui,2.979824510406888
-122,walking,all,Whanganui,2.979824510406888
-123,cycling,all,Whangārei,3.0588426909742217
+122,walking,all,Whanganui,19.877359308350602
+123,cycling,all,Whangārei,6.434152100393362
 124,driving,all,Whangārei,3.0588426909742217
-125,walking,all,Whangārei,3.0588426909742217
+125,walking,all,Whangārei,17.247650609377633

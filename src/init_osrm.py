@@ -9,7 +9,7 @@ def main(config, logger, transport_mode, compile_osrm):
     '''
     logger.error('Initialize the OSRM server for {} to {} in {}'.format(transport_mode, config['services'],config['location']['city']))
     # transport mode options
-    mode_dict = {'driving':'car','walking':'foot_x','cycling':'bicycle_x'}
+    mode_dict = {'driving':'car_x','walking':'foot_x','cycling':'bicycle_x'}
 
     # pull the variables from the config file
     osm_subregion = config['OSM']['osm_subregion']
@@ -38,7 +38,7 @@ def main(config, logger, transport_mode, compile_osrm):
         logger.error('Compiling the data files')
         shell_commands = [
                         # init docker data
-                        'docker run -t -v {}:/data osrm/osrm-backend osrm-extract -p /opt/{}.lua /data/{}-latest.osm.pbf'.format(directory, transport_mode, osm_subregion),
+                        'docker run -t -v {}:/data osrm/osrm-backend osrm-extract -p /data/profiles/{}.lua /data/{}-latest.osm.pbf'.format(directory, transport_mode, osm_subregion),
                         'docker run -t -v {}:/data osrm/osrm-backend osrm-partition /data/{}-latest.osrm'.format(directory, osm_subregion),
                         'docker run -t -v {}:/data osrm/osrm-backend osrm-customize /data/{}-latest.osrm'.format(directory, osm_subregion),
                         ]
