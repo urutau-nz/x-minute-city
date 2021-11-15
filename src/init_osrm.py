@@ -9,7 +9,7 @@ def main(config, logger, transport_mode, compile_osrm):
     '''
     logger.error('Initialize the OSRM server for {} to {} in {}'.format(transport_mode, config['services'],config['location']['city']))
     # transport mode options
-    mode_dict = {'driving':'car','walking':'foot','cycling':'bicycle'}
+    mode_dict = {'driving':'car','walking':'foot_x','cycling':'bicycle_x'}
 
     # pull the variables from the config file
     osm_subregion = config['OSM']['osm_subregion']
