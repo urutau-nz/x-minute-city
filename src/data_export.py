@@ -2,6 +2,7 @@
 Export data for the d3 app
 '''
 import yaml
+from yaml import Loader, Dumper
 import main
 import pandas as pd
 import numpy as np
@@ -11,12 +12,20 @@ import topojson as tp
 from tqdm import tqdm
 import inequalipy as ineq
 from geoalchemy2 import Geometry, WKTElement
+import ray
+import psutil
+
+# RAY
+num_cpus = np.int(psutil.cpu_count(logical=False) * 1)
+print('Using {} cores.'.format(num_cpus))
+ray.init(num_cpus=num_cpus)
+
 
 def main_export():
     config_filename = 'main'
     # import config file
     with open('./config/{}.yaml'.format(config_filename)) as file:
-        config = yaml.load(file)
+        config = yaml.load(file,Loader=Loader)
 
     # connect to the psql database
     db = main.init_db(config)
@@ -101,7 +110,7 @@ def main_export():
         blocks.drop_duplicates(inplace=True)
         blocks['centroids'] = blocks.centroid
         urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
-        urbans = urbans[['UR2020_V_1', 'UR2020_V1_','geometry']]
+        urbans = urbans[['UR2020_V_2', 'UR2020_V1_','geometry']]
         urbans = urbans.to_crs(blocks.crs)
         blocks.set_geometry('centroids',inplace=True)
         blocks = blocks.to_crs(urbans.crs)
@@ -124,7 +133,7 @@ def main_export():
         # blocks_topo.to_json('./data/results/blocks.topojson')
 
         urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
-        urbans['region'] = urbans['UR2020_V_1']
+        urbans['region'] = urbans['UR2020_V_2']
         urbans=urbans[['UR2020_V1_','region']]
         blocks = gpd.read_file('./data/results/blocks.shp')
         blocks = blocks.merge(urbans, how='inner', left_on='UR2020_V1_',right_on='UR2020_V1_')
@@ -137,12 +146,12 @@ def main_export():
         # Get centroids # region_centroids
     if config['data_export']['region_centroids']:
         urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
-        urbans = urbans[['UR2020_V_1','geometry']]
+        urbans = urbans[['UR2020_V_2','geometry']]
         urbans['centroid'] = urbans.centroid
         urbans['Y'] = urbans['centroid'].y
         urbans['X'] = urbans['centroid'].x
         urbans['zoom'] = 15
-        urbans=urbans[['Y','X','UR2020_V_1','zoom']]
+        urbans=urbans[['Y','X','UR2020_V_2','zoom']]
         fn = './data/results/urbans_centroids.csv'
         urbans.to_csv(fn)
         print('Written: {}'.format(fn))
@@ -156,14 +165,14 @@ def main_export():
         df = pd.read_sql(sql, db['con'])
         gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.lon, df.lat))
         urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
-        urbans = urbans[['UR2020_V_1','geometry']]
+        urbans = urbans[['UR2020_V_2','geometry']]
         gdf = gdf.set_crs(4326)
         # buffer
         # gdf = gdf.to_crs(3395)
         # gdf = gdf.buffer(5000, join_style=2)
         # gdf = gdf.to_crs(4326)
         df = gpd.sjoin(gdf, urbans, how='inner', op='within')
-        df = df[['dest_type','lon','lat','UR2020_V_1']]
+        df = df[['dest_type','lon','lat','UR2020_V_2']]
         # gdf = gpd.clip(zones, gdf)
         fn = './data/results/destinations_regions.csv'
         df.to_csv(fn)
@@ -184,7 +193,7 @@ def main_export():
         df['centroids'] = df.centroid
         urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
         # zones = gpd.read_file('/homedirs/projects/x-minute-city/data/raw/statsnzterritorial-authority-2021-generalised-SHP/territorial-authority-2021-generalised.shp')
-        urbans = urbans[['UR2020_V_1','geometry']]
+        urbans = urbans[['UR2020_V_2','geometry']]
         urbans = urbans.to_crs(df.crs)
         df.set_geometry('centroids',inplace=True)
         df = df.to_crs(urbans.crs)
@@ -206,7 +215,7 @@ def main_export():
         modes = df['mode'].unique()
         for mode in modes:
             for group in groups:
-                regions = df['UR2020_V_1'].unique()
+                regions = df['UR2020_V_2'].unique()
                 for service in df['dest_type'].unique():
                     df_sub = df[(df['dest_type']==service)&(df['mode']==mode)]
                     # print(group)
@@ -227,7 +236,7 @@ def main_export():
                     df_new['mode'] = mode
                     hists.append(df_new)
                     for region in regions:
-                        df_sub = df[(df['dest_type']==service)&(df['UR2020_V_1']==region)&(df['mode']==mode)]
+                        df_sub = df[(df['dest_type']==service)&(df['UR2020_V_2']==region)&(df['mode']==mode)]
                         # create the hist
                         density, division = np.histogram(df_sub['duration'], bins = bins, weights=df_sub[group], density=True)
                         unity_density = density / density.sum()
@@ -268,25 +277,25 @@ def main_export():
     # df['centroids'] = df.centroid
     # urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
     # # zones = gpd.read_file('/homedirs/projects/x-minute-city/data/raw/statsnzterritorial-authority-2021-generalised-SHP/territorial-authority-2021-generalised.shp')
-    # urbans = urbans[['UR2020_V_1','geometry']]
+    # urbans = urbans[['UR2020_V_2','geometry']]
     # urbans = urbans.to_crs(df.crs)
     # df.set_geometry('centroids',inplace=True)
     # df = df.to_crs(urbans.crs)
     # df = gpd.sjoin(df, urbans, how='inner', op='within')
     # df['duration_weighted'] = df.duration * df.population
-    # df_group = df.groupby(['UR2020_V_1','dest_type','mode']).sum()
+    # df_group = df.groupby(['UR2020_V_2','dest_type','mode']).sum()
     # df_group['duration_weighted'] = df_group['duration_weighted']/df_group['population']
     # df_group = df_group[['duration_weighted']]
     # df_group.reset_index(inplace=True)
 
     # # calculate the maximum
-    # # df_max = df_group.loc[df_group.groupby(['UR2020_V_1','mode'],as_index=False).idxmax()]
+    # # df_max = df_group.loc[df_group.groupby(['UR2020_V_2','mode'],as_index=False).idxmax()]
     # df_max = df_group.copy()
     # df_max = df_max[df_max.dest_type != 'all']
-    # df_max = df_max.sort_values('duration_weighted',ascending=False).groupby(['UR2020_V_1','mode'], as_index=False).first()
+    # df_max = df_max.sort_values('duration_weighted',ascending=False).groupby(['UR2020_V_2','mode'], as_index=False).first()
 
     # least_accessible = df_max.copy()
-    # least_accessible = least_accessible[['UR2020_V_1','mode','dest_type']]
+    # least_accessible = least_accessible[['UR2020_V_2','mode','dest_type']]
     # fn = './data/results/least_accessible.csv'
     # least_accessible.to_csv(fn)
     # print('Written: {}'.format(fn))
@@ -306,7 +315,7 @@ def main_export():
         df['centroids'] = df.centroid
         urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
         # zones = gpd.read_file('/homedirs/projects/x-minute-city/data/raw/statsnzterritorial-authority-2021-generalised-SHP/territorial-authority-2021-generalised.shp')
-        urbans = urbans[['UR2020_V_1','geometry']]
+        urbans = urbans[['UR2020_V_2','geometry']]
         urbans = urbans.to_crs(df.crs)
         df.set_geometry('centroids',inplace=True)
         df = df.to_crs(urbans.crs)
@@ -314,26 +323,26 @@ def main_export():
 
 
         modes = df['mode'].unique()
-        regions = df['UR2020_V_1'].unique()
+        regions = df['UR2020_V_2'].unique()
         dests = df['dest_type'].unique()
 
         results = []
         for mode in modes:
             for service in dests:
                 for region in regions:
-                    df_sub = df[(df['dest_type']==service)&(df['mode']==mode)&(df['UR2020_V_1']==region)]
+                    df_sub = df[(df['dest_type']==service)&(df['mode']==mode)&(df['UR2020_V_2']==region)]
                     ede = ineq.kolmpollak.ede(a = df_sub.duration.values, epsilon = -0.5, weights = df_sub.population.values)
                     result = [mode, service, region,ede]
                     results.append(result)
 
-        results = pd.DataFrame(results, columns=['mode','dest_type','UR2020_V_1','duration_weighted'])
+        results = pd.DataFrame(results, columns=['mode','dest_type','UR2020_V_2','duration_weighted'])
 
         df_max = results.copy()
         df_max = df_max[df_max.dest_type != 'all']
-        df_max = df_max.sort_values('duration_weighted',ascending=False).groupby(['UR2020_V_1','mode'], as_index=False).first()
+        df_max = df_max.sort_values('duration_weighted',ascending=False).groupby(['UR2020_V_2','mode'], as_index=False).first()
 
         least_accessible = df_max.copy()
-        least_accessible = least_accessible[['UR2020_V_1','mode','dest_type']]
+        least_accessible = least_accessible[['UR2020_V_2','mode','dest_type']]
         fn = './data/results/least_accessible.csv'
         least_accessible.to_csv(fn)
         print('Written: {}'.format(fn))
@@ -381,3 +390,63 @@ def main_export():
         df_results['percent'] = res_percent
 
         df_results.to_csv(r'./data/results/percent_statistics.csv')
+
+    ###
+    # Make CSV with rankings for each city, suburb, amenity, and mode
+    ###
+    if config['data_export']['rankings']:
+        # logger
+        print('Making city and suburb rankings')
+        # get duration data at block level
+        sql = "SELECT geoid, dest_type, duration, population, geometry, mode  FROM nearest_{} WHERE population > 0 AND duration IS NOT NULL".format(config['SQL']['table_name'])
+        df = gpd.read_postgis(sql, con=db['engine'], geom_col='geometry')
+        # set centroids
+        df['centroids'] = df.centroid
+        # import urban areas to clip on
+        urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
+        # zones = gpd.read_file('/homedirs/projects/x-minute-city/data/raw/statsnzterritorial-authority-2021-generalised-SHP/territorial-authority-2021-generalised.shp')
+        urbans = urbans[['UR2020_V_2','geometry']]
+        urbans = urbans.to_crs(df.crs)
+        df.set_geometry('centroids',inplace=True)
+        df = df.to_crs(urbans.crs)
+        df = gpd.sjoin(df, urbans, how='inner', op='within')
+        df = df.drop(columns=['index_right'])
+
+        # import suburban areas to clip on
+        suburbans = gpd.read_file('./data/raw/statistical-area-2-2020-generalised.shp')
+        suburbans = suburbans[['SA22020__2','geometry']]
+        suburbans = suburbans.to_crs(df.crs)
+        df = gpd.sjoin(df, suburbans, how='inner', op='within')
+
+        # init lists to loop through
+        modes = list(df['mode'].unique())
+        regions = list(df['UR2020_V_2'].unique())
+        suburbs = list(df['SA22020__2'].unique()) + ['all']
+        dests = list(df['dest_type'].unique())
+
+
+        # init results list
+        results = pd.DataFrame(columns = ['mode', 'dest_type', 'region', 'duration', 'suburb'])
+        # loop through modes
+        for mode in modes:
+            for region in tqdm(regions):
+                suburbs = list(df[df['UR2020_V_2']==region]['SA22020__2'].unique()) + ['all']
+                region_dfs = [loop_suburb.remote(df, mode, region, suburb, dests) for suburb in suburbs]
+                region_dfs = ray.get(region_dfs)
+                region_dfs = pd.concat(region_dfs)
+                results = results.append(region_dfs)
+        results.to_csv(r'data/results/rankings.csv')
+
+
+@ray.remote
+def loop_suburb(df, mode, region, suburb, dests):
+    region_df = pd.DataFrame(columns = ['mode', 'dest_type', 'region', 'duration', 'suburb'])
+    for service in dests:
+        if suburb == 'all':
+            df_sub = df[(df['dest_type']==service)&(df['mode']==mode)&(df['UR2020_V_2']==region)]
+        else:
+            df_sub = df[(df['dest_type']==service)&(df['mode']==mode)&(df['UR2020_V_2']==region)&(df['SA22020__2']==suburb)]
+        mean = df_sub['duration'].mean()
+        result = {'mode':[mode], 'dest_type':[service], 'region':[region], 'duration':[mean], 'suburb':[suburb]}
+        region_df = region_df.append(pd.DataFrame(data=result))
+    return(region_df)
