@@ -94,7 +94,7 @@ SQL:
   database_name: x-minute-city # this is the name of the database
   table_name: durations # this is the name for the table of distances/durations
   port: '5002'
-  host: 132.181.102.2
+  host: encivmu-tml62
 
 
 location:
