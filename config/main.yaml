@@ -129,3 +129,4 @@ data_export:
   edes: True
   percent_stats: True
   git_push: True
+  rankings: True
