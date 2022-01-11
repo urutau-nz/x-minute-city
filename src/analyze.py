@@ -11,7 +11,6 @@ from geoalchemy2 import Geometry
 import matplotlib as mpl
 mpl.rcParams['pdf.fonttype'] = 42
 
-
 dests = ['park','pharmacy','primary_school','supermarket'] #'doctor',
 # import data
 # need id_orig, city, destination, duration, population
@@ -81,8 +80,42 @@ df2 = df2[['geoid','city','dest_type','duration','population']]
 df = pd.concat([df,df2])
 engine.dispose()
 
+#######################################################
+# calculate ede, mean, max, 90th for distance to nearest supermarket - luke
+# USA
+###
+db_name = 'cities_500'
+engine = create_engine('postgresql+psycopg2://postgres:' + passw + '@' + db_host + '/' + db_name + '?port=' + port)
+sql = """select nearest_block20.*, blocks20.id_city as id_city, blocks20."U7B001" as population, cities.name as city, cities.state, blocks20.geometry from nearest_block20 join blocks20 using (geoid) inner join cities using (id_city);"""
+df_dist = pd.read_sql(sql, con=engine)
+df_dist = df_dist.replace(['oral_health','greenspace','emergency_medical_service'],['dentist','park','doctor'])
+df_dist['city'] = df_dist['city'] + ', ' + df_dist['state']
 
+df_dist = df_dist[df_dist['dest_type']=='supermarket']
+df_dist = df_dist[~df_dist.distance.isnull()]
+df_dist = df_dist[['geoid','city','dest_type','distance','population']]
 
+results = []
+cities = df_dist['city'].unique()
+for city in tqdm(cities):
+    df_sub = df_dist[df_dist['city']==city]
+    # Max
+    mx = df_sub.distance.values.max()
+    # Population weighted mean
+    pwm = np.average(a = df_sub.distance.values, weights = df_sub.population.values)
+    # Inequality penalised mean
+    ede = ineq.kolmpollak.ede(a = df_sub.distance.values, epsilon = -1, weights = df_sub.population.values)
+    # 90th percentile
+    df_sub.sort_values('distance', inplace=True)
+    cumsum = df_sub.population.cumsum()
+    cutoff = df_sub.population.sum() * 0.9
+    p90 = df_sub.distance[cumsum >= cutoff].iloc[0]
+    # results
+    result = [mx, pwm, ede, p90]
+    results.append(result)
+
+results = pd.DataFrame(results, columns=['max','mean','ede','90th'])
+results['city'] = cities
 
 #######################################################
 # Calculate the different city metrics
@@ -137,7 +170,6 @@ for city in tqdm(cities):
             results.append(result)
         else:
             print(city, service)
-    
 
 results = pd.DataFrame(results, columns=['destination','city','mean','ede','max','median','90th','top10_mean'])
 
