@@ -116,6 +116,8 @@ for city in tqdm(cities):
 
 results = pd.DataFrame(results, columns=['max','mean','ede','90th'])
 results['city'] = cities
+results = results[['city','max','mean','ede','90th']]
+results.to_csv('../data/results/usa_supermarket_distance.csv')
 
 #######################################################
 # Calculate the different city metrics
