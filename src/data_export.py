@@ -447,7 +447,7 @@ def loop_suburb(df, mode, region, suburb, dests):
             df_sub = df[(df['dest_type']==service)&(df['mode']==mode)&(df['UR2020_V_2']==region)]
         else:
             df_sub = df[(df['dest_type']==service)&(df['mode']==mode)&(df['UR2020_V_2']==region)&(df['SA22020__2']==suburb)]
-        mean = df_sub['duration'].mean()
+        mean = np.average(df_sub['duration'], weights=df_sub['population'])
         result = {'mode':[mode], 'dest_type':[service], 'region':[region], 'duration':[mean], 'suburb':[suburb]}
         region_df = region_df.append(pd.DataFrame(data=result))
     return(region_df)
