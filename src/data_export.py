@@ -10,13 +10,14 @@ import json
 import geopandas as gpd
 import topojson as tp
 from tqdm import tqdm
-import inequalipy as ineq
+import inequality as ineq
 from geoalchemy2 import Geometry, WKTElement
 import ray
 import psutil
 
 # RAY
-num_cpus = np.int(psutil.cpu_count(logical=False) * 1)
+# num_cpus = np.int(psutil.cpu_count(logical=False) * 1)
+num_cpus = 10
 print('Using {} cores.'.format(num_cpus))
 ray.init(num_cpus=num_cpus)
 

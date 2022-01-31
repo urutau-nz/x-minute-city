@@ -102,7 +102,8 @@ def query_points(db, config, transport_mode):
     orig_df.sort_index(inplace=True)
     logger.error('Data: origins imported')
     # get list of destination ids
-    sql = "SELECT id_dest, dest_type, st_x(geom) as lon, st_y(geom) as lat FROM destinations WHERE dest_type IN ('{}') ;".format("','".join(config['services']))
+    # sql = "SELECT id_dest, dest_type, st_x(geom) as lon, st_y(geom) as lat FROM destinations WHERE dest_type IN ('{}') ;".format("','".join(config['services']))
+    sql = "SELECT id_dest, dest_type, st_x(geom) as lon, st_y(geom) as lat FROM destination_nz WHERE dest_type IN ('{}') ;".format("','".join(config['services']))
     dest_df = pd.read_sql(sql, db['con'])
 
     dest_df['id_dest'] = dest_df['id_dest'].astype('int32')
@@ -386,6 +387,10 @@ def execute_table_query(origxdest, orig_df, dest_df, config, transport_mode):
         query_string = base_string + orig_string + dest_string + options_string
         # append to list of queries
         query_list.append(query_string)
+        
+    print(query_list)
+    import code
+    code.interact(local=locals())
     # # Table Query OSRM in parallel
     #define cpu usage
     num_workers = np.int(mp.cpu_count() * config['par_frac'])

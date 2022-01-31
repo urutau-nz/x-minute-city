@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 config_filename = 'main'
 # import config file
 with open('./config/{}.yaml'.format(config_filename)) as file:
-    config = yaml.load(file)
+    config = yaml.safe_load(file)
 
 
 def nearest(db):

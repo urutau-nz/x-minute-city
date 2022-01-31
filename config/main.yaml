@@ -6,7 +6,7 @@ set_up:
   destination_file_directory:
     - /homedirs/projects/x-minute-city/data/raw/Pharmacies2017_points.csv
     # - /homedirs/projects/x-minute-city/data/raw/Hospitals2017_points.shp
-    - /homedirs/projects/x-minute-city/data/raw/Community_oralhealthcare_services.csv
+    # - /homedirs/projects/x-minute-city/data/raw/Community_oralhealthcare_services.csv
     - /homedirs/projects/x-minute-city/data/raw/All_GP_including_VLCA.csv
     # - /homedirs/projects/x-minute-city/data/raw/Alcohol_outlets_GHL.shp
     # - /homedirs/projects/x-minute-city/data/raw/Dairy_and_conv.shp
@@ -45,7 +45,7 @@ orig_id: SA12018_V1
 services:
   - pharmacy
   # - hospital
-  - oral_health
+  # - oral_health
   - doctor
   # - alcohol_outlet
   # - convenience_store
