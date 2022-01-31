@@ -17,7 +17,7 @@ from sqlalchemy.types import Float, Integer
 from sqlalchemy import create_engine
 from sqlalchemy_utils import database_exists, create_database
 # functions - geospatial
-import osgeo.ogr
+# import osgeo.ogr
 import geopandas as gpd
 import shapely
 from shapely.geometry import Point

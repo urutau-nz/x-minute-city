@@ -109,7 +109,7 @@ OSM:
     osm_subregion: new-zealand
     osm_region: australia-oceania
     # where do you want your OSM data saved
-    data_directory: /homedirs/projects/x-minute-city/data/osm
+    data_directory: data/osm
 
 OSRM:
     host: http://localhost
@@ -121,9 +121,9 @@ OSRM:
 data_export:
   execute: True
   block_results: True
-  block_shapefile: True
-  block_topojson: True
-  region_centroids: True
+  block_shapefile: False
+  block_topojson: False
+  region_centroids: False
   region_destinations: True
   access_histogram: True
   edes: True

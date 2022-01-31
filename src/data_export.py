@@ -10,7 +10,7 @@ import json
 import geopandas as gpd
 import topojson as tp
 from tqdm import tqdm
-import inequality as ineq
+import inequalipy as ineq
 from geoalchemy2 import Geometry, WKTElement
 import ray
 import psutil
@@ -162,7 +162,7 @@ def main_export():
     # destinations: dest_type, lat, lon # region_destinations
     ###
     if config['data_export']['region_destinations']:
-        sql = "SELECT dest_type, st_x(geom) as lon, st_y(geom) as lat FROM destinations"
+        sql = "SELECT dest_type, st_x(geom) as lon, st_y(geom) as lat FROM destination_nz"
         df = pd.read_sql(sql, db['con'])
         gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.lon, df.lat))
         urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
@@ -375,7 +375,7 @@ def main_export():
                 df_amenity = df_region[df_region['service']==amenity]
                 for mode in modes:
                     df_mode = df_amenity[df_amenity['mode']==mode]
-                    result = list(df_mode[df_mode['duration']==15].pop_perc_cum)[0]
+                    result = list(df_mode[df_mode['duration']==10].pop_perc_cum)[0]
                     result = np.round(result,0)
                     res_regions.append(region)
                     res_amenities.append(amenity)
