@@ -23,7 +23,7 @@ import subprocess
 import time
 
 # functions - geospatial
-import osgeo.ogr
+# import osgeo.ogr
 import geopandas as gpd
 import shapely
 from geoalchemy2 import Geometry, WKTElement

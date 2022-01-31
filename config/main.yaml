@@ -109,7 +109,7 @@ OSM:
     osm_subregion: new-zealand
     osm_region: australia-oceania
     # where do you want your OSM data saved
-    data_directory: data/osm
+    data_directory: /home/mitchell/projects/x-minute-city/data/osm
 
 OSRM:
     host: http://localhost

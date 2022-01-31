@@ -40,12 +40,12 @@ def nearest(db):
         'CREATE TABLE IF NOT EXISTS nearest_{}(geoid TEXT, dest_type TEXT, duration INT, population INT, geometry geometry, mode TEXT)'.format(config_table_name)
     ]
     queries_2 = [''' INSERT INTO nearest_{} (geoid, dest_type, duration, population, geometry, mode)
-            SELECT dist.id_orig as geoid, destinations.dest_type, MIN(dist.duration) as duration, blocks."C18_CURPop" as population, blocks.geometry, dist.mode
+            SELECT dist.id_orig as geoid, destination_nz.dest_type, MIN(dist.duration) as duration, blocks."C18_CURPop" as population, blocks.geometry, dist.mode
             FROM {} as dist
-            INNER JOIN destinations ON dist.id_dest = destinations.id_dest
+            INNER JOIN destination_nz ON dist.id_dest = destination_nz.id_dest
             INNER JOIN blocks ON  dist.id_orig = blocks."SA12018_V1"
-            WHERE destinations.dest_type='{}' AND dist.mode = '{}'
-            GROUP BY dist.id_orig, destinations.dest_type, blocks.geometry, blocks."C18_CURPop", dist.mode;
+            WHERE destination_nz.dest_type='{}' AND dist.mode = '{}'
+            GROUP BY dist.id_orig, destination_nz.dest_type, blocks.geometry, blocks."C18_CURPop", dist.mode;
         '''.format(config_table_name, config_table_name, dest_type, mode)
         for mode in modes 
         for dest_type in dest_types]

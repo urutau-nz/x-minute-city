@@ -17,7 +17,7 @@ import psutil
 
 # RAY
 # num_cpus = np.int(psutil.cpu_count(logical=False) * 1)
-num_cpus = 10
+num_cpus = 32
 print('Using {} cores.'.format(num_cpus))
 ray.init(num_cpus=num_cpus)
 
