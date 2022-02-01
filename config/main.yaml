@@ -109,24 +109,24 @@ OSM:
     osm_subregion: new-zealand
     osm_region: australia-oceania
     # where do you want your OSM data saved
-    data_directory: /home/mitchell/projects/x-minute-city/data/osm
+    data_directory: '/home/mitchell/projects/x-minute-city/data/osm'
 
 OSRM:
     host: http://localhost
-    port: '6010'
+    port: '6004'
     # Do you want the port closed after use? [True, False] TYPE: bool
     shutdown: True
 
 
 data_export:
   execute: True
-  block_results: True
+  block_results: False
   block_shapefile: False
   block_topojson: False
   region_centroids: False
-  region_destinations: True
-  access_histogram: True
-  edes: True
-  percent_stats: True
+  region_destinations: False
+  access_histogram: False
+  edes: False
+  percent_stats: False
   git_push: True
   rankings: True

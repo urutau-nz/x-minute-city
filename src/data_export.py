@@ -429,10 +429,10 @@ def main_export():
         # init results list
         results = pd.DataFrame(columns = ['mode', 'dest_type', 'region', 'duration', 'suburb'])
         # loop through modes
-        for mode in modes:
+        for mode in tqdm(modes):
             for region in tqdm(regions):
                 suburbs = list(df[df['UR2020_V_2']==region]['SA22020__2'].unique()) + ['all']
-                region_dfs = [loop_suburb.remote(df, mode, region, suburb, dests) for suburb in suburbs]
+                region_dfs = [loop_suburb.remote(df, mode, region, suburb, dests) for suburb in tqdm(suburbs)]
                 region_dfs = ray.get(region_dfs)
                 region_dfs = pd.concat(region_dfs)
                 results = results.append(region_dfs)
