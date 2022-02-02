@@ -10,14 +10,14 @@ import json
 import geopandas as gpd
 import topojson as tp
 from tqdm import tqdm
-import inequality as ineq
+import inequalipy as ineq
 from geoalchemy2 import Geometry, WKTElement
 import ray
 import psutil
 
 # RAY
 # num_cpus = np.int(psutil.cpu_count(logical=False) * 1)
-num_cpus = 10
+num_cpus = 32
 print('Using {} cores.'.format(num_cpus))
 ray.init(num_cpus=num_cpus)
 
@@ -162,7 +162,7 @@ def main_export():
     # destinations: dest_type, lat, lon # region_destinations
     ###
     if config['data_export']['region_destinations']:
-        sql = "SELECT dest_type, st_x(geom) as lon, st_y(geom) as lat FROM destinations"
+        sql = "SELECT dest_type, st_x(geom) as lon, st_y(geom) as lat FROM destination_nz"
         df = pd.read_sql(sql, db['con'])
         gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.lon, df.lat))
         urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
@@ -375,7 +375,7 @@ def main_export():
                 df_amenity = df_region[df_region['service']==amenity]
                 for mode in modes:
                     df_mode = df_amenity[df_amenity['mode']==mode]
-                    result = list(df_mode[df_mode['duration']==15].pop_perc_cum)[0]
+                    result = list(df_mode[df_mode['duration']==10].pop_perc_cum)[0]
                     result = np.round(result,0)
                     res_regions.append(region)
                     res_amenities.append(amenity)
@@ -429,10 +429,10 @@ def main_export():
         # init results list
         results = pd.DataFrame(columns = ['mode', 'dest_type', 'region', 'duration', 'suburb'])
         # loop through modes
-        for mode in modes:
+        for mode in tqdm(modes):
             for region in tqdm(regions):
                 suburbs = list(df[df['UR2020_V_2']==region]['SA22020__2'].unique()) + ['all']
-                region_dfs = [loop_suburb.remote(df, mode, region, suburb, dests) for suburb in suburbs]
+                region_dfs = [loop_suburb.remote(df, mode, region, suburb, dests) for suburb in tqdm(suburbs)]
                 region_dfs = ray.get(region_dfs)
                 region_dfs = pd.concat(region_dfs)
                 results = results.append(region_dfs)
