@@ -20,6 +20,6 @@ inequality_function_test.py
 *.pyc
 slack_token.txt
 
-data/
+# data/
 *.csv
 *.jpg

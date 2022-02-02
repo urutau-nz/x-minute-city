@@ -120,13 +120,13 @@ OSRM:
 
 data_export:
   execute: True
-  block_results: False
-  block_shapefile: False
-  block_topojson: False
-  region_centroids: False
-  region_destinations: False
-  access_histogram: False
-  edes: False
-  percent_stats: False
+  block_results: True
+  block_shapefile: True
+  block_topojson: True
+  region_centroids: True
+  region_destinations: True
+  access_histogram: True
+  edes: True
+  percent_stats: True
   git_push: True
   rankings: True

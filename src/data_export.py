@@ -10,7 +10,7 @@ import json
 import geopandas as gpd
 import topojson as tp
 from tqdm import tqdm
-import inequalipy as ineq
+import inequality as ineq
 from geoalchemy2 import Geometry, WKTElement
 import ray
 import psutil
