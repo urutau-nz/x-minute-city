@@ -1,4 +1,4 @@
-,UR2020_V_2,mode,dest_type
+,UR2020_V_1,mode,dest_type
 0,Ashburton,cycling,doctor
 1,Ashburton,driving,pharmacy
 2,Ashburton,walking,doctor
@@ -92,9 +92,9 @@
 90,Rotorua,cycling,pharmacy
 91,Rotorua,driving,pharmacy
 92,Rotorua,walking,pharmacy
-93,Taupo,cycling,doctor
-94,Taupo,driving,doctor
-95,Taupo,walking,doctor
+93,Taupō,cycling,doctor
+94,Taupō,driving,doctor
+95,Taupō,walking,doctor
 96,Tauranga,cycling,doctor
 97,Tauranga,driving,doctor
 98,Tauranga,walking,doctor
@@ -116,12 +116,12 @@
 114,Wellington,cycling,supermarket
 115,Wellington,driving,supermarket
 116,Wellington,walking,supermarket
-117,Whakatane,cycling,supermarket
-118,Whakatane,driving,supermarket
-119,Whakatane,walking,supermarket
+117,Whakatāne,cycling,supermarket
+118,Whakatāne,driving,supermarket
+119,Whakatāne,walking,supermarket
 120,Whanganui,cycling,pharmacy
 121,Whanganui,driving,pharmacy
 122,Whanganui,walking,pharmacy
-123,Whangarei,cycling,supermarket
-124,Whangarei,driving,supermarket
-125,Whangarei,walking,supermarket
+123,Whangārei,cycling,supermarket
+124,Whangārei,driving,supermarket
+125,Whangārei,walking,supermarket

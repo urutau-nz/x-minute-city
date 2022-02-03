@@ -1,5 +1,5 @@
-,mode,dest_type,UR2020_V_2,duration_weighted
-0,walking,supermarket,Whangarei,16.728503334006074
+,mode,dest_type,UR2020_V_1,duration_weighted
+0,walking,supermarket,Whangārei,16.728503334006074
 1,walking,supermarket,Auckland,17.84698477997664
 2,walking,supermarket,Cambridge,21.667113102866487
 3,walking,supermarket,Wellington,13.904076317412956
@@ -17,12 +17,12 @@
 15,walking,supermarket,Christchurch,19.656569224033767
 16,walking,supermarket,Rolleston,23.138690157732306
 17,walking,supermarket,Te Awamutu,15.157579251978264
-18,walking,supermarket,Taupo,28.075328619227403
+18,walking,supermarket,Taupō,28.075328619227403
 19,walking,supermarket,Pukekohe,17.20840127412692
 20,walking,supermarket,Tokoroa,16.607406679309044
 21,walking,supermarket,Tauranga,18.375998361443575
 22,walking,supermarket,Hastings,12.43370678844062
-23,walking,supermarket,Whakatane,22.093527605006614
+23,walking,supermarket,Whakatāne,22.093527605006614
 24,walking,supermarket,Havelock North,18.014648262689146
 25,walking,supermarket,New Plymouth,18.51875165040045
 26,walking,supermarket,Napier,16.06845244503391
@@ -41,7 +41,7 @@
 39,walking,supermarket,Timaru,18.512624469136938
 40,walking,supermarket,Queenstown,28.98432411767896
 41,walking,supermarket,Mosgiel,17.419502335948458
-42,walking,ece,Whangarei,8.224821400894678
+42,walking,ece,Whangārei,8.224821400894678
 43,walking,ece,Auckland,6.859055725415154
 44,walking,ece,Cambridge,9.028816105750215
 45,walking,ece,Wellington,7.854617564626419
@@ -59,12 +59,12 @@
 57,walking,ece,Christchurch,8.434431295240532
 58,walking,ece,Rolleston,8.909577736449119
 59,walking,ece,Te Awamutu,9.9772509431136
-60,walking,ece,Taupo,15.80595805028386
+60,walking,ece,Taupō,15.80595805028386
 61,walking,ece,Pukekohe,7.249730183346967
 62,walking,ece,Tokoroa,8.221186427984417
 63,walking,ece,Tauranga,11.083207829133483
 64,walking,ece,Hastings,5.68065783370972
-65,walking,ece,Whakatane,9.702144693109094
+65,walking,ece,Whakatāne,9.702144693109094
 66,walking,ece,Havelock North,13.190125115699953
 67,walking,ece,New Plymouth,10.895341978648844
 68,walking,ece,Napier,11.362282893016266
@@ -83,7 +83,7 @@
 81,walking,ece,Timaru,9.346218844433608
 82,walking,ece,Queenstown,26.318189165828993
 83,walking,ece,Mosgiel,11.631309028001333
-84,walking,pharmacy,Whangarei,14.322894876673645
+84,walking,pharmacy,Whangārei,14.322894876673645
 85,walking,pharmacy,Auckland,13.33316966671024
 86,walking,pharmacy,Cambridge,20.868644792686712
 87,walking,pharmacy,Wellington,13.15209705870878
@@ -101,12 +101,12 @@
 99,walking,pharmacy,Christchurch,13.635306769228345
 100,walking,pharmacy,Rolleston,22.947767064919947
 101,walking,pharmacy,Te Awamutu,15.841842377386598
-102,walking,pharmacy,Taupo,30.878051452227893
+102,walking,pharmacy,Taupō,30.878051452227893
 103,walking,pharmacy,Pukekohe,16.7074830780752
 104,walking,pharmacy,Tokoroa,18.321366997913845
 105,walking,pharmacy,Tauranga,18.963866585285718
 106,walking,pharmacy,Hastings,13.007919864769454
-107,walking,pharmacy,Whakatane,19.87218680342862
+107,walking,pharmacy,Whakatāne,19.87218680342862
 108,walking,pharmacy,Havelock North,21.024996172386647
 109,walking,pharmacy,New Plymouth,16.268403518735695
 110,walking,pharmacy,Napier,15.009311686410676
@@ -125,7 +125,7 @@
 123,walking,pharmacy,Timaru,17.06131309382641
 124,walking,pharmacy,Queenstown,25.703980769350306
 125,walking,pharmacy,Mosgiel,18.033814792887853
-126,walking,doctor,Whangarei,13.472669270273554
+126,walking,doctor,Whangārei,13.472669270273554
 127,walking,doctor,Auckland,13.084501544519766
 128,walking,doctor,Cambridge,16.868809321056744
 129,walking,doctor,Wellington,12.316421504517912
@@ -143,12 +143,12 @@
 141,walking,doctor,Christchurch,13.572302188374907
 142,walking,doctor,Rolleston,21.309446810319887
 143,walking,doctor,Te Awamutu,16.42392636303682
-144,walking,doctor,Taupo,35.19352120822241
+144,walking,doctor,Taupō,35.19352120822241
 145,walking,doctor,Pukekohe,19.62260435077671
 146,walking,doctor,Tokoroa,20.94840871808075
 147,walking,doctor,Tauranga,20.082157967343406
 148,walking,doctor,Hastings,13.938885748024227
-149,walking,doctor,Whakatane,21.431114723976627
+149,walking,doctor,Whakatāne,21.431114723976627
 150,walking,doctor,Havelock North,19.743266139214224
 151,walking,doctor,New Plymouth,19.35037362382866
 152,walking,doctor,Napier,19.42184622557456
@@ -167,7 +167,7 @@
 165,walking,doctor,Timaru,18.320943320450365
 166,walking,doctor,Queenstown,28.666526222876623
 167,walking,doctor,Mosgiel,18.43854127600766
-168,walking,primary_school,Whangarei,13.780577550897076
+168,walking,primary_school,Whangārei,13.780577550897076
 169,walking,primary_school,Auckland,10.874245631691931
 170,walking,primary_school,Cambridge,18.23626375748743
 171,walking,primary_school,Wellington,9.72552933969766
@@ -185,12 +185,12 @@
 183,walking,primary_school,Christchurch,11.99131922362884
 184,walking,primary_school,Rolleston,14.177656560819518
 185,walking,primary_school,Te Awamutu,14.425851085398545
-186,walking,primary_school,Taupo,19.373172870646066
+186,walking,primary_school,Taupō,19.373172870646066
 187,walking,primary_school,Pukekohe,12.95052869475031
 188,walking,primary_school,Tokoroa,9.61493377691331
 189,walking,primary_school,Tauranga,15.931043182907159
 190,walking,primary_school,Hastings,9.141269726364893
-191,walking,primary_school,Whakatane,13.071086530853421
+191,walking,primary_school,Whakatāne,13.071086530853421
 192,walking,primary_school,Havelock North,16.144426318030295
 193,walking,primary_school,New Plymouth,13.244007593486256
 194,walking,primary_school,Napier,13.82181119935671
@@ -209,7 +209,7 @@
 207,walking,primary_school,Timaru,11.397926614277415
 208,walking,primary_school,Queenstown,27.9642811417222
 209,walking,primary_school,Mosgiel,16.87779698366328
-210,walking,greenspace,Whangarei,7.619246988644887
+210,walking,greenspace,Whangārei,7.619246988644887
 211,walking,greenspace,Auckland,3.312469928307615
 212,walking,greenspace,Cambridge,5.828402485795251
 213,walking,greenspace,Wellington,5.417007243210795
@@ -227,12 +227,12 @@
 225,walking,greenspace,Christchurch,3.909589184576997
 226,walking,greenspace,Rolleston,3.095344800446205
 227,walking,greenspace,Te Awamutu,4.850180370117774
-228,walking,greenspace,Taupo,5.153606152093377
+228,walking,greenspace,Taupō,5.153606152093377
 229,walking,greenspace,Pukekohe,4.74199272779933
 230,walking,greenspace,Tokoroa,4.166466573260131
 231,walking,greenspace,Tauranga,7.124242375474658
 232,walking,greenspace,Hastings,4.278447494213227
-233,walking,greenspace,Whakatane,8.48325803301464
+233,walking,greenspace,Whakatāne,8.48325803301464
 234,walking,greenspace,Havelock North,7.625530054213257
 235,walking,greenspace,New Plymouth,8.123947740073884
 236,walking,greenspace,Napier,8.392977548621808
@@ -251,7 +251,7 @@
 249,walking,greenspace,Timaru,4.959329840847269
 250,walking,greenspace,Queenstown,10.19259568418296
 251,walking,greenspace,Mosgiel,6.655814426471769
-294,cycling,supermarket,Whangarei,5.980929268958584
+294,cycling,supermarket,Whangārei,5.980929268958584
 295,cycling,supermarket,Auckland,6.832209902107955
 296,cycling,supermarket,Cambridge,8.004775156092514
 297,cycling,supermarket,Wellington,5.508896483799375
@@ -269,12 +269,12 @@
 309,cycling,supermarket,Christchurch,7.518659971857623
 310,cycling,supermarket,Rolleston,8.570997360105299
 311,cycling,supermarket,Te Awamutu,5.520368713800394
-312,cycling,supermarket,Taupo,10.190468112381211
+312,cycling,supermarket,Taupō,10.190468112381211
 313,cycling,supermarket,Pukekohe,6.753847480222856
 314,cycling,supermarket,Tokoroa,6.536309115328328
 315,cycling,supermarket,Tauranga,6.8285540597963
 316,cycling,supermarket,Hastings,4.4762028378016145
-317,cycling,supermarket,Whakatane,8.168966953063252
+317,cycling,supermarket,Whakatāne,8.168966953063252
 318,cycling,supermarket,Havelock North,7.0339065690625775
 319,cycling,supermarket,New Plymouth,6.688730225375397
 320,cycling,supermarket,Napier,6.181944169979208
@@ -293,7 +293,7 @@
 333,cycling,supermarket,Timaru,6.798316509711238
 334,cycling,supermarket,Queenstown,10.872879999290175
 335,cycling,supermarket,Mosgiel,7.01390156055509
-336,cycling,ece,Whangarei,2.951713027811237
+336,cycling,ece,Whangārei,2.951713027811237
 337,cycling,ece,Auckland,2.6018546909767624
 338,cycling,ece,Cambridge,3.141548021607282
 339,cycling,ece,Wellington,3.2005120809963534
@@ -311,12 +311,12 @@
 351,cycling,ece,Christchurch,3.2981677350746015
 352,cycling,ece,Rolleston,3.4970585852903096
 353,cycling,ece,Te Awamutu,3.5130049224007425
-354,cycling,ece,Taupo,5.58167626103533
+354,cycling,ece,Taupō,5.58167626103533
 355,cycling,ece,Pukekohe,2.8996771116080895
 356,cycling,ece,Tokoroa,3.178871283982287
 357,cycling,ece,Tauranga,4.070780348426459
 358,cycling,ece,Hastings,1.8987802158030873
-359,cycling,ece,Whakatane,3.41415274984294
+359,cycling,ece,Whakatāne,3.41415274984294
 360,cycling,ece,Havelock North,4.7054573701777205
 361,cycling,ece,New Plymouth,3.8603325641190778
 362,cycling,ece,Napier,4.263969083928335
@@ -335,7 +335,7 @@
 375,cycling,ece,Timaru,3.3555894615151542
 376,cycling,ece,Queenstown,9.420569235243681
 377,cycling,ece,Mosgiel,4.358389467522785
-378,cycling,pharmacy,Whangarei,5.119721248964289
+378,cycling,pharmacy,Whangārei,5.119721248964289
 379,cycling,pharmacy,Auckland,5.023227440674471
 380,cycling,pharmacy,Cambridge,7.524597911896615
 381,cycling,pharmacy,Wellington,5.06845220235732
@@ -353,12 +353,12 @@
 393,cycling,pharmacy,Christchurch,5.253731474615008
 394,cycling,pharmacy,Rolleston,8.505075449645458
 395,cycling,pharmacy,Te Awamutu,5.676207581471819
-396,cycling,pharmacy,Taupo,11.045369284905382
+396,cycling,pharmacy,Taupō,11.045369284905382
 397,cycling,pharmacy,Pukekohe,6.322228665178178
 398,cycling,pharmacy,Tokoroa,6.7793190663333975
 399,cycling,pharmacy,Tauranga,7.077496251299982
 400,cycling,pharmacy,Hastings,4.722078780306709
-401,cycling,pharmacy,Whakatane,7.349090124416575
+401,cycling,pharmacy,Whakatāne,7.349090124416575
 402,cycling,pharmacy,Havelock North,8.056390708148067
 403,cycling,pharmacy,New Plymouth,5.776772698774067
 404,cycling,pharmacy,Napier,5.889883520944488
@@ -377,7 +377,7 @@
 417,cycling,pharmacy,Timaru,6.199152452593638
 418,cycling,pharmacy,Queenstown,9.423023235883914
 419,cycling,pharmacy,Mosgiel,6.668281708583044
-420,cycling,doctor,Whangarei,4.829258493235986
+420,cycling,doctor,Whangārei,4.829258493235986
 421,cycling,doctor,Auckland,4.918061720972333
 422,cycling,doctor,Cambridge,5.913153752570581
 423,cycling,doctor,Wellington,4.721504531353293
@@ -395,12 +395,12 @@
 435,cycling,doctor,Christchurch,5.175447521831872
 436,cycling,doctor,Rolleston,7.841099028483634
 437,cycling,doctor,Te Awamutu,5.8583662232135545
-438,cycling,doctor,Taupo,12.230707302101978
+438,cycling,doctor,Taupō,12.230707302101978
 439,cycling,doctor,Pukekohe,7.351098962595729
 440,cycling,doctor,Tokoroa,7.686566209242798
 441,cycling,doctor,Tauranga,7.4907101924402655
 442,cycling,doctor,Hastings,5.190751691697465
-443,cycling,doctor,Whakatane,7.833687692496893
+443,cycling,doctor,Whakatāne,7.833687692496893
 444,cycling,doctor,Havelock North,7.054231602696534
 445,cycling,doctor,New Plymouth,6.9143554278871875
 446,cycling,doctor,Napier,7.098231461924637
@@ -419,7 +419,7 @@
 459,cycling,doctor,Timaru,6.516109665149527
 460,cycling,doctor,Queenstown,10.374025727779815
 461,cycling,doctor,Mosgiel,7.671390867373607
-462,cycling,primary_school,Whangarei,4.836118623509468
+462,cycling,primary_school,Whangārei,4.836118623509468
 463,cycling,primary_school,Auckland,4.206035368271723
 464,cycling,primary_school,Cambridge,6.281972455395988
 465,cycling,primary_school,Wellington,3.836188909822523
@@ -437,12 +437,12 @@
 477,cycling,primary_school,Christchurch,4.722383597193575
 478,cycling,primary_school,Rolleston,5.866813682804005
 479,cycling,primary_school,Te Awamutu,4.98087570401134
-480,cycling,primary_school,Taupo,6.856867012391207
+480,cycling,primary_school,Taupō,6.856867012391207
 481,cycling,primary_school,Pukekohe,4.80136714038382
 482,cycling,primary_school,Tokoroa,3.6858457971878593
 483,cycling,primary_school,Tauranga,6.050672019523356
 484,cycling,primary_school,Hastings,3.2150567117341544
-485,cycling,primary_school,Whakatane,5.000300997194002
+485,cycling,primary_school,Whakatāne,5.000300997194002
 486,cycling,primary_school,Havelock North,5.708865225494917
 487,cycling,primary_school,New Plymouth,4.81033446153424
 488,cycling,primary_school,Napier,5.213789900897321
@@ -461,7 +461,7 @@
 501,cycling,primary_school,Timaru,4.073911602698276
 502,cycling,primary_school,Queenstown,9.906171106834538
 503,cycling,primary_school,Mosgiel,6.242877376902566
-504,cycling,greenspace,Whangarei,2.6561427404097877
+504,cycling,greenspace,Whangārei,2.6561427404097877
 505,cycling,greenspace,Auckland,1.1863142954663162
 506,cycling,greenspace,Cambridge,1.948836352061197
 507,cycling,greenspace,Wellington,2.360874763797994
@@ -479,12 +479,12 @@
 519,cycling,greenspace,Christchurch,1.5919616201206028
 520,cycling,greenspace,Rolleston,1.2557085741024412
 521,cycling,greenspace,Te Awamutu,1.657840304550693
-522,cycling,greenspace,Taupo,1.795152825010557
+522,cycling,greenspace,Taupō,1.795152825010557
 523,cycling,greenspace,Pukekohe,1.862476500353427
 524,cycling,greenspace,Tokoroa,1.5842914660060974
 525,cycling,greenspace,Tauranga,2.493225115477434
 526,cycling,greenspace,Hastings,1.3548207663782372
-527,cycling,greenspace,Whakatane,3.1009792063886445
+527,cycling,greenspace,Whakatāne,3.1009792063886445
 528,cycling,greenspace,Havelock North,2.5813101388059208
 529,cycling,greenspace,New Plymouth,2.844774513373976
 530,cycling,greenspace,Napier,3.0773053232426886
@@ -503,7 +503,7 @@
 543,cycling,greenspace,Timaru,1.7329862878922448
 544,cycling,greenspace,Queenstown,3.6972992323949914
 545,cycling,greenspace,Mosgiel,2.545473709369626
-588,driving,supermarket,Whangarei,2.5718594288894394
+588,driving,supermarket,Whangārei,2.5718594288894394
 589,driving,supermarket,Auckland,2.571797768146198
 590,driving,supermarket,Cambridge,3.4146729662699182
 591,driving,supermarket,Wellington,2.1552420851679797
@@ -521,12 +521,12 @@
 603,driving,supermarket,Christchurch,2.760009169992474
 604,driving,supermarket,Rolleston,3.118031893325359
 605,driving,supermarket,Te Awamutu,2.3922980396696163
-606,driving,supermarket,Taupo,3.390678234463454
+606,driving,supermarket,Taupō,3.390678234463454
 607,driving,supermarket,Pukekohe,2.9347578025759034
 608,driving,supermarket,Tokoroa,1.9274618287931327
 609,driving,supermarket,Tauranga,2.8252580613993996
 610,driving,supermarket,Hastings,1.5561046259960052
-611,driving,supermarket,Whakatane,3.4655887945745296
+611,driving,supermarket,Whakatāne,3.4655887945745296
 612,driving,supermarket,Havelock North,2.8156337830018474
 613,driving,supermarket,New Plymouth,2.6221486888343715
 614,driving,supermarket,Napier,2.0684618083379482
@@ -545,7 +545,7 @@
 627,driving,supermarket,Timaru,2.707425457951453
 628,driving,supermarket,Queenstown,4.487138181437265
 629,driving,supermarket,Mosgiel,2.633696726972721
-630,driving,ece,Whangarei,1.2012800711636817
+630,driving,ece,Whangārei,1.2012800711636817
 631,driving,ece,Auckland,0.8774882678982885
 632,driving,ece,Cambridge,1.189751720598563
 633,driving,ece,Wellington,1.0776465226204872
@@ -563,12 +563,12 @@
 645,driving,ece,Christchurch,1.0547998752766763
 646,driving,ece,Rolleston,1.1404843742725141
 647,driving,ece,Te Awamutu,1.6044968381299878
-648,driving,ece,Taupo,1.6532075670205233
+648,driving,ece,Taupō,1.6532075670205233
 649,driving,ece,Pukekohe,1.1418310160059262
 650,driving,ece,Tokoroa,0.7950603532783028
 651,driving,ece,Tauranga,1.6531681327034846
 652,driving,ece,Hastings,0.5153979590490132
-653,driving,ece,Whakatane,1.263283583453292
+653,driving,ece,Whakatāne,1.263283583453292
 654,driving,ece,Havelock North,1.5120492310163527
 655,driving,ece,New Plymouth,1.510198707343711
 656,driving,ece,Napier,1.314706433123109
@@ -587,7 +587,7 @@
 669,driving,ece,Timaru,1.1472984485720072
 670,driving,ece,Queenstown,3.9732971351312933
 671,driving,ece,Mosgiel,1.7447442779183422
-672,driving,pharmacy,Whangarei,2.219767687397663
+672,driving,pharmacy,Whangārei,2.219767687397663
 673,driving,pharmacy,Auckland,1.8166449647976157
 674,driving,pharmacy,Cambridge,3.018543110949412
 675,driving,pharmacy,Wellington,1.929584691234337
@@ -605,12 +605,12 @@
 687,driving,pharmacy,Christchurch,1.847174567163022
 688,driving,pharmacy,Rolleston,3.168143028319751
 689,driving,pharmacy,Te Awamutu,2.6724053562338934
-690,driving,pharmacy,Taupo,3.6395403488451694
+690,driving,pharmacy,Taupō,3.6395403488451694
 691,driving,pharmacy,Pukekohe,2.566577604642467
 692,driving,pharmacy,Tokoroa,2.264359588865566
 693,driving,pharmacy,Tauranga,2.811804375386928
 694,driving,pharmacy,Hastings,1.6193865943526435
-695,driving,pharmacy,Whakatane,2.7709029926826205
+695,driving,pharmacy,Whakatāne,2.7709029926826205
 696,driving,pharmacy,Havelock North,3.039614848242664
 697,driving,pharmacy,New Plymouth,2.2848122577508394
 698,driving,pharmacy,Napier,1.953703547458383
@@ -629,7 +629,7 @@
 711,driving,pharmacy,Timaru,2.4362023108254887
 712,driving,pharmacy,Queenstown,4.034207164108482
 713,driving,pharmacy,Mosgiel,2.4716497631313694
-714,driving,doctor,Whangarei,2.019263204776451
+714,driving,doctor,Whangārei,2.019263204776451
 715,driving,doctor,Auckland,1.7721747389424851
 716,driving,doctor,Cambridge,2.339749093621454
 717,driving,doctor,Wellington,1.770148324682251
@@ -647,12 +647,12 @@
 729,driving,doctor,Christchurch,1.8117814370144414
 730,driving,doctor,Rolleston,2.710749298470741
 731,driving,doctor,Te Awamutu,2.722465991857403
-732,driving,doctor,Taupo,4.169970773949416
+732,driving,doctor,Taupō,4.169970773949416
 733,driving,doctor,Pukekohe,3.0161900074831416
 734,driving,doctor,Tokoroa,2.578826285691709
 735,driving,doctor,Tauranga,2.8748391995177784
 736,driving,doctor,Hastings,1.6894716711258608
-737,driving,doctor,Whakatane,3.1198069302496734
+737,driving,doctor,Whakatāne,3.1198069302496734
 738,driving,doctor,Havelock North,2.7044105562177245
 739,driving,doctor,New Plymouth,2.7206883150473575
 740,driving,doctor,Napier,2.2704237292893197
@@ -671,7 +671,7 @@
 753,driving,doctor,Timaru,2.468229308073887
 754,driving,doctor,Queenstown,4.206879003967368
 755,driving,doctor,Mosgiel,2.409388678371176
-756,driving,primary_school,Whangarei,1.9537670410769943
+756,driving,primary_school,Whangārei,1.9537670410769943
 757,driving,primary_school,Auckland,1.5720949874888812
 758,driving,primary_school,Cambridge,2.4795006084055893
 759,driving,primary_school,Wellington,1.3811951153958508
@@ -689,12 +689,12 @@
 771,driving,primary_school,Christchurch,1.6580762044334718
 772,driving,primary_school,Rolleston,1.7841840366333004
 773,driving,primary_school,Te Awamutu,2.2718499667777
-774,driving,primary_school,Taupo,2.1981194577251246
+774,driving,primary_school,Taupō,2.1981194577251246
 775,driving,primary_school,Pukekohe,2.0962218432975366
 776,driving,primary_school,Tokoroa,0.9649511915165799
 777,driving,primary_school,Tauranga,2.352148517555016
 778,driving,primary_school,Hastings,1.0115332460812532
-779,driving,primary_school,Whakatane,2.279455518302967
+779,driving,primary_school,Whakatāne,2.279455518302967
 780,driving,primary_school,Havelock North,2.1605511055083353
 781,driving,primary_school,New Plymouth,1.9359878164110118
 782,driving,primary_school,Napier,1.6497588178620337
@@ -713,7 +713,7 @@
 795,driving,primary_school,Timaru,1.5814774748902558
 796,driving,primary_school,Queenstown,4.228930538114956
 797,driving,primary_school,Mosgiel,2.774123149943508
-798,driving,greenspace,Whangarei,1.1001041391714133
+798,driving,greenspace,Whangārei,1.1001041391714133
 799,driving,greenspace,Auckland,0.2686188968949879
 800,driving,greenspace,Cambridge,0.5912453409066327
 801,driving,greenspace,Wellington,0.7501953849540972
@@ -731,12 +731,12 @@
 813,driving,greenspace,Christchurch,0.2970035225529695
 814,driving,greenspace,Rolleston,0.16377778782881316
 815,driving,greenspace,Te Awamutu,0.698068431730392
-816,driving,greenspace,Taupo,0.30205487170970746
+816,driving,greenspace,Taupō,0.30205487170970746
 817,driving,greenspace,Pukekohe,0.5631860522018561
 818,driving,greenspace,Tokoroa,0.31200056500548284
 819,driving,greenspace,Tauranga,0.8792638676670607
 820,driving,greenspace,Hastings,0.21625792027227358
-821,driving,greenspace,Whakatane,1.2086817670292505
+821,driving,greenspace,Whakatāne,1.2086817670292505
 822,driving,greenspace,Havelock North,0.7845347260358434
 823,driving,greenspace,New Plymouth,0.9179028513301064
 824,driving,greenspace,Napier,0.8184491880467469
@@ -848,9 +848,9 @@
 90,cycling,all,Rotorua,7.109018387265665
 91,driving,all,Rotorua,2.7619777074031417
 92,walking,all,Rotorua,19.57065606738593
-93,cycling,all,Taupo,12.230707302101978
-94,driving,all,Taupo,4.169970773949416
-95,walking,all,Taupo,35.19352120822241
+93,cycling,all,Taupō,12.230707302101978
+94,driving,all,Taupō,4.169970773949416
+95,walking,all,Taupō,35.19352120822241
 96,cycling,all,Tauranga,7.4907101924402655
 97,driving,all,Tauranga,2.8748391995177784
 98,walking,all,Tauranga,20.082157967343406
@@ -872,12 +872,12 @@
 114,cycling,all,Wellington,5.508896483799375
 115,driving,all,Wellington,2.1552420851679797
 116,walking,all,Wellington,13.904076317412956
-117,cycling,all,Whakatane,8.168966953063252
-118,driving,all,Whakatane,3.4655887945745296
-119,walking,all,Whakatane,22.093527605006614
+117,cycling,all,Whakatāne,8.168966953063252
+118,driving,all,Whakatāne,3.4655887945745296
+119,walking,all,Whakatāne,22.093527605006614
 120,cycling,all,Whanganui,6.769043109707571
 121,driving,all,Whanganui,2.5023724787792214
 122,walking,all,Whanganui,19.344621211642245
-123,cycling,all,Whangarei,5.980929268958584
-124,driving,all,Whangarei,2.5718594288894394
-125,walking,all,Whangarei,16.728503334006074
+123,cycling,all,Whangārei,5.980929268958584
+124,driving,all,Whangārei,2.5718594288894394
+125,walking,all,Whangārei,16.728503334006074

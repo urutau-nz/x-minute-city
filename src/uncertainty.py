@@ -1,3 +1,41 @@
+import pandas as pd
+import numpy as np
+import random
+
+"""
+Approximates uncertainty for given data sets and distributions
+"""
+
+def main():
+
+    #Load housing data and generate cumulative sum
+    dist = pd.read_csv('data/nz_house_dist.csv')
+    dist['csum'] = dist['household'].cumsum().dropna()
+
+    #Load Mitch's houseing average
+    res = pd.read_csv('') #/sql query?
+
+    #generate new distributions
+    for row in res:
+
+        #number of households
+        house = row['house']
+        for x in np.arange(0, 99):
+            pop = generate_pop(house, dist)
+            
+
+def generate_pop(house, dist):
+    """"
+    Generates a random population given distribution
+    """
+    pop = []
+    rand = random.uniform(0, 1)
+    for loc in np.arange(0, len(dist)):
+        if (pop.sum() - 8) < house['pop']
+        if rand <= dist['ncums'].iloc[loc]:
+            
+#### FROM BELOW IS DATA_EXPORT            
+
 '''
 Export data for the d3 app
 '''
@@ -39,7 +77,7 @@ def main_export():
     # code.interact(local=locals())
 
     ###
-    # duration as csv - only nonzero pop # block_results
+    # distance as csv - only nonzero pop # block_results
     ###
     if config['data_export']['block_results']:
         sql = "SELECT * FROM nearest_{} WHERE population > 0".format(config['SQL']['table_name'])
@@ -107,7 +145,7 @@ def main_export():
     # blocks - shpfile # blocks_shapefile
     ###
     if config['data_export']['block_shapefile']:
-        sql = 'SELECT geoid as id, geometry FROM nearest_{} WHERE population > 0 AND duration IS NOT NULL'.format(config['SQL']['table_name'])
+        sql = 'SELECT geoid as id, geometry FROM nearest_{} WHERE population > 0 AND distance IS NOT NULL'.format(config['SQL']['table_name'])
         blocks = gpd.read_postgis(sql, con=db['con'], geom_col='geometry')
         blocks.drop_duplicates(inplace=True)
         blocks['centroids'] = blocks.centroid
@@ -190,7 +228,7 @@ def main_export():
     ###
     if config['data_export']['access_histogram']:
         # import data
-        sql = "SELECT geoid, dest_type, duration, population, geometry, mode  FROM nearest_{} WHERE population > 0 AND duration IS NOT NULL".format(config['SQL']['table_name'])
+        sql = "SELECT geoid, dest_type, distance, population, geometry, mode  FROM nearest_{} WHERE population > 0 AND distance IS NOT NULL".format(config['SQL']['table_name'])
         df = gpd.read_postgis(sql, con=db['engine'], geom_col='geometry')
         df['centroids'] = df.centroid
         urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
@@ -225,11 +263,11 @@ def main_export():
                     # create the hist
                     # import code
                     # code.interact(local=locals())
-                    density, division = np.histogram(df_sub['duration'], bins = bins, weights=df_sub[group], density=True)
+                    density, division = np.histogram(df_sub['distance'], bins = bins, weights=df_sub[group], density=True)
                     unity_density = density / density.sum()
                     unity_density = np.append(0, unity_density)
                     division = np.append(0, division)
-                    df_new = pd.DataFrame({'pop_perc':unity_density, 'duration':division[:-1]})
+                    df_new = pd.DataFrame({'pop_perc':unity_density, 'distance':division[:-1]})
                     df_new['region'] = 'All'
                     df_new['service']=service
                     df_new['pop_perc'] = df_new['pop_perc']*100
@@ -240,11 +278,11 @@ def main_export():
                     for region in regions:
                         df_sub = df[(df['dest_type']==service)&(df['UR2020_V_1']==region)&(df['mode']==mode)]
                         # create the hist
-                        density, division = np.histogram(df_sub['duration'], bins = bins, weights=df_sub[group], density=True)
+                        density, division = np.histogram(df_sub['distance'], bins = bins, weights=df_sub[group], density=True)
                         unity_density = density / density.sum()
                         unity_density = np.append(0, unity_density)
                         division = np.append(0, division)
-                        df_new = pd.DataFrame({'pop_perc':unity_density, 'duration':division[:-1]})
+                        df_new = pd.DataFrame({'pop_perc':unity_density, 'distance':division[:-1]})
                         df_new['service']=service
                         df_new['pop_perc'] = df_new['pop_perc']*100
                         df_new['pop_perc_cum'] = df_new['pop_perc'].cumsum()
@@ -255,7 +293,7 @@ def main_export():
 
         # concat
         df_hists = pd.concat(hists)
-        df_hists = df_hists[df_hists['duration'] <= 100]
+        df_hists = df_hists[df_hists['distance'] <= 100]
         # export
         fn = './data/results/access_histogram.csv'
         df_hists.to_csv(fn)
@@ -274,7 +312,7 @@ def main_export():
 
 
     # Population weighted average
-    sql = "SELECT geoid, dest_type, duration, population, geometry, mode  FROM nearest_{} WHERE population > 0 AND duration IS NOT NULL".format(config['SQL']['table_name'])
+    sql = "SELECT geoid, dest_type, distance, population, geometry, mode  FROM nearest_block WHERE population > 0 AND distance IS NOT NULL"
     df = gpd.read_postgis(sql, con=db['engine'], geom_col='geometry')
     df['centroids'] = df.centroid
     urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
@@ -284,19 +322,20 @@ def main_export():
     df.set_geometry('centroids',inplace=True)
     df = df.to_crs(urbans.crs)
     df = gpd.sjoin(df, urbans, how='inner', op='within')
-    df['duration_weighted'] = df['duration'] * df.population
+    df['distance_weighted'] = df['distance'] * df.population
     df_group = df.groupby(['UR2020_V_1','dest_type','mode']).sum()
-    df_group['duration_weighted'] = df_group['duration_weighted']/df_group['population']
-    df_group = df_group[['duration_weighted']]
+    df_group['distance_weighted'] = df_group['distance_weighted']/df_group['population']
+    df_group = df_group[['distance_weighted']]
     df_group.reset_index(inplace=True)
-    # import code
-    # code.interact(local=locals())
+    import code
+    code.interact(local=locals())
     # calculate the maximum
+    # fix or use for loop to find the largest distance for each city and each mode..
     df_max = df_group.groupby(['UR2020_V_1','mode']).max()
-    # df_max = df_group.loc[df_group.groupby(['UR2020_V_1','mode'],as_index=False).idxmax()]
+    df_max = df_group.loc[df_group.groupby(['UR2020_V_1','dest_type','mode'],as_index=False).idxmax(axis=0)]
     df_max = df_group.copy()
     df_max = df_max[df_max.dest_type != 'all']
-    df_max = df_max.sort_values('duration_weighted',ascending=False).groupby(['UR2020_V_1','mode'], as_index=False).first()
+    df_max = df_max.sort_values('distance_weighted',ascending=False).groupby(['UR2020_V_1','mode'], as_index=False).first()
 
     least_accessible = df_max.copy()
     least_accessible = least_accessible[['UR2020_V_1','mode','dest_type']]
@@ -314,7 +353,7 @@ def main_export():
 
     # EDEs #edes
     if config['data_export']['edes']:
-        sql = "SELECT geoid, dest_type, duration, population, geometry, mode  FROM nearest_{} WHERE population > 0 AND duration IS NOT NULL".format(config['SQL']['table_name'])
+        sql = "SELECT geoid, dest_type, distance, population, geometry, mode  FROM nearest_{} WHERE population > 0 AND distance IS NOT NULL".format(config['SQL']['table_name'])
         df = gpd.read_postgis(sql, con=db['engine'], geom_col='geometry')
         df['centroids'] = df.centroid
         urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
@@ -335,15 +374,15 @@ def main_export():
             for service in dests:
                 for region in regions:
                     df_sub = df[(df['dest_type']==service)&(df['mode']==mode)&(df['UR2020_V_1']==region)]
-                    ede = ineq.kolmpollak.ede(a = df_sub.duration.values, epsilon = -0.5, weights = df_sub.population.values)
+                    ede = ineq.kolmpollak.ede(a = df_sub.distance.values, epsilon = -0.5, weights = df_sub.population.values)
                     result = [mode, service, region,ede]
                     results.append(result)
 
-        results = pd.DataFrame(results, columns=['mode','dest_type','UR2020_V_1','duration_weighted'])
+        results = pd.DataFrame(results, columns=['mode','dest_type','UR2020_V_1','distance_weighted'])
 
         df_max = results.copy()
         df_max = df_max[df_max.dest_type != 'all']
-        df_max = df_max.sort_values('duration_weighted',ascending=False).groupby(['UR2020_V_1','mode'], as_index=False).first()
+        df_max = df_max.sort_values('distance_weighted',ascending=False).groupby(['UR2020_V_1','mode'], as_index=False).first()
 
         least_accessible = df_max.copy()
         least_accessible = least_accessible[['UR2020_V_1','mode','dest_type']]
@@ -378,7 +417,7 @@ def main_export():
                 df_amenity = df_region[df_region['service']==amenity]
                 for mode in modes:
                     df_mode = df_amenity[df_amenity['mode']==mode]
-                    result = list(df_mode[df_mode['duration']==10].pop_perc_cum)[0]
+                    result = list(df_mode[df_mode['distance']==10].pop_perc_cum)[0]
                     result = np.round(result,0)
                     res_regions.append(region)
                     res_amenities.append(amenity)
@@ -402,7 +441,7 @@ def main_export():
         # logger
         print('Making city and suburb rankings')
         # get duration data at block level
-        sql = "SELECT geoid, dest_type, duration, population, geometry, mode  FROM nearest_{} WHERE population > 0 AND duration IS NOT NULL".format(config['SQL']['table_name'])
+        sql = "SELECT geoid, dest_type, distance, population, geometry, mode  FROM nearest_{} WHERE population > 0 AND distance IS NOT NULL".format(config['SQL']['table_name'])
         df = gpd.read_postgis(sql, con=db['engine'], geom_col='geometry')
         # set centroids
         df['centroids'] = df.centroid
@@ -430,7 +469,7 @@ def main_export():
 
 
         # init results list
-        results = pd.DataFrame(columns = ['mode', 'dest_type', 'region', 'duration', 'suburb'])
+        results = pd.DataFrame(columns = ['mode', 'dest_type', 'region', 'distance', 'suburb'])
         # loop through modes
         for mode in tqdm(modes):
             for region in tqdm(regions):
