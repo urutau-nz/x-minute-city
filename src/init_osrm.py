@@ -21,8 +21,8 @@ def main(config, logger, transport_mode, compile_osrm):
 
     # in shell, remove any existing dockers
     shell_commands = [
-                    'docker stop osrm-{}'.format(state),
-                    'docker rm osrm-{}'.format(state),
+                    'docker stop osrm-xmin-{}'.format(state),
+                    'docker rm osrm-xmin-{}'.format(state),
                     ]
     for com in shell_commands:
         subprocess.run(com.split())
@@ -47,7 +47,7 @@ def main(config, logger, transport_mode, compile_osrm):
     else:
         logger.error('Data not re-downloaded and compiled because no changes to online version')
 
-    run_docker = 'docker run -d --name osrm-{} -t -i -p {}:5000 -v {}:/data osrm/osrm-backend osrm-routed --algorithm mld --max-table-size 100000 /data/{}-latest.osrm'.format(state, port, directory, osm_subregion)
+    run_docker = 'docker run -d --name osrm-xmin-{} -t -i -p {}:5000 -v {}:/data osrm/osrm-backend osrm-routed --algorithm mld --max-table-size 100000 /data/{}-latest.osrm'.format(state, port, directory, osm_subregion)
     subprocess.run(run_docker.split())
 
     logger.error('OSRM server initialized')
