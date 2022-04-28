@@ -16,12 +16,6 @@ from geoalchemy2 import Geometry, WKTElement
 import ray
 import psutil
 
-# RAY
-# num_cpus = np.int(psutil.cpu_count(logical=False) * 1)
-num_cpus = 32
-print('Using {} cores.'.format(num_cpus))
-ray.init(num_cpus=num_cpus)
-
 
 def main_export():
     config_filename = 'main'
@@ -97,7 +91,7 @@ def main_export():
         all_dist['geometry'] = geoms
         df = df.append(all_dist)
 
-        df.to_postgis('nearest_{}'.format(config['SQL']['table_name']), engine, if_exists='replace', dtype={'geometry': Geometry('POLYGON', srid= projection)})
+        df.to_postgis('updated_nearest_{}'.format(config['SQL']['table_name']), engine, if_exists='replace', dtype={'geometry': Geometry('POLYGON', srid= projection)})
         df = df[['geoid', 'dest_type', 'duration', 'mode']]
         df.to_csv('./data/results/duration.csv')
         print('Written: ./data/results/duration.csv')
@@ -107,7 +101,7 @@ def main_export():
     # blocks - shpfile # blocks_shapefile
     ###
     if config['data_export']['block_shapefile']:
-        sql = 'SELECT geoid as id, geometry FROM nearest_{} WHERE population > 0 AND duration IS NOT NULL'.format(config['SQL']['table_name'])
+        sql = 'SELECT geoid as id, geometry FROM updated_nearest_{} WHERE population > 0 AND duration IS NOT NULL'.format(config['SQL']['table_name'])
         blocks = gpd.read_postgis(sql, con=db['con'], geom_col='geometry')
         blocks.drop_duplicates(inplace=True)
         blocks['centroids'] = blocks.centroid
@@ -190,7 +184,7 @@ def main_export():
     ###
     if config['data_export']['access_histogram']:
         # import data
-        sql = "SELECT geoid, dest_type, duration, population, geometry, mode  FROM nearest_{} WHERE population > 0 AND duration IS NOT NULL".format(config['SQL']['table_name'])
+        sql = "SELECT geoid, dest_type, duration, population, geometry, mode  FROM updated_nearest_{} WHERE population > 0 AND duration IS NOT NULL".format(config['SQL']['table_name'])
         df = gpd.read_postgis(sql, con=db['engine'], geom_col='geometry')
         df['centroids'] = df.centroid
         urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
@@ -274,7 +268,7 @@ def main_export():
 
 
     # Population weighted average
-    sql = "SELECT geoid, dest_type, duration, population, geometry, mode  FROM nearest_{} WHERE population > 0 AND duration IS NOT NULL".format(config['SQL']['table_name'])
+    sql = "SELECT geoid, dest_type, duration, population, geometry, mode  FROM updated_nearest_{} WHERE population > 0 AND duration IS NOT NULL".format(config['SQL']['table_name'])
     df = gpd.read_postgis(sql, con=db['engine'], geom_col='geometry')
     df['centroids'] = df.centroid
     urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
@@ -314,7 +308,7 @@ def main_export():
 
     # EDEs #edes
     if config['data_export']['edes']:
-        sql = "SELECT geoid, dest_type, duration, population, geometry, mode  FROM nearest_{} WHERE population > 0 AND duration IS NOT NULL".format(config['SQL']['table_name'])
+        sql = "SELECT geoid, dest_type, duration, population, geometry, mode  FROM updated_nearest_{} WHERE population > 0 AND duration IS NOT NULL".format(config['SQL']['table_name'])
         df = gpd.read_postgis(sql, con=db['engine'], geom_col='geometry')
         df['centroids'] = df.centroid
         urbans = gpd.read_file('./data/raw/new_urban_areas.shp')
@@ -398,11 +392,15 @@ def main_export():
     ###
     # Make CSV with rankings for each city, suburb, amenity, and mode
     ###
+    # RAY
+    num_cpus = np.int(psutil.cpu_count(logical=False) * 1)
+    print('Using {} cores.'.format(num_cpus))
+    ray.init(num_cpus=num_cpus)
     if config['data_export']['rankings']:
         # logger
         print('Making city and suburb rankings')
         # get duration data at block level
-        sql = "SELECT geoid, dest_type, duration, population, geometry, mode  FROM nearest_{} WHERE population > 0 AND duration IS NOT NULL".format(config['SQL']['table_name'])
+        sql = "SELECT geoid, dest_type, duration, population, geometry, mode  FROM updated_nearest_{} WHERE population > 0 AND duration IS NOT NULL".format(config['SQL']['table_name'])
         df = gpd.read_postgis(sql, con=db['engine'], geom_col='geometry')
         # set centroids
         df['centroids'] = df.centroid

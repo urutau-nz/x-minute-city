@@ -248,8 +248,8 @@ def init_destinations(db, config):
 def shutdown_db(config):
     if config['OSRM']['shutdown']:
         shell_commands = [
-                            'docker stop osrm-{}'.format(config['location']['state']),
-                            'docker rm osrm-{}'.format(config['location']['state']),
+                            'docker stop osrm-xmin-{}'.format(config['location']['state']),
+                            'docker rm osrm-xmin-{}'.format(config['location']['state']),
                             ]
         for com in shell_commands:
             com = com.split()
